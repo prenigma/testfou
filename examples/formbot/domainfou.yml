@@ -1,0 +1,109 @@
+intents:
+  - request_flightsearch:
+      use_entities: false
+  - chitchat:
+      use_entities: false
+  - inform
+  - affirm
+  - deny
+  - stop
+  - thankyou
+  - greet
+  - feedback_negativ
+  - great
+  - ask_baggage
+
+
+entities:
+  - destination
+  - flightclass
+  - depaturedate
+
+
+slots:
+  destination:
+    type: unfeaturized
+    auto_fill: false
+  flightclass:
+    type: unfeaturized
+    auto_fill: false
+  departuredate:
+    type: unfeaturized
+    auto_fill: false  
+  flightoptions:
+    type: list
+  seatnumber:
+    type: unfeaturized 
+  passengername:
+    type: unfeaturized 
+  hourdelay:
+    type: unfeaturized
+  selectedflightnumber:
+    type: unfeaturized 
+  selectedflight:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+
+templates:
+  utter_ask_destination:
+    - text: "what destination?"
+  utter_ask_flightclass:
+    - text: "in which class?"
+  utter_ask_departuredate:
+    - text: "what would be the departure date?"
+  utter_submit:
+    - text: "done!"
+  utter_slots_values:
+    - text: "got slots:\n
+             - destination: {destination}\n
+             - flightclass: {flightclass}\n
+             - departuredate: {departuredate}"
+  utter_return_proposed_flights:
+    - text: {flightoptions}           
+  utter_noworries:
+    - text: "you are welcome :)"
+  utter_chitchat:
+    - text: "chitchat"
+  utter_ask_continue:
+    - text: "do you want to continue?"
+  utter_wrong_destination:
+    - text: "destination is not in the database, please try again another destination"
+  utter_wrong_flightclass:
+    - text: "flight class is wrong, please try again"
+  utter_default:
+    - text: "sorry, I didn't understand you, please try input something else"
+  utter_inform_flightsearch:
+    - text: "I will search for you the next possible flight to {destination}"
+  utter_inform_pricefreeofcharge:
+    - text: "There will be no extra fees for the rebooking"
+  utter_askfurtherhelp:
+    - text: "Can i do something else for you?"
+  utter_baggage:
+    - text: "I will take care of your baggage!"
+  utter_inform_delay:
+    - text: "Sorry, {passengername}. You connecting flight to {destination} will be delayed for more than {hourdelay} hours"  
+  utter_welcomes_passenger:
+    - text: "Welcome {passengername} to Dubai!"
+  
+
+actions:
+  - utter_slots_values
+  - utter_noworries
+  - utter_chitchat
+  - utter_ask_continue
+  - action_search_flight
+  - utter_return_proposed_flights
+  - action_get_flight_details
+  - utter_welcomes_passenger
+  - utter_inform_delay
+  - utter_baggage
+  - utter_inform_pricefreeofcharge
+  - utter_inform_flightsearch
+  - utter_askfurtherhelp
+  - action_book_flight
+
+
+
+forms:
+  - flightsearch_form
