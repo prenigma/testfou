@@ -1,3 +1,49 @@
+## happy path rebook change destination flight and HOTEL
+* start
+    - action_get_flight_details
+    - utter_welcomes_passenger
+* change_destination{"destination":"destination"}
+    - utter_inform_flightsearch
+    - action_search_change_destination_flight
+* select_flight{"selectedflightnumber":"EK 147"}
+    - action_book_flight
+* great
+	- utter_askfurtherhelp
+* ask_baggage
+	- utter_baggage
+* great
+	- utter_askfurtherhelp
+* ask_hotel
+    - action_search_hotel
+* select_hotel{"selectedrhotelid":"1"}
+    - action_book_hotel
+* thankyou
+    - utter_noworries
+
+## happy path rebook upgrade flight
+* start
+    - action_get_flight_details
+    - utter_welcomes_passenger
+    - utter_inform_delay
+* upgrade
+    - action_search_upgrade_flight
+* thankyou
+    - utter_noworries
+    - utter_askfurtherhelp
+* ask_restaurant
+    - action_search_restaurant
+* select_restaurant{"selectedrestaurantid":"2"}
+    - action_book_restaurant
+* great
+	- utter_askfurtherhelp
+* thankyou
+    - utter_noworries
+
+## login
+* select_login{"username": "fouad", "password": "admin"}
+    - action_login
+
+
 ## happy path rebook delayed flight
 * start
     - action_get_flight_details
@@ -434,4 +480,19 @@
     - utter_baggage
 * thankyou
     - utter_noworries
+
+## Generated Story 4548957576817830631
+* ask_restaurant
+    - action_search_restaurant
+    - slot{"restaurantoptions": [{"Reservation": "Sun, Apr 21, 2 people", "address": "Concourse B,Terminal 3,Dubai International Airport - Dubai", "cuisine": "French", "cuisine_restaurant": "French restaurant", "id": "1", "name": "Paul", "open_time": {"Friday": "24 hours open", "Monday": "24 hours open", "Saturday": "24 hours open", "Sunday": "24 hours open", "Thursday": "24 hours open", "Tuesday": "24 hours open", "Wednesday": "24 hours open"}, "photoCount": 3, "photos": [{"url": "https://doc-0k-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/ub92u1vofsvsou59ri3mbm5gq3jfckkk/1555725600000/11429114590258316664/*/1Khq6ncv3CRwW1B2bHPEoSUG-oS5a7OPZ"}, {"url": "https://doc-0s-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/dcruvqc2ttls5e4i2r91t8ib2q3h5adt/1555725600000/11429114590258316664/*/117xov5OqO8AclNi5BOcguAPy6XRjDTEO"}, {"url": "https://doc-0o-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/po701g4t0mkiesg0ip287gsslephi4ee/1555725600000/11429114590258316664/*/1h3Aqx1Ja1-EoSldvHejhMXstTnCWkdWP"}], "stars": 4}, {"Reservation": "Sun, Apr 21, 2 people", "address": "Gate 25, Terminal 3 - Dubai International Airport Concourse B - Dubai", "cuisine": "French", "cuisine_restaurant": "American restaurant", "id": "2", "name": "Hard Rock Cafe", "open_time": {"Friday": "24 hours open", "Monday": "24 hours open", "Saturday": "24 hours open", "Sunday": "24 hours open", "Thursday": "24 hours open", "Tuesday": "24 hours open", "Wednesday": "24 hours open"}, "photoCount": 3, "photos": [{"url": "https://doc-04-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/a76ujr439avju72a6s7mqm59jaujljj3/1555725600000/11429114590258316664/*/1CEdYSP_Q5LO8wgjcYHvpV0EVVkU6B7eC"}, {"url": "https://doc-0o-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/v0uudi4johan6fg37s0qjjobct8cnfau/1555725600000/11429114590258316664/*/1APP8Qz5lwgO6-ZIUgTmIcY0qBnpMsJ2x"}, {"url": "https://doc-08-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/47cfrnu2pghv96i7dpjr40hs7fpenhpo/1555725600000/11429114590258316664/*/1-NXaVrNAH-KMn5QffbDvTtNiYrXfhsTt"}], "stars": 4}]}
+* select_restaurant{"selectedrestaurantid": "1"}
+    - slot{"selectedrestaurantid": "1"}
+    - action_book_restaurant
+* ask_hotel
+    - action_search_hotel
+    - slot{"hoteloptions": [{"Stay": "Sun, Apr 21, 2 poeple", "address": "International Dubai Airport - Terminal 3, Concource A, opposite Gate A1 - Dubai", "facilities": ["Air conditioning", "Wake-up service", "Linens", "Entire unit located on ground floor"], "hotel_description": "Conveniently located opposite Gate A1 at A-Gate (Terminal 3, inside the DXB transit area), the Sleep'n fly Sleep Lounge is inspired by Scandinavian design for comfort, style ans necessity", "id": 1, "name": "Sleep n'fly by yarn, sleep lounge", "numberAdults": "1 Adult", "numberRoom": "1 Room", "photoCount": 3, "photos": [{"url": "https://doc-0c-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/g147qncu7q1284crr8kf0vkt6denjedn/1555725600000/11429114590258316664/*/1BqkIOov9jj-DcrDWwvTraArcpEzWnaum"}, {"url": "https://doc-0g-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/shqqoravt2af12m54bo8s888ni9kl9pp/1555718400000/11429114590258316664/*/1ahEIMoocW79gu1Tgnit6ibhkCikAHy5Q"}, {"url": "https://doc-14-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/9iftr05026at0pmhrqvo3vlelojnbc7s/1555718400000/11429114590258316664/*/1FieFZPRmRm-oLKozCr4ZHkU-CqFSDk3F"}], "price": "AED 348,00 /per Traveller", "room": "One Room", "room_description": "One Bedroom", "stars": 4, "stay_duration": "Apr 21 - Apr 21, 1 night"}, {"Stay": "Sun, Apr 21, 2 poeple", "address": "International Dubai Airport - Terminal 3, Concource A, opposite Gate A1 - Dubai", "facilities": ["Air conditioning", "Wake-up service", "Linens", "Entire unit located on ground floor"], "hotel_description": "Conveniently located opposite Gate A1 at A-Gate (Terminal 3, inside the DXB transit area), the Sleep'n fly Sleep Lounge is inspired by Scandinavian design for comfort, style ans necessity", "id": 2, "name": "Le meridien", "numberAdults": "1 Adult", "numberRoom": "1 Room", "photoCount": 3, "photos": [{"url": "https://doc-0c-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/g147qncu7q1284crr8kf0vkt6denjedn/1555725600000/11429114590258316664/*/1BqkIOov9jj-DcrDWwvTraArcpEzWnaum"}, {"url": "https://doc-0g-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/shqqoravt2af12m54bo8s888ni9kl9pp/1555718400000/11429114590258316664/*/1ahEIMoocW79gu1Tgnit6ibhkCikAHy5Q"}, {"url": "https://doc-14-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/9iftr05026at0pmhrqvo3vlelojnbc7s/1555718400000/11429114590258316664/*/1FieFZPRmRm-oLKozCr4ZHkU-CqFSDk3F"}], "price": "AED 348,00 /per Traveller", "room": "One Room", "room_description": "One Bedroom", "stars": 4, "stay_duration": "Apr 21 - Apr 21, 1 night"}]}
+* select_hotel{"selectedhotelid": "1"}
+    - slot{"selectedhotelid": "1"}
+    - action_book_hotel
+    - slot{"hoteloptions": [{"Stay": "Sun, Apr 21, 2 poeple", "address": "International Dubai Airport - Terminal 3, Concource A, opposite Gate A1 - Dubai", "facilities": ["Air conditioning", "Wake-up service", "Linens", "Entire unit located on ground floor"], "hotel_description": "Conveniently located opposite Gate A1 at A-Gate (Terminal 3, inside the DXB transit area), the Sleep'n fly Sleep Lounge is inspired by Scandinavian design for comfort, style ans necessity", "id": "1", "name": "Sleep n'fly by yarn, sleep lounge", "numberAdults": "1 Adult", "numberRoom": "1 Room", "photoCount": 3, "photos": [{"url": "https://doc-0c-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/g147qncu7q1284crr8kf0vkt6denjedn/1555725600000/11429114590258316664/*/1BqkIOov9jj-DcrDWwvTraArcpEzWnaum"}, {"url": "https://doc-0g-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/shqqoravt2af12m54bo8s888ni9kl9pp/1555718400000/11429114590258316664/*/1ahEIMoocW79gu1Tgnit6ibhkCikAHy5Q"}, {"url": "https://doc-14-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/9iftr05026at0pmhrqvo3vlelojnbc7s/1555718400000/11429114590258316664/*/1FieFZPRmRm-oLKozCr4ZHkU-CqFSDk3F"}], "price": "AED 348,00 /per Traveller", "room": "One Room", "room_description": "One Bedroom", "stars": 4, "stay_duration": "Apr 21 - Apr 21, 1 night"}]}
 

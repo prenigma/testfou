@@ -1,7 +1,3 @@
-## intent:select_flight
-- /select_flight
-
-
 ## intent:affirm
 - yeah a cheap flight
 - correct
@@ -38,6 +34,66 @@
 - what about my luggage?
 - what will you do with my baggage???
 - what should i do with my baggage?
+
+## intent:ask_hotel
+- I am tired I want to sleep
+- search a hotel for me
+- hotel near me
+- search a hotel near me
+- find me a hotel please
+- can you find me a hotel
+- i need a hotel please
+- can you find a hotel
+
+
+## intent:ask_restaurant
+- restaurants
+- can i be shown a gluten free restaurant
+- i want a french restaurant
+- i'm looking for a Chinese restaurant
+- I need a new restaurant
+- help me find restaurant
+- I'm gonna need help finding a restaurant
+- Hey help me find a restaurant
+- How can you help me find a restaurant.
+- Where is the restaurant
+- Show me how to find a restaurant
+- I need to find this restaurant
+- Help me with finding this restaurant
+- Hey, can you help me with locating this restaurant.
+- Find me a place to eat
+- Can you recommend a restaurant open right now
+- What's the closest restaurant open near me
+- I am hungry, find me some place to go
+- Suggest me a good restaurant around
+- Show me the closest open restaurant
+- What's a good place to eat nearby
+- Recommend me a restaurant around here.
+- Pick a restaurant for me, please
+- Help me find a restaurant
+- Can you find a restaurant for me?
+- Find a restaurant for me?
+- Would you find me a restaurant?
+- Would you find a restaurant for me?
+- Could you find me a restaurant?
+- Could you find a restaurant for me?
+- Could you find me a restaurant to eat at?
+- Find a restaurant for me to eat at.
+- Find me a restaurant where I can eat.
+- Find a restaurant for me where I can eat.
+- I need a restaurant.
+- Can you find me a restaurant?
+- Where should I eat?
+- Find me a place to eat
+
+## intent:change_destination
+- can you please book for me a new ticket
+- I want to change my destination
+- change my onward flight destination
+- i want another destination
+- london
+- singapure
+- frankfurt
 
 ## intent:chitchat
 - can you share your boss with me?
@@ -253,6 +309,23 @@
 - i want to fly [tomorrow](departuredate)to [london](destination)in [economy](flightclass)
 - i want to fly t[omorrow ](departuredate:tomorrow)to l[ondon ](destination:london)in e[conomy](flightclass:economy)
 
+## intent:select_flight
+- /select_flight
+
+## intent:select_hotel
+- /select_hotel
+- /select_hotel[{"selectedhotelid":"1"}](selectedhotelid:1)
+
+## intent:select_login
+- /select_login
+
+## intent:select_lounge
+- /select_lounge
+
+## intent:select_restaurant
+- /select_restaurant
+- /select_restaurant[{"selectedrestaurantid":"1"}](selectedrestaurantid:1)
+
 ## intent:start
 - /start
 - /start
@@ -341,6 +414,15 @@
 - okay thanks
 - well done
 - perfect thank you
+
+## intent:upgrade
+- I want to upgrade my onward flight
+- upgrade?
+- Is there any upgrade for my next flight?
+- upgrade my flight
+- upgrade my onward flight
+- upgrade my connection flight
+- possibilities to upgrade?
 
 ## synonym:2
 - two

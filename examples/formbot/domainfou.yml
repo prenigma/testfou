@@ -12,6 +12,14 @@ intents:
   - feedback_negativ
   - great
   - ask_baggage
+  - ask_restaurant
+  - ask_hotel
+  - change_destination
+  - upgrade
+  - select_lounge
+  - select_hotel
+  - select_restaurant
+  - select_flight
 
 
 entities:
@@ -42,6 +50,22 @@ slots:
     type: unfeaturized 
   selectedflight:
     type: unfeaturized
+  headcount:
+    type: unfeaturized
+  username:
+    type: unfeaturized
+  password:
+    type: unfeaturized
+  hoteloptions:
+    type: list
+  restaurantoptions:
+    type: list
+  selectedrestaurantid:
+    type: unfeaturized
+  selectedrestaurant:
+    type: unfeaturized
+  selectedhotelid:
+    type: unfeaturized      
   requested_slot:
     type: unfeaturized
 
@@ -102,6 +126,13 @@ actions:
   - utter_inform_flightsearch
   - utter_askfurtherhelp
   - action_book_flight
+  - action_search_change_destination_flight
+  - action_search_upgrade_flight
+  - action_search_restaurant
+  - action_search_hotel
+  - action_login
+  - action_book_restaurant
+  - action_book_hotel
 
 
 
