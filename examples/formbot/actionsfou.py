@@ -520,7 +520,7 @@ class BookRestaurantActions(Action):
         output_json = json.dumps(proposedFlights)
         print("PROPOSED FLIGHTS: ", output_json)
         dispatcher.utter_message("Perfect, i booked for you a table")
-        return [SlotSet("selectedrestaurant", restaurant)]  
+        return [SlotSet("selectedrestaurant", proposedFlights)]  
 
 class SearchRestaurantsActions(Action):
     def name(self):
