@@ -220,7 +220,7 @@ class LoginAction(Action):
         profile['name'] = username
         profile['photo'] = photolink
         profile['weather'] = 'Clear with periodic 28'
-        profile['language'] = "GERMAN"
+        profile['language'] = "fr-FR"
         milesstatus = {}
         milesstatus['awardmiles'] = "46,000 M"
         milesstatus['statusmiles'] = "30,000"
@@ -598,9 +598,13 @@ class SearchRestaurantsActions(Action):
         }
         ]
 
+        data = {}
+        data['type'] = 'restaurantoptions'
+        data['restaurants'] = restaurants
+        json_data = json.dumps(data)
 
        
-        dispatcher.utter_attachment(restaurants)
+        dispatcher.utter_attachment(json_data)
         return [SlotSet("restaurantoptions", restaurants)]  
 
 
@@ -678,9 +682,14 @@ class SearchHotelsActions(Action):
             "hotel_description": "Conveniently located opposite Gate A1 at A-Gate (Terminal 3, inside the DXB transit area), the Sleep'n fly Sleep Lounge is inspired by Scandinavian design for comfort, style ans necessity"
         }
         ]
+
+        data = {}
+        data['type'] = 'hoteloptions'
+        data['hotels'] = hotels
+        json_data = json.dumps(data)
         
         print("PROPOSED HOTEL: ", hotels)
-        dispatcher.utter_attachment(hotels) 
+        dispatcher.utter_attachment(json_data) 
         return [SlotSet("hoteloptions", hotels)]  
 
 class BookHotelsActions(Action):

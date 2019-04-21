@@ -15,7 +15,7 @@ train-core:
 	python -m rasa_core.train -s data/storiesfou.md -d domainfou.yml -o models/dialoguefou --debug
 
 run-core:
-	python -m rasa_core.run --core models/dialoguefou --nlu models/nlu/currentfou --debug --endpoints endpoints.yml
+	python -m rasa_core.run --enable_api --core models/dialoguefou --nlu models/nlu/currentfou --debug --endpoints endpoints.yml
 
 run-actions:
 	python -m rasa_core_sdk.endpoint --actions actionsfou
