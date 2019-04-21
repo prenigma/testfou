@@ -23,6 +23,8 @@ intents:
   - ask_delayed_flights
   - give_voucher
   - change_language
+  - show_lounge
+  - show_onair_shopping_article
 
 
 entities:
@@ -156,6 +158,8 @@ actions:
   - action_give_voucher
   - action_change_language
   - action_show_voucher
+  - action_show_lounge
+  - action_show_dutyfree_articles
 
 
 

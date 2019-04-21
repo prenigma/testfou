@@ -925,13 +925,27 @@ class ShowVoucherAction(Action):
             "meal":"International Restaurant"
         }
 
-        if(voucher_type=="HOTEL"):
+        sender = (tracker.current_state())["sender_id"]
+        print("USER ID:", sender)
+
+        #sender_id = (tracker.current_state())["sender"]
+        #print("SENDER: ", sender_id)
+        if(sender.lower()=="darshit"):
             voucher = hotel_voucher
+            showoption = "showvoucherhotel"
         else:
             voucher = meal_voucher ## ADD later here if Meal, now not added since slot is not set
+            showoption = "showvouchermeal"
+
+        #if(voucher_type=="HOTEL"):
+        #    voucher = hotel_voucher
+        #   showoption = "showvoucherhotel"
+        #else:
+        #    voucher = meal_voucher ## ADD later here if Meal, now not added since slot is not set
+        #    showoption = "showvouchermeal"
 
         data={}
-        data['type'] = "showvoucher"
+        data['type'] = showoption
         data['voucher'] = voucher
         json_data = json.dumps(data)    
         
@@ -939,6 +953,76 @@ class ShowVoucherAction(Action):
         dispatcher.utter_attachment(json_data)
         return [SlotSet("voucher", voucher)]
               
+
+
+
+#class ShowLoungesAction(Action):
+#
+#    def name(self):
+#        return "action_show_lounge"
+#
+#    def run(self, dispatcher, tracker, domain):
+
+
+
+
+
+class ShowDutyFreeArticles(Action):
+
+    def name(self):
+        return "action_show_dutyfree_articles"
+
+    def run(self, dispatcher, tracker, domain):
+
+        onAir_dutyFree_shopping = [
+        {
+            "id": 1,
+            "photo": "https://imagizer.imageshack.com/img923/986/Bd9b1x.png",
+            "article_name":"Givenchy L'Interdit",
+            "information": "Eau de parfum, 80 ml",
+            "article_category": "FOR WOMEN",
+            "price_AED": "AED 375",
+            "Price_USD": "$ 150"
+        },
+
+        {
+            "id": 2,
+            "photo": "https://imagizer.imageshack.com/img924/8041/i87oKf.png",
+            "article_name":"Giorgio Armani Si Passione",
+            "information": "Eau de parfum, 50 ml",
+            "article_category": "FOR WOMEN",
+            "price_AED": "AED 350",
+            "Price_USD": "$ 96"
+        },
+
+        {
+            "id": 3,
+            "photo": "https://imagizer.imageshack.com/img921/1360/chk4fr.png",
+            "article_name":"Narciso Rodriguez Narciso Rouge",
+            "information": "Eau de parfum, 90 ml",
+            "article_category": "FOR WOMEN",
+            "price_AED": "AED 405",
+            "Price_USD": "$ 112"
+        },
+
+        {
+            "id": 4,
+            "photo": "https://imagizer.imageshack.com/img924/1/aNotN1.png",
+            "article_name":"Jo Melone London",
+            "information": "Cologne, 2 x 30ml",
+            "article_category": "FOR WOMEN",
+            "price_AED": "AED 380",
+            "Price_USD": "$ 105"
+        }
+        ]
+        data={}
+        data['type'] = "showdutyfreearticles"
+        data['articles'] = onAir_dutyFree_shopping
+        json_data = json.dumps(data)    
+        
+        dispatcher.utter_message("Here are some of the articles i found for you")
+        dispatcher.utter_message("If you buy directly buy from the app, i will deliver it to your seat, and then you can pay on the plane")
+        dispatcher.utter_attachment(json_data)
 
 
 

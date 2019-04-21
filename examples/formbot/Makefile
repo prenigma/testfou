@@ -12,7 +12,7 @@ help:
 
 
 train-core:
-	python -m rasa_core.train -s data/storiesfou.md -d domainfou.yml -o models/dialoguefou --debug
+	python -m rasa_core.train -s data/storiesfou.md -d domainfou.yml -o models/dialoguefou --debug --augmentation 0
 
 run-core:
 	python -m rasa_core.run --enable_api --core models/dialoguefou --nlu models/nlu/currentfou --debug --endpoints endpoints.yml

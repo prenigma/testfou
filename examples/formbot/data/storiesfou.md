@@ -55,6 +55,32 @@
 * change_language
     - action_change_language
 
+## show passenger lounge
+* show_lounge
+    - action_show_lounge
+    - action_listen
+
+## show passenger lounge again
+* show_lounge
+    - action_show_lounge
+    - action_listen
+* show_lounge
+    - action_show_lounge
+    - action_listen
+
+## show me articles on aid duty free
+* show_onair_shopping_article
+    - action_show_dutyfree_articles
+    - action_listen
+
+## show me articles on aid duty free again
+* show_onair_shopping_article
+    - action_show_dutyfree_articles
+    - action_listen
+* show_onair_shopping_article
+    - action_show_dutyfree_articles
+    - action_listen    
+
 ## show me my voucher
 * myvoucher
     - action_show_voucher

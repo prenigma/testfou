@@ -371,6 +371,34 @@
 - my restaurant voucher
 - give me my voucher again
 
+## intent:show_lounge
+- i want to go to a lounge
+- a lounge please
+- show me a lounge to go rest
+- i need to work in a lounge
+- i need to have a call in a lounge
+- take me to a lounge
+- is there a lounge you recommend
+- recommend me a lounge
+- i will need to go to a lounge
+- i will need a lounge
+- is there any lounges nearby
+- is there any lounge here
+- let me go to a lounge
+- let me go to a business lounge
+- what about a lounge
+
+## intent:show_onair_shopping_articles
+- i want to buy a gift
+- i want to buy a parfum
+- show me the on air duty free articles
+- i want to buy cigarettes
+- show me articles to buy
+- i want to buy a clock
+- can i buy parfum
+- can i get the list of articles
+- let me see what i can buy
+- would i be possible to buy something from the app
 
 
 
