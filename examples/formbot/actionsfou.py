@@ -220,7 +220,7 @@ class LoginAction(Action):
         profile['name'] = username
         profile['photo'] = photolink
         profile['weather'] = 'Clear with periodic 28'
-        profile['language'] = "fr-FR"
+        profile['language'] = "fr_FR"
         milesstatus = {}
         milesstatus['awardmiles'] = "46,000 M"
         milesstatus['statusmiles'] = "30,000"
