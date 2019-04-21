@@ -861,6 +861,41 @@ class GiveVoucherAction(Action):
         print(text_msg)
         dispatcher.utter_message(text_msg)
 
+class ChangeLanguageAction(Action):
+
+    def name(self):
+        return "action_change_language"
+
+    def run(self, dispatcher, tracker, domain):
+        language = tracker.get_slot("language")
+
+        language_code = self.get_language_code(language)
+
+        data={}
+        data['type'] = "changelanguage"
+        data['language'] = language_code
+        json_data = json.dumps(data)
+
+        print("We will now talk ", language)
+        print("We will now talk language code", language_code)
+        dispatcher.utter_attachment(json_data) 
+        return [SlotSet("language_speak", language_code)]
+
+    def get_language_code(self, language):
+        switcher = {
+        "english": "en_US",
+        "french": "fr_FR",
+        "german": "de_DE",
+        "italian": "it_IT",
+        "russian": "ru_RU",
+        "arabic": "ar_AE",
+        "chinese": "zh_CN"
+        }
+
+        return switcher.get(language.lower(), "Invalid language")    
+
+
+
 
      
      

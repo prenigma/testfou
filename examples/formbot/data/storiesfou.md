@@ -51,6 +51,10 @@
 * give_voucher{"pnr":"XKDFL5", "passenger_id":"1", "voucher_type":"HOTEL"}
     - action_give_voucher
 
+## change language 
+* change_language
+    - action_change_language
+
 ## happy path rebook delayed flight
 * start
     - action_get_flight_details

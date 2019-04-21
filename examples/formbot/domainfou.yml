@@ -22,12 +22,14 @@ intents:
   - select_flight
   - ask_delayed_flights
   - give_voucher
+  - change_language
 
 
 entities:
   - destination
   - flightclass
   - depaturedate
+  - language
 
 
 slots:
@@ -75,7 +77,11 @@ slots:
   passenger_id:
     type: unfeaturized
   voucher_type:
-    type: unfeaturized            
+    type: unfeaturized
+  language_speak:
+    type: unfeaturized
+  language:
+    type: unfeaturized                
   requested_slot:
     type: unfeaturized
 
@@ -145,6 +151,7 @@ actions:
   - action_book_hotel
   - action_get_delayed_flights
   - action_give_voucher
+  - action_change_language
 
 
 

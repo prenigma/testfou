@@ -352,6 +352,43 @@
 - /start
 - /start
 
+## intent:change_language
+- talk to me in [french](language)
+- can you talk [french](language)
+- respond in [french](language)
+- i don't talk your language, can you repeat in [french](language)
+- in [french](language) please
+- talk to me in [german](language)
+- can you talk [german](language)
+- respond in [german](language)
+- i don't talk your language, can you repeat in [german](language)
+- in [german](language) please
+- talk to me in [arabic](language)
+- can you talk [arabic](language)
+- respond in [arabic](language)
+- i don't talk your language, can you repeat in [arabic](language)
+- in [arabic](language) please
+- talk to me in [english](language)
+- can you talk [english](language)
+- respond in [english](language)
+- i don't talk your language, can you repeat in [english](language)
+- in [english](language) please
+- talk to me in [italian](language)
+- can you talk [italian](language)
+- respond in [italian](language)
+- i don't talk your language, can you repeat in [italian](language)
+- in [italian](italian) please
+- talk to me in [russian](language)
+- can you talk [russian](language)
+- respond in [russian](language)
+- i don't talk your language, can you repeat in [russian](language)
+- in [russian](language) please
+- talk to me in [chinese](language)
+- can you talk [chinese](language)
+- respond in [chinese](language)
+- i don't talk your language, can you repeat in [chinese](language)
+- in [chinese](language) please
+
 ## intent:stop
 - ok then you cant help me
 - that was shit, you're not helping
@@ -481,6 +518,10 @@
 ## synonym:london
 - ondon 
 - ondon
+
+## synonym:chinese
+- chineese 
+- chinis
 
 ## synonym:paris
 - aris
