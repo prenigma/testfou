@@ -20,6 +20,7 @@ intents:
   - select_hotel
   - select_restaurant
   - select_flight
+  - select_article
   - ask_delayed_flights
   - give_voucher
   - change_language
@@ -75,6 +76,12 @@ slots:
     type: unfeaturized
   selectedhotelid:
     type: unfeaturized
+  selectedarticleid:
+    type: unfeaturized  
+  selectedloungeid:
+    type: unfeaturized
+  selectedlounge:
+    type: unfeaturized    
   pnr:
     type: unfeaturized
   passenger_id:
@@ -160,6 +167,8 @@ actions:
   - action_show_voucher
   - action_show_lounge
   - action_show_dutyfree_articles
+  - action_book_lounge
+  - action_buy_article
 
 
 

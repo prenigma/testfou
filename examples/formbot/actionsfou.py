@@ -962,7 +962,98 @@ class ShowLoungesAction(Action):
         return "action_show_lounge"
 
     def run(self, dispatcher, tracker, domain):
+        lounges = [
 
+        {
+            "id": 1,
+            "photo": "https://imagizer.imageshack.com/img924/8836/zl7glO.png",
+            "name": "Business Class Lounge",
+            "address": "Terminal 3,Dubai International Airport - Dubai",
+            "title": "Business Class Lounge",
+            "open_now": "Open Now",
+            "open_time":{
+                "Monday": "24 hours open",
+                "Tuesday": "24 hours open",
+                "Wednesday": "24 hours open",
+                "Thursday": "24 hours open",
+                "Friday": "24 hours open",
+                "Saturday": "24 hours open",
+                "Sunday": "24 hours open"
+            },
+            "collaps_hours": "COLLAPS HOURS",
+            "lounge_facilities": "Lounge Facilities",
+            "lounge Facilites": [
+                "Non-Smoking",
+                "Shower",
+                "Beer & Wine",
+                "Newspaper & Magazines",
+                "Spa Services",
+                "TVs",
+                "Wi-Fi"
+            ],
+            "collaps_facilities": "COLLAPS FACILITIES",
+            "description": "In our Business Class Lounge in Dubai International airport Concourse B, you can now enjoy a personalised barista experience with Costa Coffee. A favourite among coffee lovers, Costa Coffee uses a unique blend from sustainably grown beans sourced from responsible farms. Replenish your caffeine levels in stylish surroundings with an espresso, soothe your soul with a fragrant herbal tea or indulge in a fresh pastry or cookie while you wait for your flight to board.",
+            "directions": "Directions",
+            "direction_photo": "https://imagizer.imageshack.com/img921/2062/xugq2v.png"        
+        },
+
+        {
+            "id": 2,
+            "photo": "https://imagizer.imageshack.com/img921/1920/6Y0rGn.png",
+            "name": "First Class Lounge",
+            "address": "Terminal 3,Dubai International Airport - Dubai",
+            "titel": "FIRST Class Lounge",
+            "open_now": "Open Now",
+            "open_time":{
+                "Monday": "24 hours open",
+                "Tuesday": "24 hours open",
+                "Wednesday": "24 hours open",
+                "Thursday": "24 hours open",
+                "Friday": "24 hours open",
+                "Saturday": "24 hours open",
+                "Sunday": "24 hours open"
+            },
+            "collaps_hours": "COLLAPS HOURS",
+            "lounge_facilities": "Lounge Facilities",
+            "lounge Facilites": [
+                "Non-Smoking",
+                "Shower",
+                "Beer & Wine",
+                "Newspaper & Magazines",
+                "Spa Services",
+                "TVs",
+                "Wi-Fi"
+            ],
+            "collaps_facilities": "COLLAPS FACILITIES",
+            "description": "Arrive feeling fully refreshed Our shower spas have everything you need to prepare for the next stage of your journey, including towels, luxury toiletries and hairdryers.",
+            "directions": "Directions",
+            "direction_photo": "https://imagizer.imageshack.com/img923/4965/Es8DNR.png"        
+        }
+        ]
+        data={}
+        data['type'] = "showlounges"
+        data['lounges'] = lounges
+        json_data = json.dumps(data)    
+        
+        dispatcher.utter_message("Here are a some lounges i would recommend")
+        dispatcher.utter_attachment(json_data)
+
+
+
+class BookLoungeAction(Action):
+
+    def name(self):
+        return "action_book_lounge"
+
+    def run(self, dispatcher, tracker, domain):
+        lounges = [{"id": 1, "name": "Business Class Lounge"}, {"id": 2, "name": "First Class Lounge"}]
+        selectedloungeid = tracker.get_slot("selectedloungeid")
+        print("selectedloungeid: ", selectedloungeid)
+        selectedlounge = [flight for flight in lounges if flight['id']==selectedloungeid]
+        print("selectedloungeid: ", selectedloungeid)
+        dispatcher.utter_message("Perfect, i booked for you the requested lounge")
+       
+        return [SlotSet("selectedlounge", selectedlounge)] 
 
 
 
@@ -1025,7 +1116,20 @@ class ShowDutyFreeArticles(Action):
         dispatcher.utter_attachment(json_data)
 
 
+class BuyArticleAction(Action):
 
+    def name(self):
+        return "action_buy_article"
+
+    def run(self, dispatcher, tracker, domain):
+        lounges = [{"id": 1, "name": "Parfum"}, {"id": 2, "name": "Flowers"}]
+        selectedloungeid = tracker.get_slot("selectedarticleid")
+        print("selectedloungeid: ", selectedloungeid)
+        selectedlounge = [flight for flight in lounges if flight['id']==selectedloungeid]
+        print("selectedloungeid: ", selectedloungeid)
+        dispatcher.utter_message("Perfect, the article will be delivered to your seat")
+       
+        #return [SlotSet("selectedarticle", selectedlounge)] 
      
      
      

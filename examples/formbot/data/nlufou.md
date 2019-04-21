@@ -398,6 +398,9 @@
 ## intent:select_lounge
 - /select_lounge
 
+## intent:select_article
+- /select_article
+
 ## intent:select_restaurant
 - /select_restaurant
 - /select_restaurant[{"selectedrestaurantid":"1"}](selectedrestaurantid:1)

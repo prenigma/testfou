@@ -55,6 +55,16 @@
 * change_language
     - action_change_language
 
+## select lounge
+* select_lounge
+    - action_book_lounge
+    - action_listen
+
+## select article
+* select_article
+    - action_buy_article
+    - action_listen
+
 ## show passenger lounge
 * show_lounge
     - action_show_lounge
