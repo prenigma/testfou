@@ -569,3 +569,9 @@
     - slot{"hourdelay": "7"}
     - slot{"headcount": "2"}
 
+## Generated Story -4654606953354447149
+* show_onair_shopping_articles
+    - action_show_dutyfree_articles
+* show_onair_shopping_articles
+    - action_show_dutyfree_articles
+

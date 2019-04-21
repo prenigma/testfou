@@ -24,7 +24,7 @@ intents:
   - give_voucher
   - change_language
   - show_lounge
-  - show_onair_shopping_article
+  - show_onair_shopping_articles
 
 
 entities:

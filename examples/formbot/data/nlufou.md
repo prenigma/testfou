@@ -114,6 +114,43 @@
 - singapure
 - frankfurt
 
+## intent:change_language
+- talk to me in [french](language)
+- can you talk [french](language)
+- respond in [french](language)
+- i don't talk your language, can you repeat in [french](language)
+- in [french](language) please
+- talk to me in [german](language)
+- can you talk [german](language)
+- respond in [german](language)
+- i don't talk your language, can you repeat in [german](language)
+- in [german](language) please
+- talk to me in [arabic](language)
+- can you talk [arabic](language)
+- respond in [arabic](language)
+- i don't talk your language, can you repeat in [arabic](language)
+- in [arabic](language) please
+- talk to me in [english](language)
+- can you talk [english](language)
+- respond in [english](language)
+- i don't talk your language, can you repeat in [english](language)
+- in [english](language) please
+- talk to me in [italian](language)
+- can you talk [italian](language)
+- respond in [italian](language)
+- i don't talk your language, can you repeat in [italian](language)
+- in [italian](italian) please
+- talk to me in [russian](language)
+- can you talk [russian](language)
+- respond in [russian](language)
+- i don't talk your language, can you repeat in [russian](language)
+- in [russian](language) please
+- talk to me in [chinese](language)
+- can you talk [chinese](language)
+- respond in [chinese](language)
+- i don't talk your language, can you repeat in [chinese](language)
+- in [chinese](language) please
+
 ## intent:chitchat
 - can you share your boss with me?
 - i want to get to know your owner
@@ -303,6 +340,25 @@
 - [tomorrow](departuredate) please if possible
 - in [business](flightclass)as usual
 
+## intent:myvoucher
+- where is my voucher?
+- do i have a voucher
+- show me my restaurant voucher
+- show me my meal voucher
+- show me my hotel voucher
+- show me voucher
+- give me voucher
+- hotel voucher
+- restaurant voucher
+- eat voucher
+- sleep voucher
+- can you give me voucher please?
+- give a voucher
+- voucher please
+- show me my voucher please
+- my restaurant voucher
+- give me my voucher again
+
 ## intent:request_flightsearch
 - im looking for a flight ticket
 - i wnat to fly
@@ -330,8 +386,6 @@
 
 ## intent:select_flight
 - /select_flight
-
-# intent:give_voucher
 - /give_voucher
 
 ## intent:select_hotel
@@ -347,29 +401,6 @@
 ## intent:select_restaurant
 - /select_restaurant
 - /select_restaurant[{"selectedrestaurantid":"1"}](selectedrestaurantid:1)
-
-## intent:start
-- /start
-- /start
-
-## intent:myvoucher
-- where is my voucher?
-- do i have a voucher
-- show me my restaurant voucher
-- show me my meal voucher
-- show me my hotel voucher
-- show me voucher
-- give me voucher
-- hotel voucher
-- restaurant voucher
-- eat voucher
-- sleep voucher
-- can you give me voucher please?
-- give a voucher
-- voucher please
-- show me my voucher please
-- my restaurant voucher
-- give me my voucher again
 
 ## intent:show_lounge
 - i want to go to a lounge
@@ -388,7 +419,10 @@
 - let me go to a business lounge
 - what about a lounge
 
+
 ## intent:show_onair_shopping_articles
+- show me articles to buy
+- let me see what i can bu
 - i want to buy a gift
 - i want to buy a parfum
 - show me the on air duty free articles
@@ -400,44 +434,9 @@
 - let me see what i can buy
 - would i be possible to buy something from the app
 
-
-
-## intent:change_language
-- talk to me in [french](language)
-- can you talk [french](language)
-- respond in [french](language)
-- i don't talk your language, can you repeat in [french](language)
-- in [french](language) please
-- talk to me in [german](language)
-- can you talk [german](language)
-- respond in [german](language)
-- i don't talk your language, can you repeat in [german](language)
-- in [german](language) please
-- talk to me in [arabic](language)
-- can you talk [arabic](language)
-- respond in [arabic](language)
-- i don't talk your language, can you repeat in [arabic](language)
-- in [arabic](language) please
-- talk to me in [english](language)
-- can you talk [english](language)
-- respond in [english](language)
-- i don't talk your language, can you repeat in [english](language)
-- in [english](language) please
-- talk to me in [italian](language)
-- can you talk [italian](language)
-- respond in [italian](language)
-- i don't talk your language, can you repeat in [italian](language)
-- in [italian](italian) please
-- talk to me in [russian](language)
-- can you talk [russian](language)
-- respond in [russian](language)
-- i don't talk your language, can you repeat in [russian](language)
-- in [russian](language) please
-- talk to me in [chinese](language)
-- can you talk [chinese](language)
-- respond in [chinese](language)
-- i don't talk your language, can you repeat in [chinese](language)
-- in [chinese](language) please
+## intent:start
+- /start
+- /start
 
 ## intent:stop
 - ok then you cant help me
@@ -556,6 +555,10 @@
 ## synonym:business
 - usiness
 
+## synonym:chinese
+- chineese
+- chinis
+
 ## synonym:economy
 - conomy
 
@@ -568,10 +571,6 @@
 ## synonym:london
 - ondon 
 - ondon
-
-## synonym:chinese
-- chineese 
-- chinis
 
 ## synonym:paris
 - aris

@@ -956,12 +956,12 @@ class ShowVoucherAction(Action):
 
 
 
-#class ShowLoungesAction(Action):
-#
-#    def name(self):
-#        return "action_show_lounge"
-#
-#    def run(self, dispatcher, tracker, domain):
+class ShowLoungesAction(Action):
+
+    def name(self):
+        return "action_show_lounge"
+
+    def run(self, dispatcher, tracker, domain):
 
 
 
