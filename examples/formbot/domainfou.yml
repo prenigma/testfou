@@ -20,6 +20,8 @@ intents:
   - select_hotel
   - select_restaurant
   - select_flight
+  - ask_delayed_flights
+  - give_voucher
 
 
 entities:
@@ -60,12 +62,20 @@ slots:
     type: list
   restaurantoptions:
     type: list
+  delayedflights:
+    type: list  
   selectedrestaurantid:
     type: unfeaturized
   selectedrestaurant:
     type: unfeaturized
   selectedhotelid:
-    type: unfeaturized      
+    type: unfeaturized
+  pnr:
+    type: unfeaturized
+  passenger_id:
+    type: unfeaturized
+  voucher_type:
+    type: unfeaturized            
   requested_slot:
     type: unfeaturized
 
@@ -133,6 +143,8 @@ actions:
   - action_login
   - action_book_restaurant
   - action_book_hotel
+  - action_get_delayed_flights
+  - action_give_voucher
 
 
 

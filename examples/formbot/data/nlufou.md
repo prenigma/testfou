@@ -35,6 +35,26 @@
 - what will you do with my baggage???
 - what should i do with my baggage?
 
+## intent:ask_delayed_flights
+- what are the delayed flights now
+- what are the delayed flights today
+- give me the list of delayed flights
+- give me all delayed flights today
+- give me please all delayed flights now
+- the delayed flights please
+- what flights delayed
+- which floghts delayed today
+- which flights delayed now
+- i want to see the list of delayed flights
+- i want to see the list of delayed flights please
+- please the delayed flights for today
+- delayed flights
+- what are the delayed flights today
+- delayed flights
+- which flights are delayed today?
+- delayed flights please
+- delayed flights please
+
 ## intent:ask_hotel
 - I am tired I want to sleep
 - search a hotel for me
@@ -44,7 +64,6 @@
 - can you find me a hotel
 - i need a hotel please
 - can you find a hotel
-
 
 ## intent:ask_restaurant
 - restaurants
@@ -312,6 +331,9 @@
 ## intent:select_flight
 - /select_flight
 
+# intent:give_voucher
+- /give_voucher
+
 ## intent:select_hotel
 - /select_hotel
 - /select_hotel[{"selectedhotelid":"1"}](selectedhotelid:1)
@@ -423,6 +445,10 @@
 - upgrade my onward flight
 - upgrade my connection flight
 - possibilities to upgrade?
+
+## synonym:1
+- {"selectedhotelid":"1"}
+- {"selectedrestaurantid":"1"}
 
 ## synonym:2
 - two

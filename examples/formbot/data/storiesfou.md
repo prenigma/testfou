@@ -43,6 +43,13 @@
 * select_login{"username": "fouad", "password": "admin"}
     - action_login
 
+## get delayed flights
+* ask_delayed_flights
+    - action_get_delayed_flights
+
+## give vouchers to passengers
+* give_voucher{"pnr":"XKDFL5", "passenger_id":"1", "voucher_type":"HOTEL"}
+    - action_give_voucher
 
 ## happy path rebook delayed flight
 * start
@@ -495,4 +502,27 @@
     - slot{"selectedhotelid": "1"}
     - action_book_hotel
     - slot{"hoteloptions": [{"Stay": "Sun, Apr 21, 2 poeple", "address": "International Dubai Airport - Terminal 3, Concource A, opposite Gate A1 - Dubai", "facilities": ["Air conditioning", "Wake-up service", "Linens", "Entire unit located on ground floor"], "hotel_description": "Conveniently located opposite Gate A1 at A-Gate (Terminal 3, inside the DXB transit area), the Sleep'n fly Sleep Lounge is inspired by Scandinavian design for comfort, style ans necessity", "id": "1", "name": "Sleep n'fly by yarn, sleep lounge", "numberAdults": "1 Adult", "numberRoom": "1 Room", "photoCount": 3, "photos": [{"url": "https://doc-0c-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/g147qncu7q1284crr8kf0vkt6denjedn/1555725600000/11429114590258316664/*/1BqkIOov9jj-DcrDWwvTraArcpEzWnaum"}, {"url": "https://doc-0g-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/shqqoravt2af12m54bo8s888ni9kl9pp/1555718400000/11429114590258316664/*/1ahEIMoocW79gu1Tgnit6ibhkCikAHy5Q"}, {"url": "https://doc-14-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/9iftr05026at0pmhrqvo3vlelojnbc7s/1555718400000/11429114590258316664/*/1FieFZPRmRm-oLKozCr4ZHkU-CqFSDk3F"}], "price": "AED 348,00 /per Traveller", "room": "One Room", "room_description": "One Bedroom", "stars": 4, "stay_duration": "Apr 21 - Apr 21, 1 night"}]}
+
+## Generated Story -1327116923689532971
+* ask_delayed_flights
+    - action_get_delayed_flights
+    - slot{"delayedflights": "{\"type\": \"delayedflights\", \"delayedflights\": [{\"flightNumber\": \"EK 145\", \"flightDelayedPassengers\": [{\"id\": 1, \"number\": \"XKDFK2\", \"birthday\": \"04.04.1981\", \"accompaniedPassengers\": 0, \"statusMiles\": \"30,000\", \"flightSegments\": \"7\", \"eVouchers\": \"2\", \"hasHotel\": true, \"hasMeal\": false}, {\"id\": 2, \"number\": \"XKDFK1\", \"birthday\": \"04.04.1982\", \"accompaniedPassengers\": 0, \"statusMiles\": \"60,000\", \"flightSegments\": \"2\", \"eVouchers\": \"0\", \"hasHotel\": false, \"hasMeal\": true}]}, {\"flightNumber\": \"EK 147\", \"flightDelayedPassengers\": [{\"id\": 1, \"number\": \"XKDFL5\", \"birthday\": \"04.04.1981\", \"accompaniedPassengers\": 0, \"statusMiles\": \"10,000\", \"flightSegments\": \"7\", \"eVouchers\": \"2\", \"hasHotel\": true, \"hasMeal\": false}, {\"id\": 2, \"number\": \"XKDFL6\", \"birthday\": \"04.04.1982\", \"accompaniedPassengers\": 0, \"statusMiles\": \"5,000\", \"flightSegments\": \"2\", \"eVouchers\": \"0\", \"hasHotel\": false, \"hasMeal\": true}]}]}"}
+* ask_delayed_flights
+    - action_get_delayed_flights
+    - slot{"delayedflights": "{\"type\": \"delayedflights\", \"delayedflights\": [{\"flightNumber\": \"EK 145\", \"flightDelayedPassengers\": [{\"id\": 1, \"number\": \"XKDFK2\", \"birthday\": \"04.04.1981\", \"accompaniedPassengers\": 0, \"statusMiles\": \"30,000\", \"flightSegments\": \"7\", \"eVouchers\": \"2\", \"hasHotel\": true, \"hasMeal\": false}, {\"id\": 2, \"number\": \"XKDFK1\", \"birthday\": \"04.04.1982\", \"accompaniedPassengers\": 0, \"statusMiles\": \"60,000\", \"flightSegments\": \"2\", \"eVouchers\": \"0\", \"hasHotel\": false, \"hasMeal\": true}]}, {\"flightNumber\": \"EK 147\", \"flightDelayedPassengers\": [{\"id\": 1, \"number\": \"XKDFL5\", \"birthday\": \"04.04.1981\", \"accompaniedPassengers\": 0, \"statusMiles\": \"10,000\", \"flightSegments\": \"7\", \"eVouchers\": \"2\", \"hasHotel\": true, \"hasMeal\": false}, {\"id\": 2, \"number\": \"XKDFL6\", \"birthday\": \"04.04.1982\", \"accompaniedPassengers\": 0, \"statusMiles\": \"5,000\", \"flightSegments\": \"2\", \"eVouchers\": \"0\", \"hasHotel\": false, \"hasMeal\": true}]}]}"}
+* ask_delayed_flights
+    - action_get_delayed_flights
+    - slot{"delayedflights": "{\"type\": \"delayedflights\", \"delayedflights\": [{\"flightNumber\": \"EK 145\", \"flightDelayedPassengers\": [{\"id\": 1, \"number\": \"XKDFK2\", \"birthday\": \"04.04.1981\", \"accompaniedPassengers\": 0, \"statusMiles\": \"30,000\", \"flightSegments\": \"7\", \"eVouchers\": \"2\", \"hasHotel\": true, \"hasMeal\": false}, {\"id\": 2, \"number\": \"XKDFK1\", \"birthday\": \"04.04.1982\", \"accompaniedPassengers\": 0, \"statusMiles\": \"60,000\", \"flightSegments\": \"2\", \"eVouchers\": \"0\", \"hasHotel\": false, \"hasMeal\": true}]}, {\"flightNumber\": \"EK 147\", \"flightDelayedPassengers\": [{\"id\": 1, \"number\": \"XKDFL5\", \"birthday\": \"04.04.1981\", \"accompaniedPassengers\": 0, \"statusMiles\": \"10,000\", \"flightSegments\": \"7\", \"eVouchers\": \"2\", \"hasHotel\": true, \"hasMeal\": false}, {\"id\": 2, \"number\": \"XKDFL6\", \"birthday\": \"04.04.1982\", \"accompaniedPassengers\": 0, \"statusMiles\": \"5,000\", \"flightSegments\": \"2\", \"eVouchers\": \"0\", \"hasHotel\": false, \"hasMeal\": true}]}]}"}
+* ask_delayed_flights
+    - action_get_delayed_flights
+    - slot{"delayedflights": "{\"type\": \"delayedflights\", \"delayedflights\": [{\"flightNumber\": \"EK 145\", \"flightDelayedPassengers\": [{\"id\": 1, \"number\": \"XKDFK2\", \"birthday\": \"04.04.1981\", \"accompaniedPassengers\": 0, \"statusMiles\": \"30,000\", \"flightSegments\": \"7\", \"eVouchers\": \"2\", \"hasHotel\": true, \"hasMeal\": false}, {\"id\": 2, \"number\": \"XKDFK1\", \"birthday\": \"04.04.1982\", \"accompaniedPassengers\": 0, \"statusMiles\": \"60,000\", \"flightSegments\": \"2\", \"eVouchers\": \"0\", \"hasHotel\": false, \"hasMeal\": true}]}, {\"flightNumber\": \"EK 147\", \"flightDelayedPassengers\": [{\"id\": 1, \"number\": \"XKDFL5\", \"birthday\": \"04.04.1981\", \"accompaniedPassengers\": 0, \"statusMiles\": \"10,000\", \"flightSegments\": \"7\", \"eVouchers\": \"2\", \"hasHotel\": true, \"hasMeal\": false}, {\"id\": 2, \"number\": \"XKDFL6\", \"birthday\": \"04.04.1982\", \"accompaniedPassengers\": 0, \"statusMiles\": \"5,000\", \"flightSegments\": \"2\", \"eVouchers\": \"0\", \"hasHotel\": false, \"hasMeal\": true}]}]}"}
+
+## Generated Story -6511269173217550078
+* ask_delayed_flights
+    - action_get_flight_details
+    - slot{"destination": "London"}
+    - slot{"flightclass": "Economy"}
+    - slot{"passengername": "John"}
+    - slot{"hourdelay": "7"}
+    - slot{"headcount": "2"}
 

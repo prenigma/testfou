@@ -775,8 +775,96 @@ class BookHotelsActions(Action):
        
         return [SlotSet("hoteloptions", proposedFlights)]  
 
+class SearchTasksDeplayedFlightActions(Action):
+    
+    def name(self):
+        return 'action_get_delayed_flights'
+
+    def run(self, dispatcher, tracker, domain):
+
+        flightdelayed1 = {}
+        flightdelayed1['flightNumber'] = "EK 145"
+        flightDelayedPassengers1 =  [
+                    {
+                        "id": 1,
+                        "pnr": 'XKDFK2',
+                        "birthday": '04.04.1981',
+                        "accompaniedPassengers": 0,
+                        "statusMiles": '30,000',
+                        "flightSegments": '7',
+                        "eVouchers": '2',
+                        "hasHotel": True,
+                        "hasMeal": False
+                    },
+                    {
+                        "id": 2,
+                        "pnr": 'XKDFK1',
+                        "birthday": '04.04.1982',
+                        "accompaniedPassengers": 0,
+                        "statusMiles": '60,000',
+                        "flightSegments": '2',
+                        "eVouchers": '0',
+                        "hasHotel": False,
+                        "hasMeal": True
+                    }]
+        flightdelayed1['flightDelayedPassengers'] = flightDelayedPassengers1
+
+        flightdelayed2 = {}
+        flightdelayed2['flightNumber'] = "EK 147"
+        flightDelayedPassengers2 =  [
+                    {
+                        "id": 1,
+                        "pnr": 'XKDFL5',
+                        "birthday": '04.04.1981',
+                        "accompaniedPassengers": 0,
+                        "statusMiles": '10,000',
+                        "flightSegments": '7',
+                        "eVouchers": '2',
+                        "hasHotel": True,
+                        "hasMeal": False
+                    },
+                    {
+                        "id": 2,
+                        "pnr": 'XKDFL6',
+                        "birthday": '04.04.1982',
+                        "accompaniedPassengers": 0,
+                        "statusMiles": '5,000',
+                        "flightSegments": '2',
+                        "eVouchers": '0',
+                        "hasHotel": False,
+                        "hasMeal": True
+                    }]
+        flightdelayed2['flightDelayedPassengers'] = flightDelayedPassengers2              
+
+        flightsDelayed = [flightdelayed1, flightdelayed2]
+       
+        data = {}
+        data['type'] = 'delayedflights'
+        data['delayedflights'] = flightsDelayed
+        json_data = json.dumps(data)
+        
+        print("deplayed flights: ", json_data)
+        dispatcher.utter_attachment(json_data) 
+        return [SlotSet("delayedflights", json_data)]
+
+class GiveVoucherAction(Action):
+
+    def name(self):
+        return "action_give_voucher"
 
 
+    def run(self, dispatcher, tracker, domain):
+        pnr = tracker.get_slot("pnr")
+        passenger_id = tracker.get_slot("passenger_id")
+        voucher_type = tracker.get_slot("voucher_type")
+        text_msg = "We will give passenger "+ pnr + "a voucher of type " + voucher_type
+        print(text_msg)
+        dispatcher.utter_message(text_msg)
+
+
+     
+     
+     
 class FlightSearchForm(FormAction):
     """Example of a custom form action"""
 
