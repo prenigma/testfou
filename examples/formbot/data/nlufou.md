@@ -352,6 +352,28 @@
 - /start
 - /start
 
+## intent:myvoucher
+- where is my voucher?
+- do i have a voucher
+- show me my restaurant voucher
+- show me my meal voucher
+- show me my hotel voucher
+- show me voucher
+- give me voucher
+- hotel voucher
+- restaurant voucher
+- eat voucher
+- sleep voucher
+- can you give me voucher please?
+- give a voucher
+- voucher please
+- show me my voucher please
+- my restaurant voucher
+- give me my voucher again
+
+
+
+
 ## intent:change_language
 - talk to me in [french](language)
 - can you talk [french](language)

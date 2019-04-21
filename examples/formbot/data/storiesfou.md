@@ -55,6 +55,19 @@
 * change_language
     - action_change_language
 
+## show me my voucher
+* myvoucher
+    - action_show_voucher
+    - action_listen
+
+## show me my voucher again
+* myvoucher
+    - action_show_voucher
+    - action_listen
+* myvoucher
+    - action_show_voucher
+    - action_listen    
+
 ## happy path rebook delayed flight
 * start
     - action_get_flight_details

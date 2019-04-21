@@ -896,6 +896,51 @@ class ChangeLanguageAction(Action):
 
 
 
+class ShowVoucherAction(Action):
+
+    def name(self):
+        return "action_show_voucher"
+
+    def run(self, dispatcher, tracker, domain):
+        voucher_type = tracker.get_slot("voucher_type")
+        hotel_voucher = {
+            "name": "Hotel Voucher",
+            "information": "PRESENT THIS VOUCHER AT HOTEL CHECK-IN",
+            "QR_code": "https://imagizer.imageshack.com/img923/6066/56rKD8.png",
+            "passenger_name": "EDWARDS/SOPHIA",
+            "booking_ref": "FPXLJJ",
+            "hottel_name":"LE MERIDIEN",
+            "room_description":"SINGLE",
+            "meal":"BREAKFAST LUNCH"
+        }
+        
+        meal_voucher= {
+            "id": 1,
+            "name": "Meal Voucher",
+            "information": "PRESENT THIS VOUCHER AT RESTAURANT CHECK-IN",
+            "QR_code": "https://imagizer.imageshack.com/img923/6066/56rKD8.png",
+            "passenger_name": "ADAMS/JOHN",
+            "booking_ref": "LJ6GA6",
+            "resttaurantt_name":"Giraffe Stop",
+            "meal":"International Restaurant"
+        }
+
+        if(voucher_type=="HOTEL"):
+            voucher = hotel_voucher
+        else:
+            voucher = meal_voucher ## ADD later here if Meal, now not added since slot is not set
+
+        data={}
+        data['type'] = "showvoucher"
+        data['voucher'] = voucher
+        json_data = json.dumps(data)    
+        
+        dispatcher.utter_message("Here is your {vouchertype} Voucher")
+        dispatcher.utter_attachment(json_data)
+        return [SlotSet("voucher", voucher)]
+              
+
+
 
      
      

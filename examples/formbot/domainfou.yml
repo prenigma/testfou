@@ -30,6 +30,7 @@ entities:
   - flightclass
   - depaturedate
   - language
+  - voucher
 
 
 slots:
@@ -81,7 +82,9 @@ slots:
   language_speak:
     type: unfeaturized
   language:
-    type: unfeaturized                
+    type: unfeaturized
+  voucher:
+    type: unfeaturized                  
   requested_slot:
     type: unfeaturized
 
@@ -152,6 +155,7 @@ actions:
   - action_get_delayed_flights
   - action_give_voucher
   - action_change_language
+  - action_show_voucher
 
 
 
