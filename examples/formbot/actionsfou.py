@@ -183,11 +183,14 @@ class BookFlightActions(Action):
         ]
         selectedflightnumber = tracker.get_slot("selectedflightnumber")
         print("selectedflightnumber: ", selectedflightnumber)
-        proposedFlights = [flight for flight in segments if flight['flight_number'].lower()==selectedflightnumber.lower()]
-        output_json = json.dumps(proposedFlights)
-        print("PROPOSED FLIGHTS: ", output_json)
-        dispatcher.utter_message("Perfect, i rebooked you")
-        return [SlotSet("selectedflight", output_json)]         
+        if(selectedflightnumber is not None):
+            proposedFlights = [flight for flight in segments if flight['flight_number'].lower()==selectedflightnumber.lower()]
+            output_json = json.dumps(proposedFlights)
+            print("PROPOSED FLIGHTS: ", output_json)
+            dispatcher.utter_message("Perfect, i rebooked you")
+            return [SlotSet("selectedflight", output_json)]
+        else:
+            dispatcher.utter_message("Please select a flight")         
 
 class GetPassengerFlightDetails(Action):
     def name(self):
@@ -262,7 +265,7 @@ class LoginAction(Action):
         json_data = json.dumps(data) 
         #description = " we called get passenger flight details "
         dispatcher.utter_attachment(json_data)
-        return [SlotSet("sender_id", username), SlotSet("profile_type", "operations")]   
+        return [SlotSet("profile_type", "operations")]   
 
 class SearchChangeDesttinationFlightsActions(Action):
    def name(self):
@@ -1038,6 +1041,7 @@ class ShowRosterOverviewAction(Action):
         overview["weekday"] = weekDays[weekday] 
         overview["completed_flights_count"] = len(completedflights)
         overview["overdue_flights_count"] = len(overdueflights)
+        data["type"] = "showcrewrosteroverview"
         data['overview'] = overview
         data["completed_flights"] = completedflights
         data["overdue_flights"] = overdueflights
@@ -1079,6 +1083,7 @@ class ShowOverviewTasksOnFlight(Action):
 		}
 	
 	    ]
+        data['type'] = "showcrewonflighttasks"
         data['overview'] = overview
         data['tasks'] = tasks
         json_data = json.dumps(data)
