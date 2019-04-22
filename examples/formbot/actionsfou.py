@@ -218,11 +218,11 @@ class GetPassengerFlightDetails(Action):
 
         destination = "London"
         flightclass = "Economy"
-        passengername = "John"
         hourdelay = "7"
         headcount = "2"
         
         sender = tracker.current_state()['sender_id']
+        passengername = sender
         print("SENDER")
         print(sender)
         #description = " we called get passenger flight details "
@@ -270,7 +270,7 @@ class LoginAction(Action):
         "safa": None,
         "elena": None,
         "wafa": "voucher_hotel", # flight delayed for 8 hours
-        "faizan": "cancelled"
+        "faizan": "voucher_hotel"
         }
 
         return switcher.get(sender.lower(), "Invalid user")    
@@ -305,6 +305,8 @@ class LoginAction(Action):
 
         username = tracker.get_slot("username")
         password = tracker.get_slot("password")
+        sender = (tracker.current_state())["sender_id"]
+        username = sender
 
         photolink = self.get_profile_url(username) 
         data = {}
