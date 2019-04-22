@@ -3,6 +3,10 @@ from typing import Dict, Text, Any, List, Union
 
 import json
 
+from datetime import date
+
+from datetime import datetime
+
 from rasa_core_sdk import ActionExecutionRejection, Action
 from rasa_core_sdk import Tracker
 from rasa_core_sdk.events import SlotSet
@@ -258,7 +262,7 @@ class LoginAction(Action):
         json_data = json.dumps(data) 
         #description = " we called get passenger flight details "
         dispatcher.utter_attachment(json_data)
-        #return [SlotSet("sender_id", username)]   
+        return [SlotSet("sender_id", username), SlotSet("profile_type", "operations")]   
 
 class SearchChangeDesttinationFlightsActions(Action):
    def name(self):
@@ -860,6 +864,286 @@ class GiveVoucherAction(Action):
         text_msg = "We will give passenger "+ pnr + "a voucher of type " + voucher_type
         print(text_msg)
         dispatcher.utter_message(text_msg)
+
+class SearchOverviewVoucherForAFlightActions(Action):
+    
+    def name(self):
+        return 'action_vouchers_for_flight'
+
+    def run(self, dispatcher, tracker, domain):
+
+    
+        flightVouchers = {
+                "id": 1,
+                "number": 'XKDFKR1',
+                "birthday": '04.04.1981',
+                "accompaniedPassengers": 0,
+                "statusMiles": '30,000',
+                "flightSegments": '7',
+                "eVouchers": '2',
+                "hasHotel": True,
+                "hasMeal": False
+            },{
+                "id": 2,
+                "number": 'XKDFKR2',
+                "birthday": '04.04.1982',
+                "accompaniedPassengers": 0,
+                "statusMiles": '50,000',
+                "flightSegments": '2',
+                "eVouchers": '0',
+                "hasHotel": False,
+                "hasMeal": True
+            }
+        flightVouchers2 = {
+                "id": 1,
+                "number": 'FKDFKR1',
+                "birthday": '04.04.1991',
+                "accompaniedPassengers": 0,
+                "statusMiles": '30,000',
+                "flightSegments": '17',
+                "eVouchers": '20',
+                "hasHotel": True,
+                "hasMeal": False
+            },{
+                "id": 2,
+                "number": 'FKDFKR2',
+                "birthday": '04.04.1992',
+                "accompaniedPassengers": 0,
+                "statusMiles": '50,000',
+                "flightSegments": '20',
+                "eVouchers": '0',
+                "hasHotel": False,
+                "hasMeal": True
+            }
+
+        vouchersummary = [
+            {
+            "flightnumber": "EK 144",
+            "vouchers": flightVouchers
+            },
+            {
+            "flightnumber": "EK 145",
+            "vouchers": flightVouchers2    
+            }
+        ]
+        
+         
+        flightnumber = tracker.get_slot('voucherflight')
+        text_msg = "Overview of Vouchers Given to Flight "+flightnumber
+        error_msg = "No data available for the flight you entered "+flightnumber   
+        print("VOUCHER FLIGHT NUMBER ", flightnumber)
+        flightnumber = flightnumber.replace(" ", "")
+        print("VOUCHER FLIGHT NUMBER without spaces", flightnumber)
+        proposedvouchersummary = [flight for flight in vouchersummary if flight["flightnumber"].replace(" ", "").lower()==flightnumber.lower()]
+        print("SIZE ", len(proposedvouchersummary))
+        if (len(proposedvouchersummary) == 0):
+            dispatcher.utter_message(error_msg)
+            return  
+
+        data = {}
+        data['type'] = 'overviewvouchers'
+        data['vouchersummary'] = proposedvouchersummary
+        json_data = json.dumps(data)
+        
+        print("deplayed flights: ", json_data)
+        dispatcher.utter_message(text_msg)
+        dispatcher.utter_attachment(json_data) 
+        #return [SlotSet("delayedflights", json_data)] 
+        # 
+
+class ShowRosterOverviewAction(Action):
+
+    def name(self):
+        return "action_show_roster"
+
+    def run(self, dispatcher, tracker, domain):
+
+        roster_date = tracker.get_slot("roster_date")
+        today = date.today()
+        # dd/mm/YY
+        d1 = today.strftime("%d/%m/%Y")
+
+        if (roster_date is None):
+            print("d1 =", d1)
+            roster_date = d1
+
+        flights = [
+        {
+			"id": 1,
+			"departure_time": "15:45",
+            "arrival_time": "20:15",
+            "departure_airport": "Dubai (DXB)",
+            "arrival_airport": "London (LHR)",
+            "flightdate": "22/04/2019"
+		},
+		{
+			"id": 2,
+			"departure_time": "09:55",
+            "arrival_time": "12:55",
+            "departure_airport": "London (LHR)",
+            "arrival_airport": "Dubai (DXB)",
+            "flightdate": "22/04/2019"
+		},
+		{
+			"id": 3,
+			"departure_time": "17:10",
+            "arrival_time": "21:15",
+            "departure_airport": "Dubai (DXB)",
+            "arrival_airport": "Vienna (VIE)",
+            "flightdate": "22/04/2019"
+		},
+		{
+			"id": 4,
+			"departure_time": "23:45",
+            "arrival_time": "07:20",
+            "departure_airport": "Vienna (VIE)",
+            "arrival_airport": "Dubai (DXB)",
+            "flightdate": "22/04/2019"
+		},
+        {
+			"id": 5,
+			"departure_time": "23:45",
+            "arrival_time": "07:20",
+            "departure_airport": "Vienna (VIE)",
+            "arrival_airport": "Dubai (DXB)",
+            "flightdate": "20/04/2019"
+		},
+        {
+			"id": 6,
+			"departure_time": "23:45",
+            "arrival_time": "07:20",
+            "departure_airport": "Vienna (VIE)",
+            "arrival_airport": "Dubai (DXB)",
+            "flightdate": "20/04/2019"
+		},
+        {
+			"id": 7,
+			"departure_time": "23:45",
+            "arrival_time": "07:20",
+            "departure_airport": "Vienna (VIE)",
+            "arrival_airport": "Dubai (DXB)",
+            "flightdate": "20/04/2019"
+		}
+	
+	    ]
+        overdueflights = [flight for flight in flights if datetime.strptime(flight["flightdate"], '%d/%m/%Y')  >= datetime.strptime(roster_date, '%d/%m/%Y')]
+
+        completedflights = [flight for flight in flights if datetime.strptime(flight["flightdate"], '%d/%m/%Y')  < datetime.strptime(roster_date, '%d/%m/%Y')]
+
+        data = {}
+        overview = {}
+        weekDays = ("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
+        weekday = datetime.strptime(roster_date, '%d/%m/%Y').weekday()
+        print(weekDays[weekday])
+        overview["weekday"] = weekDays[weekday] 
+        overview["completed_flights_count"] = len(completedflights)
+        overview["overdue_flights_count"] = len(overdueflights)
+        data['overview'] = overview
+        data["completed_flights"] = completedflights
+        data["overdue_flights"] = overdueflights
+        json_data = json.dumps(data)
+        
+        print("ROSTER Overview: ", json_data)
+       
+        dispatcher.utter_attachment(json_data) 
+
+
+class ShowOverviewTasksOnFlight(Action):
+
+    def name(self):
+        return "action_show_tasks_onflight"
+
+    def run(self, dispatcher, tracker, domain):
+
+        nextflightnumber = "EK 145" # Change it here to be read from DB
+        data = {}
+        overview = {}
+        overview['title'] = "Tasks for your Flight"
+        overview['flightnumber'] = nextflightnumber
+        tasks = [
+		{
+			"id": 1,
+			"description": "Deliver Article nr. 10 to Seat 04F"
+		},
+		{
+			"id": 2,
+			"description": "Organize a small Birthday-Surprise to Seat 02F :)"
+		},
+		{
+			"id": 3,
+			"description": "Diabetecs, special meal for Seat 02D"
+		},
+		{
+			"id": 4,
+			"description": "Passenger Seat 04A special vegan meal without salt"
+		}
+	
+	    ]
+        data['overview'] = overview
+        data['tasks'] = tasks
+        json_data = json.dumps(data)
+        
+        print("Tasks Overview for CREW: ", json_data)
+       
+        dispatcher.utter_attachment(json_data) 
+
+
+class ShowOperationsTasksAction(Action):
+
+    def name(self):
+        return "action_show_operations_tasks"
+
+    def run(self, dispatcher, tracker, domain):
+        tasks = [
+            {
+                "id": 1,
+                "title": 'Give Vouchers for Distrupted passenger on Flight EK 145',
+                "time": '9:30 AM',
+                "isIndicator": True
+            },
+            {
+                "id": 2,
+                "title": 'Give Vouchers for passenger on delayed Flight EK 146',
+                "subTitle": 'Subtitle',
+                "time": '11:40 AM',
+                "isIndicator": False
+            },
+            {
+                "id": 3,
+                "title": 'Manage expected disruption on Gate B1',
+                "subTitle": 'Subtitle',
+                "time": '11:40 AM',
+                "isIndicator": False
+            },
+            {
+                "id": 4,
+                "title": 'Call Team for Sync Meeting',
+                "subTitle": 'Bad Weather expected tomorrow',
+                "time": '11:40 AM',
+                "isIndicator": False
+            }
+        ]
+        data = {}
+        overview = {}
+        weekDays = ("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
+        today = date.today()
+        # dd/mm/YY
+        d1 = today.strftime("%d/%m/%Y")
+        weekday = datetime.strptime(d1, '%d/%m/%Y').weekday()
+        print(weekDays[weekday])
+        overview["weekday"] = weekDays[weekday] 
+        completed = [task for task in tasks if task['isIndicator'] == True]
+        overdue = [task for task in tasks if task['isIndicator'] == False]
+        overview['completed_count'] = len(completed)
+        overview['overdue_count'] = len(overdue)
+        data['overview'] = overview
+        data['tasks'] = tasks
+
+        json_data = json.dumps(data)
+        
+        print("Tasks Overview for Operations: ", json_data)
+       
+        dispatcher.utter_attachment(json_data)    
 
 class ChangeLanguageAction(Action):
 

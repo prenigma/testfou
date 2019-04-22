@@ -55,6 +55,56 @@
 - delayed flights please
 - delayed flights please
 
+## intent:ask_overview_vouchers
+- give me an overview of vouchers given on flight [EK 144](voucherflight)
+- overview voucher [EK 145](voucherflight)
+- vouchers flight [EK 444](voucherflight)
+- vouchers overview [EK 314](voucherflight)
+- the vouchers for [EK 744](voucherflight)
+- the vouchers given in [EK 944](voucherflight)
+- please show me the vouchers given to [EK 194](voucherflight) today
+- how many vouchers given to [EK 104](voucherflight)
+- summary of vouchers we gave to [EK 141](voucherflight) today
+- summary of the voucher [EK 844](voucherflight)
+
+## intent:ask_flight_plan
+- show me my flights plan
+- show me roster
+- can you show me my flight plan please
+- can you give my roster
+- i want to see my flight plan please
+- give my upcoming flights please
+- please the overview of my flights
+- the roster
+- flight plan
+- my plan overview
+- plan overview
+- my next flights please
+- what are my next flights
+- how does my schedule look like
+- how does my flight plan look like
+- how is my flight plan
+
+## intent:ask_tasks_on_next_flight
+- what are my tasks on this flight
+- what are my tasks for the next flight
+- what do i have to do on my coming flight
+- any tasks i need not to forget
+- tasks for me
+- tasks i need to do on this flight
+- tasks on next flight
+- tasks needed to be done on my flight
+- tasks that has to be done on my flight
+
+
+## intent:show_tasks_operations
+- what are my tasks please
+- what do i have to do today
+- which tasks i have for today
+- what should i do today
+- my tasks please
+
+
 ## intent:ask_hotel
 - I am tired I want to sleep
 - search a hotel for me
@@ -397,6 +447,9 @@
 
 ## intent:select_lounge
 - /select_lounge
+
+## intent:select_date_roster
+- /select_date_roster
 
 ## intent:select_article
 - /select_article

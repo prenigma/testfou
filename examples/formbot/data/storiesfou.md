@@ -42,6 +42,12 @@
 ## login
 * select_login{"username": "fouad", "password": "admin"}
     - action_login
+    - action_listen
+
+## login1
+* select_login{"username": "safa", "password": "pwd"}
+    - action_login
+    - action_listen
 
 ## get delayed flights
 * ask_delayed_flights
@@ -78,6 +84,27 @@
     - action_show_lounge
     - action_listen
 
+## show crew roster
+* ask_flight_plan
+    - action_show_roster
+    - action_listen
+
+## show crew roster from calendar date
+* select_date_roster
+    - action_show_roster
+    - action_listen
+
+## show crew tasks on flight
+* ask_tasks_on_next_flight
+    - action_show_tasks_onflight
+    - action_listen
+
+
+## show operations tasks
+* show_tasks_operations
+    - action_show_operations_tasks
+    - action_listen        
+
 ## show me articles on aid duty free
 * show_onair_shopping_article
     - action_show_dutyfree_articles
@@ -103,6 +130,25 @@
 * myvoucher
     - action_show_voucher
     - action_listen    
+
+## ask vouchers overview for a flight
+* ask_overview_vouchers
+    - action_vouchers_for_flight
+    - action_listen
+
+## ask vouchers overview for a flight again
+* ask_overview_vouchers
+    - action_vouchers_for_flight
+    - action_listen
+* ask_overview_vouchers
+    - action_vouchers_for_flight
+    - action_listen
+* ask_delayed_flights
+    - action_get_flight_details        
+    - action_listen
+* ask_overview_vouchers
+    - action_vouchers_for_flight
+    - action_listen
 
 ## happy path rebook delayed flight
 * start

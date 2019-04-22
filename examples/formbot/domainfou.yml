@@ -21,11 +21,15 @@ intents:
   - select_restaurant
   - select_flight
   - select_article
+  - select_date_roster
   - ask_delayed_flights
   - give_voucher
   - change_language
   - show_lounge
   - show_onair_shopping_articles
+  - ask_overview_vouchers
+  - ask_flight_plan
+  - ask_tasks_on_next_flight
 
 
 entities:
@@ -34,6 +38,8 @@ entities:
   - depaturedate
   - language
   - voucher
+  - voucherflight
+  - profiletype
 
 
 slots:
@@ -93,7 +99,13 @@ slots:
   language:
     type: unfeaturized
   voucher:
-    type: unfeaturized                  
+    type: unfeaturized
+  voucherflight:
+    type: unfeaturized
+  roster_date:
+    type: unfeaturized
+  profile_type:
+    type: unfeaturized                        
   requested_slot:
     type: unfeaturized
 
@@ -169,6 +181,10 @@ actions:
   - action_show_dutyfree_articles
   - action_book_lounge
   - action_buy_article
+  - action_vouchers_for_flight
+  - action_show_roster
+  - action_show_tasks_onflight
+  - action_show_operations_tasks
 
 
 
