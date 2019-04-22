@@ -1178,7 +1178,10 @@ class ChangeLanguageAction(Action):
         "italian": "it_IT",
         "russian": "ru_RU",
         "arabic": "ar_AE",
-        "chinese": "zh_CN"
+        "chinese": "zh_CN",
+        "hindi": "hi",
+        "greek": "el",
+        "spanish": "es_ES"
         }
 
         return switcher.get(language.lower(), "Invalid language")    
