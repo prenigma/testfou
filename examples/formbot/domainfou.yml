@@ -30,6 +30,8 @@ intents:
   - ask_overview_vouchers
   - ask_flight_plan
   - ask_tasks_on_next_flight
+  - navigate_to_gate
+  - myvoucher
 
 
 entities:
@@ -105,13 +107,23 @@ slots:
   roster_date:
     type: unfeaturized
   profile_type:
-    type: unfeaturized                        
+    type: unfeaturized
+  flightstatus:
+    type: unfeaturized
+  changedestination:
+    type: unfeaturized
+  upgradedclass:
+    type: unfeaturized                              
   requested_slot:
     type: unfeaturized
 
 templates:
   utter_ask_destination:
     - text: "what destination?"
+  utter_ask_upgrade_payment:
+    - text: "Do you want to pay "
+  utter_confirm_upgrade:
+    - text : "Perfect i upgraded you to {upgradedclass}"    
   utter_ask_flightclass:
     - text: "in which class?"
   utter_ask_departuredate:
@@ -185,6 +197,10 @@ actions:
   - action_show_roster
   - action_show_tasks_onflight
   - action_show_operations_tasks
+  - action_show_way_to_gate
+  - utter_ask_destination
+  - utter_ask_upgrade_payment
+  - utter_confirm_upgrade
 
 
 

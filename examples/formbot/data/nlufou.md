@@ -55,6 +55,16 @@
 - delayed flights please
 - delayed flights please
 
+## intent:navigate_to_gate
+- please navigate me to my gate
+- i want to go to my gate
+- show me how to go to my gate
+- i need to catch my plane get me to the gate
+- way to gate
+- the way to the gate please
+- show me the way to my gate
+- how can i find my gate
+
 ## intent:ask_overview_vouchers
 - give me an overview of vouchers given on flight [EK 144](voucherflight)
 - overview voucher [EK 145](voucherflight)

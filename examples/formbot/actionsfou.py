@@ -192,6 +192,24 @@ class BookFlightActions(Action):
         else:
             dispatcher.utter_message("Please select a flight")         
 
+
+class ShowWayToGateAction(Action):
+
+    def name(self):
+        return "action_show_way_to_gate"
+
+
+    def run(self, dispatcher, tracker, domain):
+
+        data = {}
+        data['type'] = "showwaytogate"
+
+        json_data = json.dumps(data) 
+        #description = " we called get passenger flight details "
+        dispatcher.utter_attachment(json_data)
+
+
+
 class GetPassengerFlightDetails(Action):
     def name(self):
         return 'action_get_flight_details'
@@ -217,11 +235,78 @@ class LoginAction(Action):
     def name(self):
         return 'action_login'
 
+    def get_profile_url(self, sender):
+        switcher = {
+        "fouad": "https://storage.googleapis.com/fouimages/FouadOmri_photo.png",
+        "rami": "https://storage.googleapis.com/fouimages/Photos/profile/RamiElSamra.png",
+        "jisha": "https://storage.googleapis.com/fouimages/Photos/profile/JishaRoux.png",
+        "safa": "https://storage.googleapis.com/fouimages/Photos/profile/SafaOmri.jpg",
+        "elena": "https://storage.googleapis.com/fouimages/Photos/profile/ElenaKalimera.jpg",
+        "wafa": "https://storage.googleapis.com/fouimages/Photos/profile/wafaomri.png",
+        "faizan": "zh_CN"
+        }
+
+        return switcher.get(sender.lower(), "Invalid user")
+
+    def get_flight_status(self, sender):
+        switcher = {
+        "fouad": "delayed",
+        "rami": "cancelled",
+        "jisha": "delayed",
+        "safa": "ontime",
+        "elena": "ontime",
+        "wafa": "delayed",
+        "faizan": "cancelled"
+        }
+
+        return switcher.get(sender.lower(), "Invalid user")
+
+
+    def get_voucher_type(self, sender):
+        switcher = {
+        "fouad": None,
+        "rami": "voucher_hotel",
+        "jisha": "voucher_meal", # flight delayed for 4 hours
+        "safa": None,
+        "elena": None,
+        "wafa": "voucher_hotel", # flight delayed for 8 hours
+        "faizan": "cancelled"
+        }
+
+        return switcher.get(sender.lower(), "Invalid user")    
+
+    def get_preferred_language(self, sender):
+        switcher = {
+        "fouad": "de_DE",
+        "rami": "ar_AE",
+        "jisha": "fr_FR",
+        "safa": "de_DE",
+        "elena": "el",
+        "wafa": "hi",
+        "faizan": "es_US"
+        }
+
+        return switcher.get(sender.lower(), "Invalid user")
+
+    def get_profile_type(self, sender):
+        switcher = {
+        "fouad": "crew",
+        "rami": "passenger",
+        "jisha": "passenger",
+        "safa": "crew",
+        "elena": "passenger",
+        "wafa": "passenger",
+        "faizan": "passenger"
+        }
+
+        return switcher.get(sender.lower(), "Invalid user")               
+
     def run(self, dispatcher, tracker, domain):
 
         username = tracker.get_slot("username")
         password = tracker.get_slot("password")
-        photolink = 'https://doc-0k-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/7sl1nkb3c9ek1rhpbtit7gsfhbjjd7f9/1555725600000/11429114590258316664/*/1usBdf8hMCTBFhtkwlVAvOgiTi7HWEqjY' 
+
+        photolink = self.get_profile_url(username) 
         data = {}
         profile = {}
         profile['name'] = username
@@ -261,11 +346,15 @@ class LoginAction(Action):
         profile['activities'] = activities
 
         data['sender'] = username
+        data['flightstatus'] = self.get_flight_status(username)
+        data['preferredlanguage'] = self.get_preferred_language(username)
+        data['profiletype'] = self.get_profile_type(username)
+        data['voucher'] = self.get_voucher_type(username)
         data['profile'] = profile
         json_data = json.dumps(data) 
         #description = " we called get passenger flight details "
         dispatcher.utter_attachment(json_data)
-        return [SlotSet("profile_type", "operations")]   
+        return [SlotSet("profile_type", self.get_profile_type(username)), SlotSet("flightstatus", self.get_flight_status(username)), SlotSet("voucher", self.get_voucher_type(username))]   
 
 class SearchChangeDesttinationFlightsActions(Action):
    def name(self):
@@ -458,16 +547,16 @@ class BookRestaurantActions(Action):
             "photoCount": 3,
             "photos": [
                 {
-                    "url": "https://doc-0k-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/ub92u1vofsvsou59ri3mbm5gq3jfckkk/1555725600000/11429114590258316664/*/1Khq6ncv3CRwW1B2bHPEoSUG-oS5a7OPZ",
+                    "url": "https://storage.googleapis.com/fouimages/Photos/restaurants/paul/paul1.jpg",
 
                 },
 
                 {
-                    "url": "https://doc-0s-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/dcruvqc2ttls5e4i2r91t8ib2q3h5adt/1555725600000/11429114590258316664/*/117xov5OqO8AclNi5BOcguAPy6XRjDTEO"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/restaurants/paul/paul2.JPG"
                 },
 
                 {
-                    "url": "https://doc-0o-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/po701g4t0mkiesg0ip287gsslephi4ee/1555725600000/11429114590258316664/*/1h3Aqx1Ja1-EoSldvHejhMXstTnCWkdWP"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/restaurants/paul/paul3.jpg"
                 }
             ],
             "address": "Concourse B,Terminal 3,Dubai International Airport - Dubai",
@@ -493,16 +582,16 @@ class BookRestaurantActions(Action):
             "photoCount": 3,
             "photos": [
                 {
-                    "url": "https://doc-04-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/a76ujr439avju72a6s7mqm59jaujljj3/1555725600000/11429114590258316664/*/1CEdYSP_Q5LO8wgjcYHvpV0EVVkU6B7eC"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/restaurants/hardrock/hardrock1.jpeg"
 
                 },
 
                 {
-                    "url": "https://doc-0o-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/v0uudi4johan6fg37s0qjjobct8cnfau/1555725600000/11429114590258316664/*/1APP8Qz5lwgO6-ZIUgTmIcY0qBnpMsJ2x"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/restaurants/hardrock/hardrock2.jpeg"
                 },
 
                 {
-                    "url": "https://doc-08-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/47cfrnu2pghv96i7dpjr40hs7fpenhpo/1555725600000/11429114590258316664/*/1-NXaVrNAH-KMn5QffbDvTtNiYrXfhsTt"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/restaurants/hardrock/hardrock3.jpeg"
                 }
             ],
             "address": "Gate 25, Terminal 3 - Dubai International Airport Concourse B - Dubai",
@@ -543,16 +632,16 @@ class SearchRestaurantsActions(Action):
             "photoCount": 3,
             "photos": [
                 {
-                    "url": "https://doc-0k-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/ub92u1vofsvsou59ri3mbm5gq3jfckkk/1555725600000/11429114590258316664/*/1Khq6ncv3CRwW1B2bHPEoSUG-oS5a7OPZ",
+                    "url": "https://storage.googleapis.com/fouimages/Photos/restaurants/paul/paul1.jpg",
 
                 },
 
                 {
-                    "url": "https://doc-0s-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/dcruvqc2ttls5e4i2r91t8ib2q3h5adt/1555725600000/11429114590258316664/*/117xov5OqO8AclNi5BOcguAPy6XRjDTEO"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/restaurants/paul/paul2.JPG"
                 },
 
                 {
-                    "url": "https://doc-0o-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/po701g4t0mkiesg0ip287gsslephi4ee/1555725600000/11429114590258316664/*/1h3Aqx1Ja1-EoSldvHejhMXstTnCWkdWP"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/restaurants/paul/paul3.jpg"
                 }
             ],
             "address": "Concourse B,Terminal 3,Dubai International Airport - Dubai",
@@ -578,16 +667,16 @@ class SearchRestaurantsActions(Action):
             "photoCount": 3,
             "photos": [
                 {
-                    "url": "https://doc-04-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/a76ujr439avju72a6s7mqm59jaujljj3/1555725600000/11429114590258316664/*/1CEdYSP_Q5LO8wgjcYHvpV0EVVkU6B7eC"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/restaurants/hardrock/hardrock1.jpeg"
 
                 },
 
                 {
-                    "url": "https://doc-0o-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/v0uudi4johan6fg37s0qjjobct8cnfau/1555725600000/11429114590258316664/*/1APP8Qz5lwgO6-ZIUgTmIcY0qBnpMsJ2x"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/restaurants/hardrock/hardrock2.jpeg"
                 },
 
                 {
-                    "url": "https://doc-08-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/47cfrnu2pghv96i7dpjr40hs7fpenhpo/1555725600000/11429114590258316664/*/1-NXaVrNAH-KMn5QffbDvTtNiYrXfhsTt"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/restaurants/hardrock/hardrock3.jpeg"
                 }
             ],
             "address": "Gate 25, Terminal 3 - Dubai International Airport Concourse B - Dubai",
@@ -604,7 +693,6 @@ class SearchRestaurantsActions(Action):
             }
         }
         ]
-
         data = {}
         data['type'] = 'restaurantoptions'
         data['restaurants'] = restaurants
@@ -634,15 +722,15 @@ class SearchHotelsActions(Action):
             "photoCount": 3,
             "photos": [
                 {
-                    "url": "https://doc-0c-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/g147qncu7q1284crr8kf0vkt6denjedn/1555725600000/11429114590258316664/*/1BqkIOov9jj-DcrDWwvTraArcpEzWnaum"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/hotels/hotel_sleepnfly/hotel_sleepnfly1.jpg"
                 },
 
                 {
-                    "url": "https://doc-0g-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/shqqoravt2af12m54bo8s888ni9kl9pp/1555718400000/11429114590258316664/*/1ahEIMoocW79gu1Tgnit6ibhkCikAHy5Q"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/hotels/hotel_sleepnfly/hotel_sleepnfly2.jpg"
                 },
 
                 {
-                    "url": "https://doc-14-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/9iftr05026at0pmhrqvo3vlelojnbc7s/1555718400000/11429114590258316664/*/1FieFZPRmRm-oLKozCr4ZHkU-CqFSDk3F"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/hotels/hotel_sleepnfly/hotel_sleepnfly3.jpg"
                 }
             ],
             "Stay": "Sun, Apr 21, 2 poeple",
@@ -667,15 +755,15 @@ class SearchHotelsActions(Action):
             "photoCount": 3,
             "photos": [
                 {
-                    "url": "https://doc-0c-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/g147qncu7q1284crr8kf0vkt6denjedn/1555725600000/11429114590258316664/*/1BqkIOov9jj-DcrDWwvTraArcpEzWnaum"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/hotels/hotel_leMeridien/hotel_leMeridien1.png"
                 },
 
                 {
-                    "url": "https://doc-0g-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/shqqoravt2af12m54bo8s888ni9kl9pp/1555718400000/11429114590258316664/*/1ahEIMoocW79gu1Tgnit6ibhkCikAHy5Q"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/hotels/hotel_leMeridien/hotel_leMeridien2.png"
                 },
 
                 {
-                    "url": "https://doc-14-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/9iftr05026at0pmhrqvo3vlelojnbc7s/1555718400000/11429114590258316664/*/1FieFZPRmRm-oLKozCr4ZHkU-CqFSDk3F"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/hotels/hotel_leMeridien/hotel_leMeridien3.png"
                 }
             ],
             "Stay": "Sun, Apr 21, 2 poeple",
@@ -706,7 +794,7 @@ class BookHotelsActions(Action):
     def run(self, dispatcher, tracker, domain):
         hotels= [
         {
-            "id": "1",
+            "id": 1,
             "name": "Sleep n'fly by yarn, sleep lounge",
             "address": "International Dubai Airport - Terminal 3, Concource A, opposite Gate A1 - Dubai",
             "stars": 4,
@@ -718,15 +806,15 @@ class BookHotelsActions(Action):
             "photoCount": 3,
             "photos": [
                 {
-                    "url": "https://doc-0c-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/g147qncu7q1284crr8kf0vkt6denjedn/1555725600000/11429114590258316664/*/1BqkIOov9jj-DcrDWwvTraArcpEzWnaum"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/hotels/hotel_sleepnfly/hotel_sleepnfly1.jpg"
                 },
 
                 {
-                    "url": "https://doc-0g-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/shqqoravt2af12m54bo8s888ni9kl9pp/1555718400000/11429114590258316664/*/1ahEIMoocW79gu1Tgnit6ibhkCikAHy5Q"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/hotels/hotel_sleepnfly/hotel_sleepnfly2.jpg"
                 },
 
                 {
-                    "url": "https://doc-14-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/9iftr05026at0pmhrqvo3vlelojnbc7s/1555718400000/11429114590258316664/*/1FieFZPRmRm-oLKozCr4ZHkU-CqFSDk3F"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/hotels/hotel_sleepnfly/hotel_sleepnfly3.jpg"
                 }
             ],
             "Stay": "Sun, Apr 21, 2 poeple",
@@ -739,7 +827,7 @@ class BookHotelsActions(Action):
             "room": "One Room",
             "hotel_description": "Conveniently located opposite Gate A1 at A-Gate (Terminal 3, inside the DXB transit area), the Sleep'n fly Sleep Lounge is inspired by Scandinavian design for comfort, style ans necessity"
         },
-         {  "id": "2",
+         {  "id":2,
             "name": "Le meridien",
             "address": "International Dubai Airport - Terminal 3, Concource A, opposite Gate A1 - Dubai",
             "stars": 4,
@@ -751,15 +839,15 @@ class BookHotelsActions(Action):
             "photoCount": 3,
             "photos": [
                 {
-                    "url": "https://doc-0c-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/g147qncu7q1284crr8kf0vkt6denjedn/1555725600000/11429114590258316664/*/1BqkIOov9jj-DcrDWwvTraArcpEzWnaum"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/hotels/hotel_leMeridien/hotel_leMeridien1.png"
                 },
 
                 {
-                    "url": "https://doc-0g-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/shqqoravt2af12m54bo8s888ni9kl9pp/1555718400000/11429114590258316664/*/1ahEIMoocW79gu1Tgnit6ibhkCikAHy5Q"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/hotels/hotel_leMeridien/hotel_leMeridien2.png"
                 },
 
                 {
-                    "url": "https://doc-14-98-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/9iftr05026at0pmhrqvo3vlelojnbc7s/1555718400000/11429114590258316664/*/1FieFZPRmRm-oLKozCr4ZHkU-CqFSDk3F"
+                    "url": "https://storage.googleapis.com/fouimages/Photos/hotels/hotel_leMeridien/hotel_leMeridien3.png"
                 }
             ],
             "Stay": "Sun, Apr 21, 2 poeple",
@@ -773,7 +861,6 @@ class BookHotelsActions(Action):
             "hotel_description": "Conveniently located opposite Gate A1 at A-Gate (Terminal 3, inside the DXB transit area), the Sleep'n fly Sleep Lounge is inspired by Scandinavian design for comfort, style ans necessity"
         }
         ]
-
         selectedflightnumber = tracker.get_slot("selectedhotelid")
         print("selectedhotelid: ", selectedflightnumber)
         proposedFlights = [flight for flight in hotels if flight['id']==selectedflightnumber]
@@ -945,6 +1032,9 @@ class SearchOverviewVoucherForAFlightActions(Action):
 
         data = {}
         data['type'] = 'overviewvouchers'
+        data['totalnumberpassenger'] = 380
+        data['totalhotelvouchers'] = 100
+        data['totalmealvouchers'] = 77
         data['vouchersummary'] = proposedvouchersummary
         json_data = json.dumps(data)
         
@@ -1241,9 +1331,9 @@ class ShowVoucherAction(Action):
         data['voucher'] = voucher
         json_data = json.dumps(data)    
         
-        dispatcher.utter_message("Here is your {vouchertype} Voucher")
+        dispatcher.utter_message("Here is your Voucher")
         dispatcher.utter_attachment(json_data)
-        return [SlotSet("voucher", voucher)]
+        #return [SlotSet("voucher", voucher)]
               
 
 
@@ -1258,7 +1348,7 @@ class ShowLoungesAction(Action):
 
         {
             "id": 1,
-            "photo": "https://imagizer.imageshack.com/img924/8836/zl7glO.png",
+            "photo": "https://storage.googleapis.com/fouimages/Photos/lounges/EmiraresBusiness%20ClassLounge.png",
             "name": "Business Class Lounge",
             "address": "Terminal 3,Dubai International Airport - Dubai",
             "title": "Business Class Lounge",
