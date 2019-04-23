@@ -164,15 +164,33 @@
 - Can you find me a restaurant?
 - Where should I eat?
 - Find me a place to eat
+- i want to eat something
+- i want to eat
+- i am hungry
+- i'm hungry show me please where to eat
+- hungry and want to eat
+- can you recommend a place to eat italian
+- i want to eat libanese
+- i want some arabic food
+- recomemnd please some local food
+- very hungry
+- willing to eat something
+- willing to grab something to eat
+- any fastfood nearby
+- food please
+
 
 ## intent:change_destination
 - can you please book for me a new ticket
 - I want to change my destination
 - change my onward flight destination
 - i want another destination
-- london
-- singapure
-- frankfurt
+- to [london](changedestination) please
+- rebook me to [singapure](changedestination) please
+- can you rebook me to [frankfurt](changedestination)
+- change my flight to [paris](changedestination)
+- put me on the flight to [miami](changedestination) 
+- i want a different flight destination
 
 ## intent:change_language
 - talk to me in [french](language)
@@ -210,6 +228,26 @@
 - respond in [chinese](language)
 - i don't talk your language, can you repeat in [chinese](language)
 - in [chinese](language) please
+- you can speak [English](language)
+- you can speak [chinese](language)
+- you can speak [french](language)
+- you can speak [hindi](language)
+- you can speak [russian](language)
+- can you talk [hindi](language)
+- talk [hindi](language) with me
+- talk [french](language) 
+- talk [english](language)
+- talk [arabic](language)
+- let us switch to [english](language)
+- let us switch to [russian](language)
+- let us switch to [spanish](language)
+- let us switch to [hindi](language)
+- switch to [hindi](language)
+- switch to [french](language)
+- switch to [spanish](language)
+- switch to [chinese](language)
+- switch to [arabic](language)
+
 
 ## intent:chitchat
 - can you share your boss with me?
@@ -354,21 +392,21 @@
 - Hello
 
 ## intent:inform
-- to [london](destination) please
-- how bout [toronto](destination)
-- what about [new york](destination) maybe
-- uh how about [paris](destination)
-- um [frankfurt](destination)
-- im looking for a ticket to [moscow](destination)
-- id like to [rome](destination)
-- [London](destination)
-- [Moscow](destination) as for now
-- looking to fly to [new york](destination)
-- book me to [new york](destination)
-- put me on a plane to [madrid](destination)
-- my travel will to [barcelona](destination)
-- i have a meeting in [tunis](destination)
-- i need to be in [larnaca](destination)
+- to [london](changedestination) please
+- how bout [toronto](changedestination)
+- what about [new york](changedestination) maybe
+- uh how about [paris](changedestination)
+- um [frankfurt](changedestination)
+- im looking for a ticket to [moscow](changedestination)
+- id like to [rome](changedestination)
+- [London](changedestination)
+- [Moscow](changedestination) as for now
+- looking to fly to [new york](changedestination)
+- book me to [new york](changedestination)
+- put me on a plane to [madrid](changedestination)
+- my travel will to [barcelona](changedestination)
+- i have a meeting in [tunis](changedestination)
+- i need to be in [larnaca](changedestination)
 - in [economy](flightclass) please
 - how bout [first](flightclass)
 - what about [business](flightclass) maybe
@@ -383,8 +421,8 @@
 - book me in [economy](flightclass)
 - book me to [first](flightclass) class
 - my travel will in [economy](flightclass)
-- i have a meeting in [tunis](destination)
-- i need to be in [larnaca](destination)
+- i have a meeting in [tunis](changedestination)
+- i need to be in [larnaca](changedestination)
 - [tomrrow](departuredate) please
 - how bout [Monday next week](departuredate)
 - what about [in two weeks from now](departuredate) maybe
@@ -396,7 +434,7 @@
 - [this month](departuredate) please
 - [day after tomorrow](departuredate) as for now
 - looking to fly [friday](departuredate)
-- [london](destination)
+- [london](changedestination)
 - [tomorrow](departuredate) please if possible
 - in [business](flightclass)as usual
 

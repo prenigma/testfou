@@ -14,6 +14,13 @@ from rasa_core_sdk.executor import CollectingDispatcher
 from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT
 
 
+
+
+
+
+
+
+
 class SearchFlightsActions(Action):
     def name(self):
         return 'action_search_flight'
@@ -108,7 +115,63 @@ class SearchFlightsActions(Action):
         json_data = json.dumps(data)
         #dispatcher.utter_message(output_json)
         dispatcher.utter_attachment(json_data)
-        return [SlotSet("flightoptions", json_data)]   
+        return [SlotSet("flightoptions", json_data)]
+
+class GreetingAction(Action):
+
+    def name(self):
+        return "action_greet"
+
+    def get_message_type(self, flightstatus, passengername, destination, hourdelay):
+        switcher = {
+        "delayed": "Welcome "+passengername+" to Dubai! Sorry your connecting flight to "+destination+" will be delayed for more than "+hourdelay+" hours",
+        "cancelled": "Welcome "+passengername +" to Dubai! Sorry your connecting flight to "+destination+" has been cancelled"
+        }
+
+        return switcher.get(flightstatus.lower(), "Welcome "+passengername + "to Dubai!")        
+    
+    
+    def run(self, dispatcher, tracker, domain):
+
+       flightstatus = tracker.get_slot("flightstatus")
+       passengername = tracker.current_state()['sender_id']
+       destination = tracker.get_slot("destination")
+       hourdelay = tracker.get_slot("hourdelay")
+
+       text_msg = self.get_message_type(flightstatus, passengername, destination, hourdelay)
+
+       dispatcher.utter_message(txt_msg) 
+
+
+class InformFlightSearchAction(Action):
+
+    def name(self):
+        return "action_inform_flight_search"
+
+
+    def get_message_type(self, flightstatus):
+        switcher = {
+        "delayed": "I will search for you the next possible flight to "+destination+" and there will be no extra fees for the rebooking",
+        "cancelled": "I will search for you the next possible flight to "+destination+" and there will be no extra fees for the rebooking"
+        }
+
+        return switcher.get(flightstatus.lower(), "Welcome "+passengername + "to Dubai!")          
+
+    def run(self, dispatcher, tracker, domain):
+
+        flightstatus = tracker.get_slot("flightstatus")
+        chengedestination = tracker.get_slot("changedestination")
+
+        text_msg = self.get_message_type(flightstatus)
+
+        dispatcher.utter_message(txt_msg)
+        if(chengedestination is not None):
+            further_msg = "I will search for you the next possible flights to your new "+chengedestination
+            dispatcher.utter_message(further_msg)
+
+
+
+
 
 class BookFlightActions(Action):
     def name(self):
@@ -187,6 +250,9 @@ class BookFlightActions(Action):
             proposedFlights = [flight for flight in segments if flight['flight_number'].lower()==selectedflightnumber.lower()]
             output_json = json.dumps(proposedFlights)
             print("PROPOSED FLIGHTS: ", output_json)
+            upgradedask = tracker.get_slot("upgradedask")
+            if(upgradedask is not None):
+               dispatcher.utter_message("The upgrade is done and you will receive the receipt per email") 
             dispatcher.utter_message("Perfect, i rebooked you")
             return [SlotSet("selectedflight", output_json)]
         else:
@@ -299,7 +365,71 @@ class LoginAction(Action):
         "faizan": "passenger"
         }
 
-        return switcher.get(sender.lower(), "Invalid user")               
+        return switcher.get(sender.lower(), "Invalid user")
+
+    def get_profile_PNR(self, sender):
+        switcher = {
+        "fouad": "XLKD19",
+        "rami": "XLKD18",
+        "jisha": "XLKD17",
+        "safa": "XLKD16",
+        "elena": "XLKD15",
+        "wafa": "XLKD14",
+        "faizan": "XLKD13"
+        }
+
+        return switcher.get(sender.lower(), "Invalid user")
+    def get_last_name(self, sender):
+        switcher = {
+        "fouad": "omri",
+        "rami": "elsamra",
+        "jisha": "roux",
+        "safa": "omri",
+        "elena": "kalimera",
+        "wafa": "omri",
+        "faizan": "rashid"
+        }
+
+        return switcher.get(sender.lower(), "Invalid user")
+
+    def get_hoursdelay(self, sender):
+        switcher = {
+        "fouad": "2",
+        "rami": "9",
+        "jisha": "6",
+        "safa": "0",
+        "elena": "0",
+        "wafa": "10",
+        "faizan": "10"
+        }
+
+        return switcher.get(sender.lower(), "Invalid user")
+
+    def get_destination(self, sender):
+        switcher = {
+        "fouad": "London",
+        "rami": "Singapour",
+        "jisha": "Miami",
+        "safa": "San Fransisco",
+        "elena": "Tokyo",
+        "wafa": "Geneve",
+        "faizan": "Paris"
+        }
+
+        return switcher.get(sender.lower(), "Invalid user")
+
+    def get_travelclass(self, sender):
+        switcher = {
+        "fouad": "economy",
+        "rami": "first",
+        "jisha": "first",
+        "safa": "business",
+        "elena": "economy",
+        "wafa": "economy",
+        "faizan": "business"
+        }
+
+        return switcher.get(sender.lower(), "Invalid user")                                   
 
     def run(self, dispatcher, tracker, domain):
 
@@ -356,7 +486,9 @@ class LoginAction(Action):
         json_data = json.dumps(data) 
         #description = " we called get passenger flight details "
         dispatcher.utter_attachment(json_data)
-        return [SlotSet("profile_type", self.get_profile_type(username)), SlotSet("flightstatus", self.get_flight_status(username)), SlotSet("voucher", self.get_voucher_type(username))]   
+        return [SlotSet("profile_type", self.get_profile_type(username)),SlotSet("flightstatus", self.get_flight_status(username)),SlotSet("voucher", self.get_voucher_type(username)),SlotSet("lastname", self.get_last_name(username)),SlotSet("pnr", self.get_profile_PNR(username)),SlotSet("hourdelay", self.get_hoursdelay(username)),
+    SlotSet("destination", self.get_destination(username)), SlotSet("flightclass", self.get_travelclass(username))]   
+
 
 class SearchChangeDesttinationFlightsActions(Action):
    def name(self):
@@ -431,6 +563,9 @@ class SearchChangeDesttinationFlightsActions(Action):
         }
         ] 
        destination = tracker.get_slot("destination")
+       changedestination = tracker.get_slot("changedestination")
+       destination = changedestination
+          
        flightclass = tracker.get_slot("flightclass")
        headcount = tracker.get_slot("headcount")
        print("DESTINATION: ", destination)
@@ -519,6 +654,12 @@ class SearchUpgradeFlightsActions(Action):
         ] 
         destination = tracker.get_slot("destination")
         flightclass = tracker.get_slot("flightclass")
+        if(flightclass.lower() == "economy"):
+           dispatcher.utter_message("I can upgrade you on Business on the following flights")
+        if(flightclass.lower() == "Business"):
+           dispatcher.utter_message("I can upgrade you on First on the following flights")
+        if(flightclass.lower() == "First"):
+           dispatcher.utter_message("Would you like to fly the plane? :-)")           
         headcount = tracker.get_slot("headcount")
         print("DESTINATION: ", destination)
         proposedFlights = [flight for flight in segments if flight['destination'].lower()==destination.lower()]
@@ -532,7 +673,7 @@ class SearchUpgradeFlightsActions(Action):
         json_data = json.dumps(data)
         #dispatcher.utter_message(output_json)
         dispatcher.utter_attachment(json_data) 
-        return [SlotSet("flightoptions", json_data)]
+        return [SlotSet("flightoptions", json_data), SlotSet("upgradedask", "true")]
 
 class BookRestaurantActions(Action):
     def name(self):
@@ -1021,7 +1162,10 @@ class SearchOverviewVoucherForAFlightActions(Action):
         
          
         flightnumber = tracker.get_slot('voucherflight')
-        text_msg = "Overview of Vouchers Given to Flight "+flightnumber
+        if(flightnumber is not None):
+            text_msg = "Overview of Vouchers Given to Flight "+flightnumber
+        else:
+            text_msg = "No specific flight provided"   
         error_msg = "No data available for the flight you entered "+flightnumber   
         print("VOUCHER FLIGHT NUMBER ", flightnumber)
         flightnumber = flightnumber.replace(" ", "")
@@ -1286,13 +1430,17 @@ class ShowVoucherAction(Action):
         return "action_show_voucher"
 
     def run(self, dispatcher, tracker, domain):
-        voucher_type = tracker.get_slot("voucher_type")
+        voucher_type = tracker.get_slot("voucher")
+        sender = (tracker.current_state())["sender_id"]
+        lastname = tracker.get_slot("lastname")
+        passenger_name_format = sender +"/"+lastname
+        pnr = tracker.get_slot("pnr")
         hotel_voucher = {
             "name": "Hotel Voucher",
             "information": "PRESENT THIS VOUCHER AT HOTEL CHECK-IN",
             "QR_code": "https://imagizer.imageshack.com/img923/6066/56rKD8.png",
-            "passenger_name": "EDWARDS/SOPHIA",
-            "booking_ref": "FPXLJJ",
+            "passenger_name": passenger_name_format,
+            "booking_ref": pnr,
             "hottel_name":"LE MERIDIEN",
             "room_description":"SINGLE",
             "meal":"BREAKFAST LUNCH"
@@ -1303,30 +1451,30 @@ class ShowVoucherAction(Action):
             "name": "Meal Voucher",
             "information": "PRESENT THIS VOUCHER AT RESTAURANT CHECK-IN",
             "QR_code": "https://imagizer.imageshack.com/img923/6066/56rKD8.png",
-            "passenger_name": "ADAMS/JOHN",
-            "booking_ref": "LJ6GA6",
+            "passenger_name": passenger_name_format,
+            "booking_ref": pnr,
             "resttaurantt_name":"Giraffe Stop",
             "meal":"International Restaurant"
         }
 
-        sender = (tracker.current_state())["sender_id"]
+        #sender = (tracker.current_state())["sender_id"]
         print("USER ID:", sender)
 
         #sender_id = (tracker.current_state())["sender"]
         #print("SENDER: ", sender_id)
-        if(sender.lower()=="darshit"):
+        #if(sender.lower()=="darshit"):
+        #    voucher = hotel_voucher
+        #    showoption = "showvoucherhotel"
+        #else:
+        #    voucher = meal_voucher ## ADD later here if Meal, now not added since slot is not set
+        #    showoption = "showvouchermeal"
+
+        if(voucher_type=="voucher_hotel"):
             voucher = hotel_voucher
             showoption = "showvoucherhotel"
         else:
             voucher = meal_voucher ## ADD later here if Meal, now not added since slot is not set
             showoption = "showvouchermeal"
-
-        #if(voucher_type=="HOTEL"):
-        #    voucher = hotel_voucher
-        #   showoption = "showvoucherhotel"
-        #else:
-        #    voucher = meal_voucher ## ADD later here if Meal, now not added since slot is not set
-        #    showoption = "showvouchermeal"
 
         data={}
         data['type'] = showoption

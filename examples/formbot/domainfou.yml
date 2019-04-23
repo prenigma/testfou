@@ -112,6 +112,8 @@ slots:
     type: unfeaturized
   changedestination:
     type: unfeaturized
+  upgradedask:
+    type: unfeaturized
   upgradedclass:
     type: unfeaturized                              
   requested_slot:
@@ -120,8 +122,6 @@ slots:
 templates:
   utter_ask_destination:
     - text: "what destination?"
-  utter_ask_upgrade_payment:
-    - text: "Do you want to pay "
   utter_confirm_upgrade:
     - text : "Perfect i upgraded you to {upgradedclass}"    
   utter_ask_flightclass:
@@ -149,10 +149,6 @@ templates:
     - text: "flight class is wrong, please try again"
   utter_default:
     - text: "sorry, I didn't understand you, please try input something else"
-  utter_inform_flightsearch:
-    - text: "I will search for you the next possible flight to {destination}"
-  utter_inform_pricefreeofcharge:
-    - text: "There will be no extra fees for the rebooking"
   utter_askfurtherhelp:
     - text: "Can i do something else for you?"
   utter_baggage:
@@ -171,11 +167,7 @@ actions:
   - action_search_flight
   - utter_return_proposed_flights
   - action_get_flight_details
-  - utter_welcomes_passenger
-  - utter_inform_delay
   - utter_baggage
-  - utter_inform_pricefreeofcharge
-  - utter_inform_flightsearch
   - utter_askfurtherhelp
   - action_book_flight
   - action_search_change_destination_flight
@@ -201,6 +193,8 @@ actions:
   - utter_ask_destination
   - utter_ask_upgrade_payment
   - utter_confirm_upgrade
+  - action_inform_flight_search
+  - action_greet
 
 
 
