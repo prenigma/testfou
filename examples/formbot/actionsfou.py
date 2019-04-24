@@ -326,10 +326,11 @@ class InformFlightSearchAction(Action):
         passengername = tracker.current_state()['sender_id']
 
         destination = tracker.get_slot("destination")
-        if (changedestination == destination):
-            text_msg = self.get_message_type(flightstatus, destination, passengername)
-        else:
-            text_msg = "This is what i found for you to "+changedestination    
+        if(changedestination is not None):
+            if (changedestination == destination):
+                text_msg = self.get_message_type(flightstatus, destination, passengername)
+            else:
+                text_msg = "This is what i found for you to "+changedestination    
 
         dispatcher.utter_message(text_msg)
         print("CHANGEDESTINATION ", changedestination)

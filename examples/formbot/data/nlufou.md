@@ -383,6 +383,11 @@
 - i want to see my voucher
 - i want to have a look at my voucher
 - please show me my voucher
+- i want a french restaurant
+- take me to a french restaurant
+- i want to eat french
+- a french cuisine
+- french restaurant
 
 ## intent:navigate_to_gate
 - please navigate me to my gate
