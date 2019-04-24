@@ -2213,7 +2213,7 @@ class ShowVoucherAction(Action):
             "passenger_name": passenger_name_format,
             "flightnumber": selectedflightnumber,
             "meals": "Eligibility is based in time of check in at the hotel",
-            "date": date.today() 
+            "date": date.today(), 
             "booking_ref": pnr,
             "hottel_name":"LE MERIDIEN",
             "room_description":"SINGLE",
@@ -2227,7 +2227,7 @@ class ShowVoucherAction(Action):
             "QR_code": "https://imagizer.imageshack.com/img923/6066/56rKD8.png",
             "passenger_name": passenger_name_format,
             "flightnumber": selectedflightnumber,
-            "date": date.today() 
+            "date": date.today(), 
             "booking_ref": pnr,
             "resttaurantt_name":"Giraffe Stop",
             "meal":"International Restaurant"

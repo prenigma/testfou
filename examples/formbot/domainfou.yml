@@ -123,7 +123,9 @@ slots:
   lastname:
     type: unfeaturized
   gatenumber:
-    type: unfeaturized                                  
+    type: unfeaturized
+  cuisine:
+    type: unfeaturized                                    
   requested_slot:
     type: unfeaturized
 
