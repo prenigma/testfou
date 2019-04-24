@@ -34,11 +34,25 @@
     - action_listen
 
 
-## rebook change destination
-* change_destination
-    - slot{"changedestination": "New York"}
+## rebook change destinationnewyork
+* change_destination{"changedestination": "Madrid"}
+    - slot{"changedestination": "Madrid"}
     - action_inform_flight_search
     - action_search_change_destination_flight
+    - action_listen
+
+## rebook change destination
+* change_destination
+    - utter_ask_destination
+* givedestination{"changedestination": "Toronto"}
+    - slot{"changedestination": "Toronto"}
+    - action_inform_flight_search
+    - action_search_change_destination_flight
+    - action_listen
+
+## ask upgrade ticket
+* upgrade
+    - action_search_upgrade_flight
     - action_listen
 
 ## search restaurant
@@ -100,4 +114,37 @@
 * myvoucher
     - action_show_voucher
     - action_listen
-   
+
+## Generated Story -1231441260612426773
+* start
+    - action_greet
+    - action_inform_flight_search
+    - action_search_flight
+* select_flight{"selectedflightnumber": "EK 444"}
+    - slot{"selectedflightnumber": "EK 444"}
+    - action_book_flight
+    - slot{"selectedflight": "[{\"id\": 13, \"origincode\": \"DXB\", \"origin\": \"Dubai\", \"origin_date\": \"2019-04-26\", \"origin_display_date\": \"Fr, Apr 26\", \"origin_time\": \"23:45 AM\", \"destinationcode\": \"HND\", \"destination\": \"Tokyo\", \"destination_date\": \"2019-04-27\", \"destination_display_day\": \"Sat, Apr 27\", \"destination_time\": \"07:20 PM\", \"airline\": \"Emirates Airlines\", \"flight_number\": \"EK 444\", \"number_stops\": \"0\"}]"}
+* ask_overview_vouchers
+    - action_show_voucher
+* affirm
+    - utter_askfurtherhelp
+* ask_baggage
+    - utter_baggage
+* thankyou
+    - utter_noworries
+
+## Generated Story 1144646361739948422
+* start
+    - action_greet
+    - action_inform_flight_search
+    - action_search_flight
+* select_flight{"selectedflightnumber": "EK 444"}
+    - slot{"selectedflightnumber": "EK 444"}
+    - action_book_flight
+    - slot{"selectedflight": "[{\"id\": 13, \"origincode\": \"DXB\", \"origin\": \"Dubai\", \"origin_date\": \"2019-04-26\", \"origin_display_date\": \"Fr, Apr 26\", \"origin_time\": \"23:45 AM\", \"destinationcode\": \"HND\", \"destination\": \"Tokyo\", \"destination_date\": \"2019-04-27\", \"destination_display_day\": \"Sat, Apr 27\", \"destination_time\": \"07:20 PM\", \"airline\": \"Emirates Airlines\", \"flight_number\": \"EK 444\", \"number_stops\": \"0\"}]"}
+* ask_restaurant
+    - action_search_restaurant
+    - slot{"restaurantoptions": [{"Reservation": "Sun, Apr 21, 2 people", "address": "Concourse B,Terminal 3,Dubai International Airport - Dubai", "cuisine": "French", "cuisine_restaurant": "French restaurant", "id": "1", "name": "Paul", "open_time": {"Friday": "24 hours open", "Monday": "24 hours open", "Saturday": "24 hours open", "Sunday": "24 hours open", "Thursday": "24 hours open", "Tuesday": "24 hours open", "Wednesday": "24 hours open"}, "photoCount": 3, "photos": [{"url": "https://storage.googleapis.com/fouimages/Photos/restaurants/paul/paul1.jpg"}, {"url": "https://storage.googleapis.com/fouimages/Photos/restaurants/paul/paul2.JPG"}, {"url": "https://storage.googleapis.com/fouimages/Photos/restaurants/paul/paul3.jpg"}], "stars": 4}, {"Reservation": "Sun, Apr 21, 2 people", "address": "Gate 25, Terminal 3 - Dubai International Airport Concourse B - Dubai", "cuisine": "French", "cuisine_restaurant": "American restaurant", "id": "2", "name": "Hard Rock Cafe", "open_time": {"Friday": "24 hours open", "Monday": "24 hours open", "Saturday": "24 hours open", "Sunday": "24 hours open", "Thursday": "24 hours open", "Tuesday": "24 hours open", "Wednesday": "24 hours open"}, "photoCount": 3, "photos": [{"url": "https://storage.googleapis.com/fouimages/Photos/restaurants/hardrock/hardrock1.jpeg"}, {"url": "https://storage.googleapis.com/fouimages/Photos/restaurants/hardrock/hardrock2.jpeg"}, {"url": "https://storage.googleapis.com/fouimages/Photos/restaurants/hardrock/hardrock3.jpeg"}], "stars": 4}]}
+* upgrade
+    - action_search_upgrade_flight
+

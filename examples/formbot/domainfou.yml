@@ -33,6 +33,8 @@ intents:
   - navigate_to_gate
   - myvoucher
   - start
+  - givedestination
+  - change_airport
 
 
 entities:
@@ -124,7 +126,7 @@ slots:
 
 templates:
   utter_ask_destination:
-    - text: "what destination?"
+    - text: "Which new destination are you looking for?"
   utter_confirm_upgrade:
     - text : "Perfect i upgraded you to {upgradedclass}"    
   utter_ask_flightclass:

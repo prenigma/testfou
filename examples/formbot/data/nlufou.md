@@ -17,6 +17,13 @@
 - yes and i dont care
 - right on
 - i love that
+- great
+- perfect
+- that's great
+- very nice
+- well done
+- nice
+- nice
 
 ## intent:ask_baggage
 - What about my baggage?
@@ -34,22 +41,7 @@
 - what about my luggage?
 - what will you do with my baggage???
 - what should i do with my baggage?
-
-## intent:navigate_to_gate
-- please navigate me to my gate
-- i want to go to my gate
-- show me how to go to my gate
-- i need to catch my plane get me to the gate
-- way to gate
-- the way to the gate please
-- show me the way to my gate
-- how can i find my gate
-- take me to the gate please
-- take me to the gate
-- show me the way to gate
-- the gate, where can i found it
-- how can i find the gate
-
+- what about my baggage
 
 ## intent:ask_hotel
 - I am tired I want to sleep
@@ -66,7 +58,12 @@
 - i am tired show me hotels
 - tired show me where i can rest
 - get me a good hotel
+- please find me a hotel
+- please search a hotel for me
+- find me a hotel room
 
+## intent:ask_overview_vouchers
+- show me my voucher
 
 ## intent:ask_restaurant
 - restaurants
@@ -124,7 +121,19 @@
 - can you show me the restaurants
 - can you list restaurants
 - show me restaurants
+- show me a restaurant please
 
+## intent:change_airport
+- is there any other flight to another airport
+- i have a meeting and the flights you proposed are late, can you put me to another airport
+- can you put me on another airport
+- another airport same city please
+- is there a possibility to land in gatewick
+- is there a possibility to land in manchester
+- is there a possibility to land heathrow
+- london city airport is a possibility
+- is there a flight landing in london city earlier
+- is there a flight landing in gatewick same day
 
 ## intent:change_destination
 - can you please book for me a new ticket
@@ -134,9 +143,35 @@
 - to [london](changedestination) please
 - rebook me to [singapure](changedestination) please
 - can you rebook me to [frankfurt](changedestination)
+- can you rebook me to [madrid](changedestination)
+- can you rebook me to [paris](changedestination)
+- can you rebook me to [barcelona](changedestination)
+- can you rebook me to [new york](changedestination)
+- can you rebook me to [dubai](changedestination)
+- can you rebook me to [abu dhabi](changedestination)
 - change my flight to [paris](changedestination)
-- put me on the flight to [miami](changedestination) 
+- change my flight to [london](changedestination)
+- change my flight to [madrid](changedestination)
+- change my flight to [geneva](changedestination)
+- change my flight to [vienna](changedestination)
+- change my flight to [new delhi](changedestination)
+- put me on the flight to [miami](changedestination)
 - i want a different flight destination
+- i want to rebook
+- please rebook my flight
+- please rebook my ticket
+- i want another flight
+- rebook me please
+- rebook me
+- rebook me please to [toronto](changedestination)
+- can you rebook me to [vienna](changedestination)
+- can you rebook me to [cairo](changedestination)
+- can you rebook me to [beirut](changedestination)
+- can you rebook me to [manama](changedestination)
+- can you rebook me to [paris](changedestination)
+- can you rebook me to [toronto](changedestination)
+- can you rebook me to [new delhi](changedestination)
+- can you put me on a flight to [mexico](changedestination)
 
 ## intent:change_language
 - talk to me in [french](language)
@@ -181,7 +216,7 @@
 - you can speak [russian](language)
 - can you talk [hindi](language)
 - talk [hindi](language) with me
-- talk [french](language) 
+- talk [french](language)
 - talk [english](language)
 - talk [arabic](language)
 - let us switch to [english](language)
@@ -193,7 +228,6 @@
 - switch to [spanish](language)
 - switch to [chinese](language)
 - switch to [arabic](language)
-
 
 ## intent:chitchat
 - can you share your boss with me?
@@ -244,6 +278,39 @@
 - do you have something else
 - no this does not work for me
 - noooo
+
+## intent:givedestination
+- to [london](changedestination) please
+- rebook me to [singapure](changedestination) please
+- can you rebook me to [frankfurt](changedestination)
+- change my flight to [paris](changedestination)
+- put me on the flight to [miami](changedestination)
+- rebook me please to [toronto](changedestination)
+- can you rebook me to [vienna](changedestination)
+- can you put me on a flight to [mexico](changedestination)
+- rebook me to [Toronto](changedestination)
+- rebook me to [Madrid](changedestination)
+- rebook me to [Barcelona](changedestination)
+- can you rebook me to [madrid](changedestination)
+- can you rebook me to [paris](changedestination)
+- can you rebook me to [barcelona](changedestination)
+- can you rebook me to [new york](changedestination)
+- can you rebook me to [dubai](changedestination)
+- can you rebook me to [abu dhabi](changedestination)
+- change my flight to [paris](changedestination)
+- change my flight to [london](changedestination)
+- change my flight to [madrid](changedestination)
+- change my flight to [geneva](changedestination)
+- change my flight to [vienna](changedestination)
+- change my flight to [new delhi](changedestination)
+- rebook me please to [toronto](changedestination)
+- can you rebook me to [vienna](changedestination)
+- can you rebook me to [cairo](changedestination)
+- can you rebook me to [beirut](changedestination)
+- can you rebook me to [manama](changedestination)
+- can you rebook me to [paris](changedestination)
+- can you rebook me to [toronto](changedestination)
+- can you rebook me to [new delhi](changedestination)
 
 ## intent:greet
 - Hello
@@ -309,22 +376,43 @@
 - show me my voucher please
 - my restaurant voucher
 - give me my voucher again
+- meal voucher
+- i want to see my voucher
+- i want to have a look at my voucher
+- please show me my voucher
 
+## intent:navigate_to_gate
+- please navigate me to my gate
+- i want to go to my gate
+- show me how to go to my gate
+- i need to catch my plane get me to the gate
+- way to gate
+- the way to the gate please
+- show me the way to my gate
+- how can i find my gate
+- take me to the gate please
+- take me to the gate
+- show me the way to gate
+- the gate, where can i found it
+- how can i find the gate
+- show me my gate
+- please take me to gate
+- where is my gate?
+
+## intent:select_article
+- /select_article
 
 ## intent:select_flight
 - /select_flight
+- /select_flight[{"selectedflightnumber": "EK 444"}](selectedflightnumber:EK 444)
+- /select_flight[{"selectedflightnumber": "EK 444"}](selectedflightnumber:EK 444)
 
 ## intent:select_hotel
 - /select_hotel
 - /select_hotel[{"selectedhotelid":"1"}](selectedhotelid:1)
 
-
 ## intent:select_lounge
 - /select_lounge
-
-
-## intent:select_article
-- /select_article
 
 ## intent:select_restaurant
 - /select_restaurant
@@ -349,7 +437,8 @@
 - i need to rest in a lounge
 - i need to have a quite place to have my calls
 - i need to finish some work and would need a quite place
-
+- please show me my lounge
+- lounge?
 
 ## intent:show_onair_shopping_articles
 - show me articles to buy
@@ -367,7 +456,8 @@
 
 ## intent:start
 - /start
-
+- /start
+- /start
 
 ## intent:stop
 - ok then you cant help me
@@ -453,6 +543,7 @@
 - okay thanks
 - well done
 - perfect thank you
+- thank you
 
 ## intent:upgrade
 - I want to upgrade my onward flight
@@ -462,6 +553,11 @@
 - upgrade my onward flight
 - upgrade my connection flight
 - possibilities to upgrade?
+- i want to upgrade my ticket
+- can i upgrade my ticket?
+- please upgrade me
+- please upgrade my flight
+- i want to upgrade my flight
 
 ## synonym:1
 - {"selectedhotelid":"1"}
@@ -475,6 +571,9 @@
 
 ## synonym:4
 - four
+
+## synonym:EK 444
+- {"selectedflightnumber": "EK 444"}
 
 ## synonym:Moscow
 - oscow
@@ -500,7 +599,6 @@
 - gastro pub
 
 ## synonym:london
-- ondon 
 - ondon
 
 ## synonym:paris
@@ -513,7 +611,6 @@
 - oday
 
 ## synonym:tomorrow
-- omorrow 
 - omorrow
 
 ## synonym:toronto
