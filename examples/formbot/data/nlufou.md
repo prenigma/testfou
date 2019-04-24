@@ -163,6 +163,9 @@
 - i want another flight
 - rebook me please
 - rebook me
+- can i go to [tokyo](changedestination)
+- can i go to [manchester](changedestination)
+- [machester](changedestination)
 - rebook me please to [toronto](changedestination)
 - can you rebook me to [vienna](changedestination)
 - can you rebook me to [cairo](changedestination)

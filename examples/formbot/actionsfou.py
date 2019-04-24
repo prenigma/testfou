@@ -571,6 +571,38 @@ class BookFlightActions(Action):
             "airline": "Emirates Airlines",
             "flight_number": "EK 445",
             "number_stops": "0"
+        },
+        {
+            "id": 15,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
+            "origin_time": "17:10 AM",
+            "destinationcode": "HND",
+            "destination": "Tokyo",
+            "destination_date": "2019-04-26",
+            "destination_display_day": "Fr, Apr 26",
+            "destination_time": "21:15 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 445",
+            "number_stops": "0"
+        },
+         {
+            "id": 16,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
+            "origin_time": "17:10 AM",
+            "destinationcode": "HND",
+            "destination": "Tokyo",
+            "destination_date": "2019-04-26",
+            "destination_display_day": "Fr, Apr 26",
+            "destination_time": "21:15 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 445",
+            "number_stops": "0"
         }
         ]
 
@@ -651,7 +683,8 @@ class LoginAction(Action):
         "wafa": "https://storage.googleapis.com/fouimages/Photos/profile/wafaomri.png",
         "faizan": "zh_CN",
         "amna":"",
-        "deepa": ""
+        "deepa": "",
+        "vanessa": ""
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -660,7 +693,7 @@ class LoginAction(Action):
         switcher = {
         "fouad": "delayed",
         "rami": "cancelled",
-        "jisha": "delayed",
+        "jisha": "ontime",
         "safa": "ontime",
         "elena": "ontime",
         "wafa": "delayed",
@@ -2118,6 +2151,9 @@ class ChangeLanguageAction(Action):
         json_data = json.dumps(data)
 
         print("We will now talk ", language)
+        sender = (tracker.current_state())["sender_id"]
+        passengername = sender.title()
+        dispatcher.utter_message("Of course,"+passengername+" please start talking now in "+language)
         print("We will now talk language code", language_code)
         dispatcher.utter_attachment(json_data) 
         return [SlotSet("language_speak", language_code)]
