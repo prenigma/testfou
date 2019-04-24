@@ -120,7 +120,9 @@ slots:
   upgradedclass:
     type: unfeaturized
   lastname:
-    type: unfeaturized                                
+    type: unfeaturized
+  gatenumber:
+    type: unfeaturized                                  
   requested_slot:
     type: unfeaturized
 

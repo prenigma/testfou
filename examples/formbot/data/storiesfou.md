@@ -56,6 +56,12 @@
     - action_listen
 
 ## search restaurant
+* ask_restaurant{"cuisine":"french"}
+    - slot{"cuisine":"french"}
+    - action_search_restaurant
+    - action_listen
+
+## search restaurant
 * ask_restaurant
     - action_search_restaurant
     - action_listen

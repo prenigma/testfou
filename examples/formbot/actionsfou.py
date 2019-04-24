@@ -326,11 +326,12 @@ class InformFlightSearchAction(Action):
         passengername = tracker.current_state()['sender_id']
 
         destination = tracker.get_slot("destination")
-        if(changedestination is not None):
-            if (changedestination == destination):
-                text_msg = self.get_message_type(flightstatus, destination, passengername)
-            else:
-                text_msg = "This is what i found for you to "+changedestination    
+        
+        if (changedestination == destination):
+            text_msg = self.get_message_type(flightstatus, destination, passengername)
+        else:
+            text_msg = "This is what i found for you to "+changedestination    
+
 
         dispatcher.utter_message(text_msg)
         print("CHANGEDESTINATION ", changedestination)
@@ -849,7 +850,23 @@ class LoginAction(Action):
         "vanessa": "8A"
         }
 
-        return switcher.get(sender.lower(), "Invalid user")                                         
+        return switcher.get(sender.lower(), "Invalid user")
+
+    def get_gatenumber(self, sender):
+        switcher = {
+        "fouad": "B2",
+        "rami": "B2",
+        "jisha": "B10",
+        "safa": "B8",
+        "elena": "B8",
+        "wafa": "B8",
+        "faizan": "B8",
+        "amna": "B8",
+        "deepa": "B7",
+        "vanessa": "B8"
+        }
+
+        return switcher.get(sender.lower(), "Invalid user")                                              
 
     def run(self, dispatcher, tracker, domain):
 
@@ -908,7 +925,7 @@ class LoginAction(Action):
         dispatcher.utter_attachment(json_data)
         return [SlotSet("profile_type", self.get_profile_type(username)),SlotSet("flightstatus", self.get_flight_status(username)),SlotSet("voucher", self.get_voucher_type(username)),SlotSet("lastname", self.get_last_name(username)),SlotSet("pnr", self.get_profile_PNR(username)),SlotSet("hourdelay", self.get_hoursdelay(username)),
     SlotSet("destination", self.get_destination(username)), SlotSet("flightclass", self.get_travelclass(username)),
-    SlotSet("seatnumber", self.get_seatnumber(username))]   
+    SlotSet("seatnumber", self.get_seatnumber(username)), SlotSet("gatenumber", self.get_gatenumber(username))]   
 
 
 class SearchChangeDesttinationFlightsActions(Action):
@@ -2188,11 +2205,15 @@ class ShowVoucherAction(Action):
         lastname = tracker.get_slot("lastname")
         passenger_name_format = sender +"/"+lastname
         pnr = tracker.get_slot("pnr")
+        selectedflightnumber = tracker.get_slot("selectedflightnumber")
         hotel_voucher = {
             "name": "Hotel Voucher",
             "information": "PRESENT THIS VOUCHER AT HOTEL CHECK-IN",
             "QR_code": "https://imagizer.imageshack.com/img923/6066/56rKD8.png",
             "passenger_name": passenger_name_format,
+            "flightnumber": selectedflightnumber,
+            "meals": "Eligibility is based in time of check in at the hotel",
+            "date": date.today() 
             "booking_ref": pnr,
             "hottel_name":"LE MERIDIEN",
             "room_description":"SINGLE",
@@ -2205,6 +2226,8 @@ class ShowVoucherAction(Action):
             "information": "PRESENT THIS VOUCHER AT RESTAURANT CHECK-IN",
             "QR_code": "https://imagizer.imageshack.com/img923/6066/56rKD8.png",
             "passenger_name": passenger_name_format,
+            "flightnumber": selectedflightnumber,
+            "date": date.today() 
             "booking_ref": pnr,
             "resttaurantt_name":"Giraffe Stop",
             "meal":"International Restaurant"
