@@ -114,7 +114,12 @@ class SearchFlightsActions(Action):
         data['segments'] = proposedFlights
         json_data = json.dumps(data)
         #dispatcher.utter_message(output_json)
-        dispatcher.utter_attachment(json_data)
+        flightstatus = tracker.get_slot("flightstatus")
+        print("FLIGHTSTATUS ", flightstatus)
+        print(flightstatus.lower() != "ontime")
+        if (flightstatus.lower() != "ontime"):
+            print("WE WILL DISPATCH")
+            dispatcher.utter_attachment(json_data)
         return [SlotSet("flightoptions", json_data)]
 
 class GreetingAction(Action):
@@ -124,11 +129,12 @@ class GreetingAction(Action):
 
     def get_message_type(self, flightstatus, passengername, destination, hourdelay):
         switcher = {
-        "delayed": "Welcome "+passengername+" to Dubai! Sorry your connecting flight to "+destination+" will be delayed for more than "+hourdelay+" hours",
-        "cancelled": "Welcome "+passengername +" to Dubai! Sorry your connecting flight to "+destination+" has been cancelled"
+        "delayed": "Welcome "+passengername.title()+" to Dubai! Sorry, your connecting flight to "+destination.title()+" will be delayed for more than "+hourdelay+" hours",
+        "cancelled": "Welcome "+passengername.title() +" to Dubai! Sorry, your connecting flight to "+destination.title()+" has been cancelled",
+        "ontime": "Welcome "+passengername.title() +" to Dubai!" 
         }
 
-        return switcher.get(flightstatus.lower(), "Welcome "+passengername + "to Dubai!")        
+        return switcher.get(flightstatus.lower(), "How may I help you today?")        
     
     
     def run(self, dispatcher, tracker, domain):
@@ -137,10 +143,12 @@ class GreetingAction(Action):
        passengername = tracker.current_state()['sender_id']
        destination = tracker.get_slot("destination")
        hourdelay = tracker.get_slot("hourdelay")
+       start_msg = "Hi "+passengername.title()+", I am Sarah! I am your personal assistant."
+       dispatcher.utter_message(start_msg)
 
        text_msg = self.get_message_type(flightstatus, passengername, destination, hourdelay)
-
-       dispatcher.utter_message(txt_msg) 
+    
+       dispatcher.utter_message(text_msg) 
 
 
 class InformFlightSearchAction(Action):
@@ -149,24 +157,29 @@ class InformFlightSearchAction(Action):
         return "action_inform_flight_search"
 
 
-    def get_message_type(self, flightstatus):
+    def get_message_type(self, flightstatus, destination, passengername):
         switcher = {
         "delayed": "I will search for you the next possible flight to "+destination+" and there will be no extra fees for the rebooking",
         "cancelled": "I will search for you the next possible flight to "+destination+" and there will be no extra fees for the rebooking"
         }
 
-        return switcher.get(flightstatus.lower(), "Welcome "+passengername + "to Dubai!")          
+        return switcher.get(flightstatus.lower(), "How can I help you today?")          
 
     def run(self, dispatcher, tracker, domain):
 
         flightstatus = tracker.get_slot("flightstatus")
-        chengedestination = tracker.get_slot("changedestination")
+        changedestination = tracker.get_slot("changedestination")
+        passengername = tracker.current_state()['sender_id']
 
-        text_msg = self.get_message_type(flightstatus)
+        destination = tracker.get_slot("destination")
 
-        dispatcher.utter_message(txt_msg)
-        if(chengedestination is not None):
-            further_msg = "I will search for you the next possible flights to your new "+chengedestination
+        text_msg = self.get_message_type(flightstatus, destination, passengername)
+
+        dispatcher.utter_message(text_msg)
+        print("CHANGEDESTINATION ", changedestination)
+
+        if(changedestination is not None):
+            further_msg = "I propose you the following options to "+changedestination.title()
             dispatcher.utter_message(further_msg)
 
 
@@ -246,14 +259,23 @@ class BookFlightActions(Action):
         ]
         selectedflightnumber = tracker.get_slot("selectedflightnumber")
         print("selectedflightnumber: ", selectedflightnumber)
+        passengername = tracker.current_state()['sender_id']
+        passengername = passengername.title()
         if(selectedflightnumber is not None):
             proposedFlights = [flight for flight in segments if flight['flight_number'].lower()==selectedflightnumber.lower()]
             output_json = json.dumps(proposedFlights)
             print("PROPOSED FLIGHTS: ", output_json)
             upgradedask = tracker.get_slot("upgradedask")
             if(upgradedask is not None):
-               dispatcher.utter_message("The upgrade is done and you will receive the receipt per email") 
-            dispatcher.utter_message("Perfect, i rebooked you")
+               dispatcher.utter_message("The upgrade is done and you will receive the receipt per email")
+
+            changedestination = tracker.get_slot("changedestination")
+            if(changedestination is not None):
+                price = proposedFlights[selectedflightnumber]
+                text_msg = "The change to the new destination "+changedestination+" will cost you "+price+" AED. Should i use your already registered credit card "+passengername+" or use your Skyward miles?"
+            else:
+                text_msg = "Perfect, "+passengername+" i rebooked you on the flight "+selectedflightnumber    
+            dispatcher.utter_message(text_msg)
             return [SlotSet("selectedflight", output_json)]
         else:
             dispatcher.utter_message("Please select a flight")         
@@ -309,7 +331,9 @@ class LoginAction(Action):
         "safa": "https://storage.googleapis.com/fouimages/Photos/profile/SafaOmri.jpg",
         "elena": "https://storage.googleapis.com/fouimages/Photos/profile/ElenaKalimera.jpg",
         "wafa": "https://storage.googleapis.com/fouimages/Photos/profile/wafaomri.png",
-        "faizan": "zh_CN"
+        "faizan": "zh_CN",
+        "amna":"",
+        "deepa": ""
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -322,7 +346,10 @@ class LoginAction(Action):
         "safa": "ontime",
         "elena": "ontime",
         "wafa": "delayed",
-        "faizan": "cancelled"
+        "faizan": "cancelled",
+        "amna": "cancelled",
+        "deepa": "delayed",
+        "vanessa": "cancelled"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -336,7 +363,10 @@ class LoginAction(Action):
         "safa": None,
         "elena": None,
         "wafa": "voucher_hotel", # flight delayed for 8 hours
-        "faizan": "voucher_hotel"
+        "faizan": "voucher_hotel",
+        "amna": "voucher_hotel",
+        "deepa": "voucher_meal",
+        "vanessa": "voucher_hotel"
         }
 
         return switcher.get(sender.lower(), "Invalid user")    
@@ -348,8 +378,11 @@ class LoginAction(Action):
         "jisha": "fr_FR",
         "safa": "de_DE",
         "elena": "el",
-        "wafa": "hi",
-        "faizan": "es_US"
+        "wafa": "en_US",
+        "faizan": "en_US",
+        "amna": "en_US",
+        "deepa": "hi",
+        "vanessa": "en_US"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -362,7 +395,10 @@ class LoginAction(Action):
         "safa": "crew",
         "elena": "passenger",
         "wafa": "passenger",
-        "faizan": "passenger"
+        "faizan": "passenger",
+        "amna": "passenger",
+        "deepa": "passenger",
+        "vanessa": "passenger"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -375,7 +411,10 @@ class LoginAction(Action):
         "safa": "XLKD16",
         "elena": "XLKD15",
         "wafa": "XLKD14",
-        "faizan": "XLKD13"
+        "faizan": "XLKD13",
+        "amna": "XLKD12",
+        "deepa": "XLKD11",
+        "vanessa": "XLKD10"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -387,7 +426,10 @@ class LoginAction(Action):
         "safa": "omri",
         "elena": "kalimera",
         "wafa": "omri",
-        "faizan": "rashid"
+        "faizan": "rashid",
+        "amna": "alredha",
+        "deep": "misquitta",
+        "vanessa":"espera"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -400,7 +442,10 @@ class LoginAction(Action):
         "safa": "0",
         "elena": "0",
         "wafa": "10",
-        "faizan": "10"
+        "faizan": "10",
+        "amna": "9",
+        "deepa": "5",
+        "vanessa": "11"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -408,12 +453,16 @@ class LoginAction(Action):
     def get_destination(self, sender):
         switcher = {
         "fouad": "London",
-        "rami": "Singapour",
+        "rami": "London",
         "jisha": "Miami",
         "safa": "San Fransisco",
         "elena": "Tokyo",
         "wafa": "Geneve",
-        "faizan": "Paris"
+        "faizan": "Paris",
+        "amna": "London",
+        "deepa": "London",
+        "vanessa": "London"
+
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -426,10 +475,29 @@ class LoginAction(Action):
         "safa": "business",
         "elena": "economy",
         "wafa": "economy",
-        "faizan": "business"
+        "faizan": "business",
+        "amna": "business",
+        "deepa": "business",
+        "vanessa": "business"
         }
 
-        return switcher.get(sender.lower(), "Invalid user")                                   
+        return switcher.get(sender.lower(), "Invalid user")
+
+    def get_seatnumber(self, sender):
+        switcher = {
+        "fouad": "19A",
+        "rami": "2B",
+        "jisha": "2A",
+        "safa": "8D",
+        "elena": "22F",
+        "wafa": "18G",
+        "faizan": "8K",
+        "amna": "7K",
+        "deepa": "6A",
+        "vanessa": "8A"
+        }
+
+        return switcher.get(sender.lower(), "Invalid user")                                         
 
     def run(self, dispatcher, tracker, domain):
 
@@ -487,7 +555,8 @@ class LoginAction(Action):
         #description = " we called get passenger flight details "
         dispatcher.utter_attachment(json_data)
         return [SlotSet("profile_type", self.get_profile_type(username)),SlotSet("flightstatus", self.get_flight_status(username)),SlotSet("voucher", self.get_voucher_type(username)),SlotSet("lastname", self.get_last_name(username)),SlotSet("pnr", self.get_profile_PNR(username)),SlotSet("hourdelay", self.get_hoursdelay(username)),
-    SlotSet("destination", self.get_destination(username)), SlotSet("flightclass", self.get_travelclass(username))]   
+    SlotSet("destination", self.get_destination(username)), SlotSet("flightclass", self.get_travelclass(username)),
+    SlotSet("seatnumber", self.get_seatnumber(username))]   
 
 
 class SearchChangeDesttinationFlightsActions(Action):
@@ -564,12 +633,13 @@ class SearchChangeDesttinationFlightsActions(Action):
         ] 
        destination = tracker.get_slot("destination")
        changedestination = tracker.get_slot("changedestination")
+       print("CHANGE destination", changedestination)
        destination = changedestination
-          
+
        flightclass = tracker.get_slot("flightclass")
        headcount = tracker.get_slot("headcount")
        print("DESTINATION: ", destination)
-       proposedFlights = [flight for flight in segments if flight['destination'].lower()==destination.lower()]
+       proposedFlights = [flight for flight in segments if flight['destination'].lower()==changedestination.lower()]
        data = {}
        data['type'] = 'flightoptions'
        data['trip_class'] = flightclass
@@ -578,7 +648,8 @@ class SearchChangeDesttinationFlightsActions(Action):
        data['passengers'] = {"adults": headcount, "children": 0, "infants":0}
        data['segments'] = proposedFlights
        json_data = json.dumps(data)
-       #dispatcher.utter_message(output_json)
+       #text_msg = "Here are new flight options for the new destination you gave"
+       #dispatcher.utter_message(text_msg)
        dispatcher.utter_attachment(json_data) 
        return [SlotSet("flightoptions", json_data)]  
 
@@ -1641,10 +1712,12 @@ class ShowDutyFreeArticles(Action):
         data={}
         data['type'] = "showdutyfreearticles"
         data['articles'] = onAir_dutyFree_shopping
-        json_data = json.dumps(data)    
+        json_data = json.dumps(data)
+
+        seatnumber = tracker.get_slot("seatnumber")    
         
         dispatcher.utter_message("Here are some of the articles i found for you")
-        dispatcher.utter_message("If you buy directly buy from the app, i will deliver it to your seat, and then you can pay on the plane")
+        dispatcher.utter_message("If you buy directly from the app, i will deliver it to your seat "+seatnumber+", and then you can pay on the plane")
         dispatcher.utter_attachment(json_data)
 
 
@@ -1659,7 +1732,8 @@ class BuyArticleAction(Action):
         print("selectedloungeid: ", selectedloungeid)
         selectedlounge = [flight for flight in lounges if flight['id']==selectedloungeid]
         print("selectedloungeid: ", selectedloungeid)
-        dispatcher.utter_message("Perfect, the article will be delivered to your seat")
+        seatnumber = tracker.get_slot("seatnumber")  
+        dispatcher.utter_message("Perfect, the article will be delivered to your seat "+seatnumber)
        
         #return [SlotSet("selectedarticle", selectedlounge)] 
      

@@ -32,6 +32,7 @@ intents:
   - ask_tasks_on_next_flight
   - navigate_to_gate
   - myvoucher
+  - start
 
 
 entities:
@@ -115,7 +116,9 @@ slots:
   upgradedask:
     type: unfeaturized
   upgradedclass:
-    type: unfeaturized                              
+    type: unfeaturized
+  lastname:
+    type: unfeaturized                                
   requested_slot:
     type: unfeaturized
 
@@ -195,6 +198,7 @@ actions:
   - utter_confirm_upgrade
   - action_inform_flight_search
   - action_greet
+  - utter_submit
 
 
 

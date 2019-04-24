@@ -35,26 +35,6 @@
 - what will you do with my baggage???
 - what should i do with my baggage?
 
-## intent:ask_delayed_flights
-- what are the delayed flights now
-- what are the delayed flights today
-- give me the list of delayed flights
-- give me all delayed flights today
-- give me please all delayed flights now
-- the delayed flights please
-- what flights delayed
-- which floghts delayed today
-- which flights delayed now
-- i want to see the list of delayed flights
-- i want to see the list of delayed flights please
-- please the delayed flights for today
-- delayed flights
-- what are the delayed flights today
-- delayed flights
-- which flights are delayed today?
-- delayed flights please
-- delayed flights please
-
 ## intent:navigate_to_gate
 - please navigate me to my gate
 - i want to go to my gate
@@ -64,55 +44,11 @@
 - the way to the gate please
 - show me the way to my gate
 - how can i find my gate
-
-## intent:ask_overview_vouchers
-- give me an overview of vouchers given on flight [EK 144](voucherflight)
-- overview voucher [EK 145](voucherflight)
-- vouchers flight [EK 444](voucherflight)
-- vouchers overview [EK 314](voucherflight)
-- the vouchers for [EK 744](voucherflight)
-- the vouchers given in [EK 944](voucherflight)
-- please show me the vouchers given to [EK 194](voucherflight) today
-- how many vouchers given to [EK 104](voucherflight)
-- summary of vouchers we gave to [EK 141](voucherflight) today
-- summary of the voucher [EK 844](voucherflight)
-
-## intent:ask_flight_plan
-- show me my flights plan
-- show me roster
-- can you show me my flight plan please
-- can you give my roster
-- i want to see my flight plan please
-- give my upcoming flights please
-- please the overview of my flights
-- the roster
-- flight plan
-- my plan overview
-- plan overview
-- my next flights please
-- what are my next flights
-- how does my schedule look like
-- how does my flight plan look like
-- how is my flight plan
-
-## intent:ask_tasks_on_next_flight
-- what are my tasks on this flight
-- what are my tasks for the next flight
-- what do i have to do on my coming flight
-- any tasks i need not to forget
-- tasks for me
-- tasks i need to do on this flight
-- tasks on next flight
-- tasks needed to be done on my flight
-- tasks that has to be done on my flight
-
-
-## intent:show_tasks_operations
-- what are my tasks please
-- what do i have to do today
-- which tasks i have for today
-- what should i do today
-- my tasks please
+- take me to the gate please
+- take me to the gate
+- show me the way to gate
+- the gate, where can i found it
+- how can i find the gate
 
 
 ## intent:ask_hotel
@@ -124,6 +60,13 @@
 - can you find me a hotel
 - i need a hotel please
 - can you find a hotel
+- i want to sleep
+- i want to have some rest
+- i'm tired i want to sleep
+- i am tired show me hotels
+- tired show me where i can rest
+- get me a good hotel
+
 
 ## intent:ask_restaurant
 - restaurants
@@ -178,6 +121,9 @@
 - willing to grab something to eat
 - any fastfood nearby
 - food please
+- can you show me the restaurants
+- can you list restaurants
+- show me restaurants
 
 
 ## intent:change_destination
@@ -299,52 +245,6 @@
 - no this does not work for me
 - noooo
 
-## intent:feedback_negativ
-- Oh really?
-- That’s terrible
-- No!
-- What???
-- That’s awful
-- How horrible!
-- That sucks
-- That’s bad
-- I am very annoyed
-- These are bad news
-- ??????????????
-- that’s a disaster!
-- I am unhappy with it
-- Oh really
-- What???
-- I am very annoyed
-- that sucks
-- oh no really?
-- shit
-- very bad
-- oh really?
-
-## intent:great
-- Great!
-- Perfect!
-- That’s nice!
-- Good choice!
-- Got it!
-- That’s great!
-- Very good!
-- Fantastic!
-- Super!
-- Awesome
-- Nice
-- Exactly
-- Amazing
-- correctly
-- Perfect!
-- Super!
-- very good
-- okay great
-- super
-- perfect
-- super
-
 ## intent:greet
 - Hello
 - Hi
@@ -391,53 +291,6 @@
 - Greetings
 - Hello
 
-## intent:inform
-- to [london](changedestination) please
-- how bout [toronto](changedestination)
-- what about [new york](changedestination) maybe
-- uh how about [paris](changedestination)
-- um [frankfurt](changedestination)
-- im looking for a ticket to [moscow](changedestination)
-- id like to [rome](changedestination)
-- [London](changedestination)
-- [Moscow](changedestination) as for now
-- looking to fly to [new york](changedestination)
-- book me to [new york](changedestination)
-- put me on a plane to [madrid](changedestination)
-- my travel will to [barcelona](changedestination)
-- i have a meeting in [tunis](changedestination)
-- i need to be in [larnaca](changedestination)
-- in [economy](flightclass) please
-- how bout [first](flightclass)
-- what about [business](flightclass) maybe
-- uh how about [economy](flightclass)
-- um [Business](flightclass)
-- im looking for a ticket in [Economy](flightclass)
-- id like to travel in [economy](flightclass) only
-- [First](flightclass) Class
-- [first](flightclass)
-- [Economy](flightclass) as for now
-- looking to fly in [business](flightclass)
-- book me in [economy](flightclass)
-- book me to [first](flightclass) class
-- my travel will in [economy](flightclass)
-- i have a meeting in [tunis](changedestination)
-- i need to be in [larnaca](changedestination)
-- [tomrrow](departuredate) please
-- how bout [Monday next week](departuredate)
-- what about [in two weeks from now](departuredate) maybe
-- uh how about [Tuesday](depaturedate)
-- um [sunday this week](departuredate)
-- im looking for a ticket on [wednesday](departuredate)
-- id like to travel [ASAP](departuredate)
-- [Today](departuredate)
-- [this month](departuredate) please
-- [day after tomorrow](departuredate) as for now
-- looking to fly [friday](departuredate)
-- [london](changedestination)
-- [tomorrow](departuredate) please if possible
-- in [business](flightclass)as usual
-
 ## intent:myvoucher
 - where is my voucher?
 - do i have a voucher
@@ -457,47 +310,18 @@
 - my restaurant voucher
 - give me my voucher again
 
-## intent:request_flightsearch
-- im looking for a flight ticket
-- i wnat to fly
-- i want to fly
-- Book me please
-- Book for me
-- can i get a flight to [london](destination)
-- a flight in [business](flightclass)
-- book me to [Tunis](destination) in [first](flightclass)
-- id like to book
-- i would like to book a ticket
-- can you find me a nice ticket?
-- can you put me on a plane to [larnaca](destination)
-- fly me
-- uh can i find a ticket to [madrid](destination)
-- uh im looking to travel cheap to [moscow](destination)
-- book me a ticket
-- book me [tomorrow](departuredate) to [Moscow](destination)in [business](flightclass)please
-- i want to fly to [paris](destination)in [economy](flightclass)as usual but this time [next monday](departuredate)
-- i want to fly [tomorrow](departuredate)to [paris](destination)in [business](flightclass)
-- book me to [toronto](destination)on [saturday](departuredate)in [first](flightclass)class
-- i want to fly [today](departuredate)to [london](destination)in [business](flightclass)class please
-- i want to fly [tomorrow](departuredate)to [london](destination)in [economy](flightclass)
-- i want to fly t[omorrow ](departuredate:tomorrow)to l[ondon ](destination:london)in e[conomy](flightclass:economy)
 
 ## intent:select_flight
 - /select_flight
-- /give_voucher
 
 ## intent:select_hotel
 - /select_hotel
 - /select_hotel[{"selectedhotelid":"1"}](selectedhotelid:1)
 
-## intent:select_login
-- /select_login
 
 ## intent:select_lounge
 - /select_lounge
 
-## intent:select_date_roster
-- /select_date_roster
 
 ## intent:select_article
 - /select_article
@@ -522,6 +346,9 @@
 - let me go to a lounge
 - let me go to a business lounge
 - what about a lounge
+- i need to rest in a lounge
+- i need to have a quite place to have my calls
+- i need to finish some work and would need a quite place
 
 
 ## intent:show_onair_shopping_articles
@@ -540,7 +367,7 @@
 
 ## intent:start
 - /start
-- /start
+
 
 ## intent:stop
 - ok then you cant help me
