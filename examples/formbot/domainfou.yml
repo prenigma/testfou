@@ -45,6 +45,7 @@ entities:
   - voucher
   - voucherflight
   - profiletype
+  - cuisine
 
 
 slots:
