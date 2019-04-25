@@ -174,6 +174,18 @@
 - any stop on my flight
 
 
+## intent:confirmmiles
+- yes please redeem my miles
+- yes use my miles
+- please use my miles
+- please use the miles
+- please use miles
+- yes with miles
+- agree with miles
+- yes use the miles
+- you can use the miles
+
+
 ## intent:change_airport
 - is there any other flight to another airport
 - i have a meeting and the flights you proposed are late, can you put me to another airport

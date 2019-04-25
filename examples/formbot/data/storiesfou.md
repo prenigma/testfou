@@ -68,7 +68,7 @@
     - utter_noworries
     - utter_askfurtherhelp
     - action_listen 
-    
+
 ## passsneger thanks
 * thankyou
     - utter_noworries
@@ -101,6 +101,19 @@
 * upgrade
     - action_search_upgrade_flight
     - action_listen
+* confirmmiles
+    - utter_use_miles
+    - action_listen
+
+## finish conversation
+* thankyou
+    - utter_noworries
+    - utter_askfurtherhelp
+    - action_listen   
+* deny
+    - utter_noworries
+    - action_listen
+
 
 ## search restaurant
 * ask_restaurant{"cuisine":"french"}

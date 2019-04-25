@@ -38,6 +38,7 @@ intents:
   - ask_seat
   - showmeticket
   - askdirectflight
+  - confirmmiles
 
 
 entities:
@@ -173,6 +174,8 @@ templates:
     - text: "Sorry, {passengername}. You connecting flight to {destination} will be delayed for more than {hourdelay} hours"  
   utter_welcomes_passenger:
     - text: "Welcome {passengername} to Dubai!"
+  utter_use_miles:
+    - text: "The upgrade is done. You will receive your confimation via email"  
   
 
 actions:
@@ -215,6 +218,7 @@ actions:
   - action_show_seat
   - action_show_me_ticket
   - action_ask_direct_flight
+  - utter_use_miles
 
 
 

@@ -2514,9 +2514,12 @@ class SearchUpgradeFlightsActions(Action):
         flightclass = tracker.get_slot("flightclass")
         if(flightclass.lower() == "economy"):
            dispatcher.utter_message("I can upgrade you on Business on the following flights")
-        if(flightclass.lower() == "Business"):
+           dispatcher.utter_message("You have 40,000 miles Tier miles available. The upgrade to Business Class will be 30,000 miles. Shall we proceed?")
+        if(flightclass.lower() == "business"):
            dispatcher.utter_message("I can upgrade you on First on the following flights")
-        if(flightclass.lower() == "First"):
+           dispatcher.utter_message("You have 100,000 miles Tier miles available. The upgrade to First Class will be 40,000 miles. Shall we proceed?")
+
+        if(flightclass.lower() == "first"):
            dispatcher.utter_message("Would you like to fly the plane? :-)")           
         headcount = tracker.get_slot("headcount")
         print("DESTINATION: ", destination)
@@ -3262,7 +3265,7 @@ class ChangeLanguageAction(Action):
         print("We will now talk ", language)
         sender = (tracker.current_state())["sender_id"]
         passengername = sender.title()
-        dispatcher.utter_message("Of course,"+passengername+" please start talking now in "+language)
+        dispatcher.utter_message("Of course "+passengername+", please start talking now in "+language)
         print("We will now talk language code", language_code)
         dispatcher.utter_attachment(json_data) 
         return [SlotSet("language_speak", language_code)]
