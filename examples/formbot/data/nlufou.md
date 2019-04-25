@@ -25,8 +25,36 @@
 - nice
 - nice
 
+## intent:ask_seat
+- what is my seat
+- what about my seat
+- show my seat
+- what is my seatnumer
+- what about my seatnumber
+- show my seatnumer
+- what is my seat number
+- what about my seat numer
+- show my seat numer
+- give me my seat
+- give me my seat number
+- give me my seatnumber
+- and what is my seat
+- and what about my seat
+- and show my seat
+- and what is my seatnumber
+- and what about my seatnumber
+- and show my seat number
+- and what is my seat number
+- and what about my seat number
+- and show my seat number
+
 ## intent:ask_baggage
 - What about my baggage?
+- what about my bags
+- and what about my bags
+- and what about my baggage
+- will you take care of my baggage please
+- will you take care of my bags
 - Is baggage transferred?
 - Shall I pick up my baggage?
 - What happens to my checked baggage?
@@ -137,6 +165,19 @@
 
 ## intent:change_destination
 - can you please book for me a new ticket
+- show me flight to [Manchester](changedestination)
+- can you rebook me to [Manchester](changedestination) please
+- show me flights to [Manchester](changedestination)
+- show me please flights to [Manchester](changedestination)
+- can you show me please flights to [Manchester](changedestination)
+- show me earlier flights to [Manchester](changedestination)
+- can you show me earlier flights to [Manchester](changedestination)
+- is there any earlier flights to [Manchester](changedestination)
+- can i take an earlier flights to [Manchester](changedestination)
+- can i take a flight to [Manchester](changedestination)
+- change my flight to [Manchester](changedestination)
+- can you change my flight to [Manchester](changedestination) please
+- can you change my flight to [Manchester](changedestination)
 - I want to change my destination
 - change my onward flight destination
 - i want another destination
@@ -162,6 +203,9 @@
 - please rebook my ticket
 - i want another flight
 - rebook me please
+- rebook me to [london](changedestination)
+- can you rebook me to [london](changedestination)
+- i changed my mind can you rebook me to [london](changedestination)
 - rebook me
 - can i go to [tokyo](changedestination)
 - can i go to [manchester](changedestination)

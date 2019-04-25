@@ -35,6 +35,7 @@ intents:
   - start
   - givedestination
   - change_airport
+  - ask_seat
 
 
 entities:
@@ -46,6 +47,7 @@ entities:
   - voucherflight
   - profiletype
   - cuisine
+  - changedestination
 
 
 slots:
@@ -162,7 +164,7 @@ templates:
   utter_askfurtherhelp:
     - text: "Can i do something else for you?"
   utter_baggage:
-    - text: "I will take care of your baggage!"
+    - text: "I will take care of your baggage! It will be transferred to the new onward flight"
   utter_inform_delay:
     - text: "Sorry, {passengername}. You connecting flight to {destination} will be delayed for more than {hourdelay} hours"  
   utter_welcomes_passenger:
@@ -206,6 +208,7 @@ actions:
   - action_inform_flight_search
   - action_greet
   - utter_submit
+  - action_show_seat
 
 
 

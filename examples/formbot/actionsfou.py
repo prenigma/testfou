@@ -33,80 +33,80 @@ class SearchFlightsActions(Action):
             "id": 1,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
             "origin_time": "02:30 AM",
             "destinationcode": "LHR",
             "destination": "London",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "7:14 PM",
+            "destination_date": "2019-04-27",
+            "destination_display_day": "Sat, Apr 27",
+            "destination_time": "07:05 AM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 7",
+            "flight_number": "EK 007",
             "number_stops": "0"
         },
         {
             "id": 2,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
             "origin_time": "07:45 AM",
             "destinationcode": "LHR",
             "destination": "London",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "11:00 PM",
+            "destination_date": "2019-04-27",
+            "destination_display_day": "Sat, Apr 27",
+            "destination_time": "12:25 PM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 3",
+            "flight_number": "EK 001",
             "number_stops": "0"
         },
         {
             "id": 3,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "17:10 AM",
-            "destinationcode": "VIE",
-            "destination": "Vienna",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "21:15 PM",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
+            "origin_time": "08:00 AM",
+            "destinationcode": "LGW",
+            "destination": "Gatwick",
+            "destination_date": "2019-04-27",
+            "destination_display_day": "Sat, Apr 27",
+            "destination_time": "12:35 PM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 125",
+            "flight_number": "EK 015",
             "number_stops": "0"
         },
         {
             "id": 4,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "23:45 AM",
-            "destinationcode": "VIE",
-            "destination": "Vienna",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
+            "origin_time": "11:25 AM",
+            "destinationcode": "LHR",
+            "destination": "London",
             "destination_date": "2019-04-27",
             "destination_display_day": "Sat, Apr 27",
-            "destination_time": "07:20 PM",
+            "destination_time": "16:10 PM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 126",
+            "flight_number": "EK 031",
             "number_stops": "0"
         },
         {
             "id": 5,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "23:45 AM",
-            "destinationcode": "NYC",
-            "destination": "New York",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
+            "origin_time": "07:25 AM",
+            "destinationcode": "MAN",
+            "destination": "Manchester",
             "destination_date": "2019-04-27",
             "destination_display_day": "Sat, Apr 27",
-            "destination_time": "07:20 PM",
+            "destination_time": "12:05 PM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 127",
+            "flight_number": "EK 017",
             "number_stops": "0"
         },
         {
@@ -115,6 +115,22 @@ class SearchFlightsActions(Action):
             "origin": "Dubai",
             "origin_date": "2019-04-26",
             "origin_display_date": "Fr, Apr 26",
+            "origin_time": "23:45 AM",
+            "destinationcode": "NYC",
+            "destination": "New York",
+            "destination_date": "2019-04-27",
+            "destination_display_day": "Sat, Apr 27",
+            "destination_time": "07:20 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 127",
+            "number_stops": "0"
+        },
+        {
+            "id": 7,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
             "origin_time": "17:10 AM",
             "destinationcode": "NYC",
             "destination": "New York",
@@ -126,7 +142,7 @@ class SearchFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 7,
+            "id": 8,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -139,22 +155,6 @@ class SearchFlightsActions(Action):
             "destination_time": "07:20 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 127",
-            "number_stops": "0"
-        },
-        {
-            "id": 8,
-            "origincode": "DXB",
-            "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "17:10 AM",
-            "destinationcode": "SIN",
-            "destination": "Singapure",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "21:15 PM",
-            "airline": "Emirates Airlines",
-            "flight_number": "EK 128",
             "number_stops": "0"
         },
         {
@@ -163,6 +163,22 @@ class SearchFlightsActions(Action):
             "origin": "Dubai",
             "origin_date": "2019-04-26",
             "origin_display_date": "Fr, Apr 26",
+            "origin_time": "17:10 AM",
+            "destinationcode": "SIN",
+            "destination": "Singapure",
+            "destination_date": "2019-04-26",
+            "destination_display_day": "Fr, Apr 26",
+            "destination_time": "21:15 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 128",
+            "number_stops": "0"
+        },
+        {
+            "id": 10,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
             "origin_time": "23:45 AM",
             "destinationcode": "CDG",
             "destination": "Paris",
@@ -174,7 +190,7 @@ class SearchFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 10,
+            "id": 11,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -190,7 +206,7 @@ class SearchFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 11,
+            "id": 12,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -206,7 +222,7 @@ class SearchFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 12,
+            "id": 13,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -222,7 +238,7 @@ class SearchFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 13,
+            "id": 14,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -238,7 +254,39 @@ class SearchFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 14,
+            "id": 15,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
+            "origin_time": "17:10 AM",
+            "destinationcode": "HND",
+            "destination": "Tokyo",
+            "destination_date": "2019-04-26",
+            "destination_display_day": "Fr, Apr 26",
+            "destination_time": "21:15 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 445",
+            "number_stops": "0"
+        },
+        {
+            "id": 16,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
+            "origin_time": "17:10 AM",
+            "destinationcode": "HND",
+            "destination": "Tokyo",
+            "destination_date": "2019-04-26",
+            "destination_display_day": "Fr, Apr 26",
+            "destination_time": "21:15 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 445",
+            "number_stops": "0"
+        },
+         {
+            "id": 17,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -283,8 +331,8 @@ class GreetingAction(Action):
 
     def get_message_type(self, flightstatus, passengername, destination, hourdelay):
         switcher = {
-        "delayed": "Welcome "+passengername.title()+" to Dubai! Sorry, your connecting flight to "+destination.title()+" will be delayed for more than "+hourdelay+" hours",
-        "cancelled": "Welcome "+passengername.title() +" to Dubai! Sorry, your connecting flight to "+destination.title()+" has been cancelled",
+        "delayed": "Welcome "+passengername.title()+" to Dubai! We apologies, because of unexpected weather conditions, your connecting flight to "+destination.title()+" will be delayed for more than "+hourdelay+" hours",
+        "cancelled": "Welcome "+passengername.title() +" to Dubai! We apologies, because of unexpected weather conditions, your connecting flight to "+destination.title()+" has been cancelled",
         "ontime": "Welcome "+passengername.title() +" to Dubai!" 
         }
 
@@ -297,12 +345,14 @@ class GreetingAction(Action):
        passengername = tracker.current_state()['sender_id']
        destination = tracker.get_slot("destination")
        hourdelay = tracker.get_slot("hourdelay")
-       start_msg = "Hi "+passengername.title()+", I am Sarah! I am your personal assistant."
+       start_msg = "Hello "+passengername.title()+", I am Sarah! I am your Emirates personal assistant."
        dispatcher.utter_message(start_msg)
 
        text_msg = self.get_message_type(flightstatus, passengername, destination, hourdelay)
     
        dispatcher.utter_message(text_msg) 
+
+
 
 
 class InformFlightSearchAction(Action):
@@ -326,15 +376,20 @@ class InformFlightSearchAction(Action):
         passengername = tracker.current_state()['sender_id']
 
         destination = tracker.get_slot("destination")
-        
+        print("IN Action INFORM FLIGHT SEARCH CHANGEDESTINATION ", changedestination)
+        print("IN Action INFORM FLIGHT SEARCH DESTINATION ", destination)
+      
         if (changedestination == destination):
             text_msg = self.get_message_type(flightstatus, destination, passengername)
         else:
-            text_msg = "This is what i found for you to "+changedestination    
+            if(changedestination is not None):
+                text_msg = "This is what i found for you to "+changedestination
+            else:
+                text_msg = self.get_message_type(flightstatus, destination, passengername)
 
 
+        print("IN Action INFORM FLIGHT SEARCH CHANGEDESTINATION ", changedestination)
         dispatcher.utter_message(text_msg)
-        print("CHANGEDESTINATION ", changedestination)
 
         #if(changedestination is not None):
         #    further_msg = "I propose you the following options to "+changedestination.title()
@@ -354,80 +409,80 @@ class BookFlightActions(Action):
             "id": 1,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
             "origin_time": "02:30 AM",
             "destinationcode": "LHR",
             "destination": "London",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "7:14 PM",
+            "destination_date": "2019-04-27",
+            "destination_display_day": "Sat, Apr 27",
+            "destination_time": "07:05 AM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 7",
+            "flight_number": "EK 007",
             "number_stops": "0"
         },
         {
             "id": 2,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
             "origin_time": "07:45 AM",
             "destinationcode": "LHR",
             "destination": "London",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "11:00 PM",
+            "destination_date": "2019-04-27",
+            "destination_display_day": "Sat, Apr 27",
+            "destination_time": "12:25 PM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 3",
+            "flight_number": "EK 001",
             "number_stops": "0"
         },
         {
             "id": 3,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "17:10 AM",
-            "destinationcode": "VIE",
-            "destination": "Vienna",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "21:15 PM",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
+            "origin_time": "08:00 AM",
+            "destinationcode": "LGW",
+            "destination": "Gatwick",
+            "destination_date": "2019-04-27",
+            "destination_display_day": "Sat, Apr 27",
+            "destination_time": "12:35 PM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 125",
+            "flight_number": "EK 015",
             "number_stops": "0"
         },
         {
             "id": 4,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "23:45 AM",
-            "destinationcode": "VIE",
-            "destination": "Vienna",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
+            "origin_time": "11:25 AM",
+            "destinationcode": "LHR",
+            "destination": "London",
             "destination_date": "2019-04-27",
             "destination_display_day": "Sat, Apr 27",
-            "destination_time": "07:20 PM",
+            "destination_time": "16:10 PM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 126",
+            "flight_number": "EK 031",
             "number_stops": "0"
         },
         {
             "id": 5,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "23:45 AM",
-            "destinationcode": "NYC",
-            "destination": "New York",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
+            "origin_time": "07:25 AM",
+            "destinationcode": "MAN",
+            "destination": "Manchester",
             "destination_date": "2019-04-27",
             "destination_display_day": "Sat, Apr 27",
-            "destination_time": "07:20 PM",
+            "destination_time": "12:05 PM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 127",
+            "flight_number": "EK 017",
             "number_stops": "0"
         },
         {
@@ -436,6 +491,22 @@ class BookFlightActions(Action):
             "origin": "Dubai",
             "origin_date": "2019-04-26",
             "origin_display_date": "Fr, Apr 26",
+            "origin_time": "23:45 AM",
+            "destinationcode": "NYC",
+            "destination": "New York",
+            "destination_date": "2019-04-27",
+            "destination_display_day": "Sat, Apr 27",
+            "destination_time": "07:20 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 127",
+            "number_stops": "0"
+        },
+        {
+            "id": 7,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
             "origin_time": "17:10 AM",
             "destinationcode": "NYC",
             "destination": "New York",
@@ -447,7 +518,7 @@ class BookFlightActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 7,
+            "id": 8,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -460,22 +531,6 @@ class BookFlightActions(Action):
             "destination_time": "07:20 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 127",
-            "number_stops": "0"
-        },
-        {
-            "id": 8,
-            "origincode": "DXB",
-            "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "17:10 AM",
-            "destinationcode": "SIN",
-            "destination": "Singapure",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "21:15 PM",
-            "airline": "Emirates Airlines",
-            "flight_number": "EK 128",
             "number_stops": "0"
         },
         {
@@ -484,6 +539,22 @@ class BookFlightActions(Action):
             "origin": "Dubai",
             "origin_date": "2019-04-26",
             "origin_display_date": "Fr, Apr 26",
+            "origin_time": "17:10 AM",
+            "destinationcode": "SIN",
+            "destination": "Singapure",
+            "destination_date": "2019-04-26",
+            "destination_display_day": "Fr, Apr 26",
+            "destination_time": "21:15 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 128",
+            "number_stops": "0"
+        },
+        {
+            "id": 10,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
             "origin_time": "23:45 AM",
             "destinationcode": "CDG",
             "destination": "Paris",
@@ -495,7 +566,7 @@ class BookFlightActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 10,
+            "id": 11,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -511,7 +582,7 @@ class BookFlightActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 11,
+            "id": 12,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -527,7 +598,7 @@ class BookFlightActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 12,
+            "id": 13,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -543,7 +614,7 @@ class BookFlightActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 13,
+            "id": 14,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -556,22 +627,6 @@ class BookFlightActions(Action):
             "destination_time": "07:20 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 444",
-            "number_stops": "0"
-        },
-        {
-            "id": 14,
-            "origincode": "DXB",
-            "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "17:10 AM",
-            "destinationcode": "HND",
-            "destination": "Tokyo",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "21:15 PM",
-            "airline": "Emirates Airlines",
-            "flight_number": "EK 445",
             "number_stops": "0"
         },
         {
@@ -590,8 +645,24 @@ class BookFlightActions(Action):
             "flight_number": "EK 445",
             "number_stops": "0"
         },
-         {
+        {
             "id": 16,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
+            "origin_time": "17:10 AM",
+            "destinationcode": "HND",
+            "destination": "Tokyo",
+            "destination_date": "2019-04-26",
+            "destination_display_day": "Fr, Apr 26",
+            "destination_time": "21:15 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 445",
+            "number_stops": "0"
+        },
+         {
+            "id": 17,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -612,6 +683,9 @@ class BookFlightActions(Action):
         selectedflightnumber = tracker.get_slot("selectedflightnumber")
         print("selectedflightnumber: ", selectedflightnumber)
         passengername = tracker.current_state()['sender_id']
+        destination = tracker.get_slot("destination")
+        voucher_type = tracker.get_slot("voucher")
+        print("IN ACTION BOKK FLIGHT VOUCHER TYPE ", voucher_type)
         passengername = passengername.title()
         if(selectedflightnumber is not None):
             proposedFlights = [flight for flight in segments if flight['flight_number'].lower()==selectedflightnumber.lower()]
@@ -622,12 +696,30 @@ class BookFlightActions(Action):
                dispatcher.utter_message("The upgrade is done and you will receive the receipt per email. It will cost you "+price+" AED. I will use your Skyward miles as configured in your preferences "+passengername)
 
             changedestination = tracker.get_slot("changedestination")
-            if(changedestination is not None):
-                price = proposedFlights[selectedflightnumber]
-                text_msg = "The change to the new destination "+changedestination+" will cost you "+price+" AED. Should i use your already registered credit card "+passengername+" or use your Skyward miles?"
+            text_msg = "Nice! "
+            if(changedestination is not None and changedestination != destination):
+                #price = proposedFlights[selectedflightnumber]
+                price = "10000"
+                text_msg = text_msg+"The change to the new destination "+changedestination+" will cost you "+price+" AED. I will use your Skyward miles as configured in your preferences "+passengername
             else:
-                text_msg = "Perfect, "+passengername+" i rebooked you on the flight "+selectedflightnumber    
-            dispatcher.utter_message(text_msg)
+                if(changedestination is not None and voucher_type == "voucher_hotel"):
+                    text_msg1 = text_msg+passengername+" i rebooked you on the flight "+selectedflightnumber
+                    dispatcher.utter_message(text_msg1)
+                    text_msg2 = " Emirates apologies and gives you a Hotel Voucher for you to rest till your next flight"
+                    dispatcher.utter_message(text_msg2)
+                else:
+                    if(changedestination is not None and voucher_type == "voucher_meal"):
+                        text_msg1 = text_msg+passengername+" i rebooked you on the flight "+selectedflightnumber
+                        dispatcher.utter_message(text_msg1)
+                        text_msg2 = " Emirates apologies and gives you a Meal Voucher for you as apologies for the delay"
+                        dispatcher.utter_message(text_msg2)
+                    else:
+                        text_msg1 = text_msg+passengername+" i rebooked you on the flight "+selectedflightnumber
+                        dispatcher.utter_message(text_msg1)
+
+
+                #text_msg = text_msg+passengername+" i rebooked you on the flight "+selectedflightnumber    
+            #dispatcher.utter_message(text_msg)
             return [SlotSet("selectedflight", output_json)]
         else:
             dispatcher.utter_message("Please select a flight")         
@@ -686,7 +778,8 @@ class LoginAction(Action):
         "faizan": "zh_CN",
         "amna":"",
         "deepa": "",
-        "vanessa": ""
+        "vanessa": "",
+        "tingting": ""
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -702,7 +795,8 @@ class LoginAction(Action):
         "faizan": "cancelled",
         "amna": "cancelled",
         "deepa": "delayed",
-        "vanessa": "cancelled"
+        "vanessa": "cancelled",
+        "tingting": "ontime"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -712,14 +806,15 @@ class LoginAction(Action):
         switcher = {
         "fouad": None,
         "rami": "voucher_hotel",
-        "jisha": "voucher_meal", # flight delayed for 4 hours
+        "jisha": None, # flight delayed for 4 hours
         "safa": None,
         "elena": None,
         "wafa": "voucher_hotel", # flight delayed for 8 hours
         "faizan": "voucher_hotel",
         "amna": "voucher_hotel",
         "deepa": "voucher_meal",
-        "vanessa": "voucher_hotel"
+        "vanessa": "voucher_hotel",
+        "tingting": None
         }
 
         return switcher.get(sender.lower(), "Invalid user")    
@@ -735,7 +830,8 @@ class LoginAction(Action):
         "faizan": "en_US",
         "amna": "en_US",
         "deepa": "hi",
-        "vanessa": "en_US"
+        "vanessa": "en_US",
+        "tingting": "zh_CN"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -751,7 +847,8 @@ class LoginAction(Action):
         "faizan": "passenger",
         "amna": "passenger",
         "deepa": "passenger",
-        "vanessa": "passenger"
+        "vanessa": "passenger",
+        "tingting": "passenger"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -767,7 +864,8 @@ class LoginAction(Action):
         "faizan": "XLKD13",
         "amna": "XLKD12",
         "deepa": "XLKD11",
-        "vanessa": "XLKD10"
+        "vanessa": "XLKD10",
+        "tingting": "XLKD09"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -782,7 +880,8 @@ class LoginAction(Action):
         "faizan": "rashid",
         "amna": "alredha",
         "deep": "misquitta",
-        "vanessa":"espera"
+        "vanessa": "espera",
+        "tingting": "tingting"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -798,7 +897,8 @@ class LoginAction(Action):
         "faizan": "10",
         "amna": "9",
         "deepa": "5",
-        "vanessa": "11"
+        "vanessa": "11",
+        "tingting": "0"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -807,14 +907,15 @@ class LoginAction(Action):
         switcher = {
         "fouad": "London",
         "rami": "London",
-        "jisha": "Miami",
+        "jisha": "Paris",
         "safa": "San Fransisco",
         "elena": "Tokyo",
         "wafa": "Geneve",
         "faizan": "Paris",
-        "amna": "London",
+        "amna": "Sydney",
         "deepa": "London",
-        "vanessa": "London"
+        "vanessa": "London",
+        "tingting": "Shanghai"
 
         }
 
@@ -831,7 +932,8 @@ class LoginAction(Action):
         "faizan": "business",
         "amna": "business",
         "deepa": "business",
-        "vanessa": "business"
+        "vanessa": "economy",
+        "tingting": "business"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -847,7 +949,8 @@ class LoginAction(Action):
         "faizan": "8K",
         "amna": "7K",
         "deepa": "6A",
-        "vanessa": "8A"
+        "vanessa": "20A",
+        "tingting": "8B"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -863,7 +966,8 @@ class LoginAction(Action):
         "faizan": "B8",
         "amna": "B8",
         "deepa": "B7",
-        "vanessa": "B8"
+        "vanessa": "B8",
+        "tingting": "B12"
         }
 
         return switcher.get(sender.lower(), "Invalid user")                                              
@@ -885,30 +989,30 @@ class LoginAction(Action):
         milesstatus = {}
         milesstatus['awardmiles'] = "46,000 M"
         milesstatus['statusmiles'] = "30,000"
-        milesstatus['flightsegment'] = "7"
-        milesstatus['evoucher'] = "2"
+        milesstatus['flightsegment'] = "2"
+        milesstatus['evoucher'] = "0"
         milesstatus['percentage'] = "25"
-        milesstatus['lastdestination'] = "Singapur"
+        milesstatus['lastdestination'] = "London"
         profile['milesstatus'] = milesstatus
         activity = {}
-        activity['date'] = "15.04.2019"
-        activity['destination'] = "Singapur - Dubai"
+        activity['date'] = "24.04.2019"
+        activity['destination'] = "Tokyo - Dubai"
         activity['awardmiles'] = "15,000"
         activity['executivebonus'] = "2,500"
         activity['statusmiles'] = "15,000"
         activity['executivebonus'] = "2,500"
-        activity['flightnumber'] = "EK450"
-        activity["flightclass"] = "Business Class"
+        activity['flightnumber'] = "EK319"
+        activity["flightclass"] = "Economy Class"
 
         activity2 = {}
-        activity2['date'] = "10.02.2019"
-        activity2['destination'] = "London - Dubai"
+        activity2['date'] = "25.04.2019"
+        activity2['destination'] = "Dubai - London"
         activity2['awardmiles'] = "15,000"
         activity2['executivebonus'] = "2,500"
         activity2['statusmiles'] = "15,000"
         activity2['executivebonus'] = "2,500"
-        activity2['flightnumber'] = "EK150"
-        activity2["flightclass"] = "Business Class"
+        activity2['flightnumber'] = "EK 001"
+        activity2["flightclass"] = "Economy Class"
 
         activities = [activity, activity2]
 
@@ -920,6 +1024,7 @@ class LoginAction(Action):
         data['profiletype'] = self.get_profile_type(username)
         data['voucher'] = self.get_voucher_type(username)
         data['profile'] = profile
+        #flightnumber = 
         json_data = json.dumps(data) 
         #description = " we called get passenger flight details "
         dispatcher.utter_attachment(json_data)
@@ -939,80 +1044,80 @@ class SearchChangeDesttinationFlightsActions(Action):
             "id": 1,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
             "origin_time": "02:30 AM",
             "destinationcode": "LHR",
             "destination": "London",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "7:14 PM",
+            "destination_date": "2019-04-27",
+            "destination_display_day": "Sat, Apr 27",
+            "destination_time": "07:05 AM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 7",
+            "flight_number": "EK 007",
             "number_stops": "0"
         },
         {
             "id": 2,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
             "origin_time": "07:45 AM",
             "destinationcode": "LHR",
             "destination": "London",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "11:00 PM",
+            "destination_date": "2019-04-27",
+            "destination_display_day": "Sat, Apr 27",
+            "destination_time": "12:25 PM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 3",
+            "flight_number": "EK 001",
             "number_stops": "0"
         },
         {
             "id": 3,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "17:10 AM",
-            "destinationcode": "VIE",
-            "destination": "Vienna",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "21:15 PM",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
+            "origin_time": "08:00 AM",
+            "destinationcode": "LGW",
+            "destination": "Gatwick",
+            "destination_date": "2019-04-27",
+            "destination_display_day": "Sat, Apr 27",
+            "destination_time": "12:35 PM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 125",
+            "flight_number": "EK 015",
             "number_stops": "0"
         },
         {
             "id": 4,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "23:45 AM",
-            "destinationcode": "VIE",
-            "destination": "Vienna",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
+            "origin_time": "11:25 AM",
+            "destinationcode": "LHR",
+            "destination": "London",
             "destination_date": "2019-04-27",
             "destination_display_day": "Sat, Apr 27",
-            "destination_time": "07:20 PM",
+            "destination_time": "16:10 PM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 126",
+            "flight_number": "EK 031",
             "number_stops": "0"
         },
         {
             "id": 5,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "23:45 AM",
-            "destinationcode": "NYC",
-            "destination": "New York",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
+            "origin_time": "07:25 AM",
+            "destinationcode": "MAN",
+            "destination": "Manchester",
             "destination_date": "2019-04-27",
             "destination_display_day": "Sat, Apr 27",
-            "destination_time": "07:20 PM",
+            "destination_time": "12:05 PM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 127",
+            "flight_number": "EK 017",
             "number_stops": "0"
         },
         {
@@ -1021,6 +1126,22 @@ class SearchChangeDesttinationFlightsActions(Action):
             "origin": "Dubai",
             "origin_date": "2019-04-26",
             "origin_display_date": "Fr, Apr 26",
+            "origin_time": "23:45 AM",
+            "destinationcode": "NYC",
+            "destination": "New York",
+            "destination_date": "2019-04-27",
+            "destination_display_day": "Sat, Apr 27",
+            "destination_time": "07:20 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 127",
+            "number_stops": "0"
+        },
+        {
+            "id": 7,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
             "origin_time": "17:10 AM",
             "destinationcode": "NYC",
             "destination": "New York",
@@ -1032,7 +1153,7 @@ class SearchChangeDesttinationFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 7,
+            "id": 8,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -1045,22 +1166,6 @@ class SearchChangeDesttinationFlightsActions(Action):
             "destination_time": "07:20 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 127",
-            "number_stops": "0"
-        },
-        {
-            "id": 8,
-            "origincode": "DXB",
-            "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "17:10 AM",
-            "destinationcode": "SIN",
-            "destination": "Singapure",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "21:15 PM",
-            "airline": "Emirates Airlines",
-            "flight_number": "EK 128",
             "number_stops": "0"
         },
         {
@@ -1069,6 +1174,22 @@ class SearchChangeDesttinationFlightsActions(Action):
             "origin": "Dubai",
             "origin_date": "2019-04-26",
             "origin_display_date": "Fr, Apr 26",
+            "origin_time": "17:10 AM",
+            "destinationcode": "SIN",
+            "destination": "Singapure",
+            "destination_date": "2019-04-26",
+            "destination_display_day": "Fr, Apr 26",
+            "destination_time": "21:15 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 128",
+            "number_stops": "0"
+        },
+        {
+            "id": 10,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
             "origin_time": "23:45 AM",
             "destinationcode": "CDG",
             "destination": "Paris",
@@ -1080,7 +1201,7 @@ class SearchChangeDesttinationFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 10,
+            "id": 11,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -1096,7 +1217,7 @@ class SearchChangeDesttinationFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 11,
+            "id": 12,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -1112,7 +1233,7 @@ class SearchChangeDesttinationFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 12,
+            "id": 13,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -1128,7 +1249,7 @@ class SearchChangeDesttinationFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 13,
+            "id": 14,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -1144,7 +1265,39 @@ class SearchChangeDesttinationFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 14,
+            "id": 15,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
+            "origin_time": "17:10 AM",
+            "destinationcode": "HND",
+            "destination": "Tokyo",
+            "destination_date": "2019-04-26",
+            "destination_display_day": "Fr, Apr 26",
+            "destination_time": "21:15 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 445",
+            "number_stops": "0"
+        },
+        {
+            "id": 16,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
+            "origin_time": "17:10 AM",
+            "destinationcode": "HND",
+            "destination": "Tokyo",
+            "destination_date": "2019-04-26",
+            "destination_display_day": "Fr, Apr 26",
+            "destination_time": "21:15 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 445",
+            "number_stops": "0"
+        },
+         {
+            "id": 17,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -1163,7 +1316,7 @@ class SearchChangeDesttinationFlightsActions(Action):
        destination = tracker.get_slot("destination")
        changedestination = tracker.get_slot("changedestination")
        print("CHANGE destination", changedestination)
-       destination = changedestination
+       #destination = changedestination
 
        flightclass = tracker.get_slot("flightclass")
        headcount = tracker.get_slot("headcount")
@@ -1198,80 +1351,80 @@ class SearchUpgradeFlightsActions(Action):
             "id": 1,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
             "origin_time": "02:30 AM",
             "destinationcode": "LHR",
             "destination": "London",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "7:14 PM",
+            "destination_date": "2019-04-27",
+            "destination_display_day": "Sat, Apr 27",
+            "destination_time": "07:05 AM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 7",
+            "flight_number": "EK 007",
             "number_stops": "0"
         },
         {
             "id": 2,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
             "origin_time": "07:45 AM",
             "destinationcode": "LHR",
             "destination": "London",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "11:00 PM",
+            "destination_date": "2019-04-27",
+            "destination_display_day": "Sat, Apr 27",
+            "destination_time": "12:25 PM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 3",
+            "flight_number": "EK 001",
             "number_stops": "0"
         },
         {
             "id": 3,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "17:10 AM",
-            "destinationcode": "VIE",
-            "destination": "Vienna",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "21:15 PM",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
+            "origin_time": "08:00 AM",
+            "destinationcode": "LGW",
+            "destination": "Gatwick",
+            "destination_date": "2019-04-27",
+            "destination_display_day": "Sat, Apr 27",
+            "destination_time": "12:35 PM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 125",
+            "flight_number": "EK 015",
             "number_stops": "0"
         },
         {
             "id": 4,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "23:45 AM",
-            "destinationcode": "VIE",
-            "destination": "Vienna",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
+            "origin_time": "11:25 AM",
+            "destinationcode": "LHR",
+            "destination": "London",
             "destination_date": "2019-04-27",
             "destination_display_day": "Sat, Apr 27",
-            "destination_time": "07:20 PM",
+            "destination_time": "16:10 PM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 126",
+            "flight_number": "EK 031",
             "number_stops": "0"
         },
         {
             "id": 5,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "23:45 AM",
-            "destinationcode": "NYC",
-            "destination": "New York",
+            "origin_date": "2019-04-27",
+            "origin_display_date": "Sat, Apr 27",
+            "origin_time": "07:25 AM",
+            "destinationcode": "MAN",
+            "destination": "Manchester",
             "destination_date": "2019-04-27",
             "destination_display_day": "Sat, Apr 27",
-            "destination_time": "07:20 PM",
+            "destination_time": "12:05 PM",
             "airline": "Emirates Airlines",
-            "flight_number": "EK 127",
+            "flight_number": "EK 017",
             "number_stops": "0"
         },
         {
@@ -1280,6 +1433,22 @@ class SearchUpgradeFlightsActions(Action):
             "origin": "Dubai",
             "origin_date": "2019-04-26",
             "origin_display_date": "Fr, Apr 26",
+            "origin_time": "23:45 AM",
+            "destinationcode": "NYC",
+            "destination": "New York",
+            "destination_date": "2019-04-27",
+            "destination_display_day": "Sat, Apr 27",
+            "destination_time": "07:20 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 127",
+            "number_stops": "0"
+        },
+        {
+            "id": 7,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
             "origin_time": "17:10 AM",
             "destinationcode": "NYC",
             "destination": "New York",
@@ -1291,7 +1460,7 @@ class SearchUpgradeFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 7,
+            "id": 8,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -1304,22 +1473,6 @@ class SearchUpgradeFlightsActions(Action):
             "destination_time": "07:20 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 127",
-            "number_stops": "0"
-        },
-        {
-            "id": 8,
-            "origincode": "DXB",
-            "origin": "Dubai",
-            "origin_date": "2019-04-26",
-            "origin_display_date": "Fr, Apr 26",
-            "origin_time": "17:10 AM",
-            "destinationcode": "SIN",
-            "destination": "Singapure",
-            "destination_date": "2019-04-26",
-            "destination_display_day": "Fr, Apr 26",
-            "destination_time": "21:15 PM",
-            "airline": "Emirates Airlines",
-            "flight_number": "EK 128",
             "number_stops": "0"
         },
         {
@@ -1328,6 +1481,22 @@ class SearchUpgradeFlightsActions(Action):
             "origin": "Dubai",
             "origin_date": "2019-04-26",
             "origin_display_date": "Fr, Apr 26",
+            "origin_time": "17:10 AM",
+            "destinationcode": "SIN",
+            "destination": "Singapure",
+            "destination_date": "2019-04-26",
+            "destination_display_day": "Fr, Apr 26",
+            "destination_time": "21:15 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 128",
+            "number_stops": "0"
+        },
+        {
+            "id": 10,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
             "origin_time": "23:45 AM",
             "destinationcode": "CDG",
             "destination": "Paris",
@@ -1339,7 +1508,7 @@ class SearchUpgradeFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 10,
+            "id": 11,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -1355,7 +1524,7 @@ class SearchUpgradeFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 11,
+            "id": 12,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -1371,7 +1540,7 @@ class SearchUpgradeFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 12,
+            "id": 13,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -1387,7 +1556,7 @@ class SearchUpgradeFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 13,
+            "id": 14,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -1403,7 +1572,39 @@ class SearchUpgradeFlightsActions(Action):
             "number_stops": "0"
         },
         {
-            "id": 14,
+            "id": 15,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
+            "origin_time": "17:10 AM",
+            "destinationcode": "HND",
+            "destination": "Tokyo",
+            "destination_date": "2019-04-26",
+            "destination_display_day": "Fr, Apr 26",
+            "destination_time": "21:15 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 445",
+            "number_stops": "0"
+        },
+        {
+            "id": 16,
+            "origincode": "DXB",
+            "origin": "Dubai",
+            "origin_date": "2019-04-26",
+            "origin_display_date": "Fr, Apr 26",
+            "origin_time": "17:10 AM",
+            "destinationcode": "HND",
+            "destination": "Tokyo",
+            "destination_date": "2019-04-26",
+            "destination_display_day": "Fr, Apr 26",
+            "destination_time": "21:15 PM",
+            "airline": "Emirates Airlines",
+            "flight_number": "EK 445",
+            "number_stops": "0"
+        },
+         {
+            "id": 17,
             "origincode": "DXB",
             "origin": "Dubai",
             "origin_date": "2019-04-26",
@@ -1418,7 +1619,7 @@ class SearchUpgradeFlightsActions(Action):
             "flight_number": "EK 445",
             "number_stops": "0"
         }
-        ] 
+        ]
         destination = tracker.get_slot("destination")
         flightclass = tracker.get_slot("flightclass")
         if(flightclass.lower() == "economy"):
@@ -1525,7 +1726,7 @@ class BookRestaurantActions(Action):
         proposedFlights = [flight for flight in restaurants if flight['id']==selectedflightnumber]
         output_json = json.dumps(proposedFlights)
         print("PROPOSED FLIGHTS: ", output_json)
-        dispatcher.utter_message("Perfect, i booked for you a table")
+        dispatcher.utter_message("Ok, i booked for you a table")
         return [SlotSet("selectedrestaurant", proposedFlights)]  
 
 class SearchRestaurantsActions(Action):
@@ -1775,7 +1976,7 @@ class BookHotelsActions(Action):
         print("selectedhotelid: ", selectedflightnumber)
         proposedFlights = [flight for flight in hotels if flight['id']==selectedflightnumber]
        
-        dispatcher.utter_message("Perfect, i booked for you the requested hotel")
+        dispatcher.utter_message("Ok, i booked for you the requested hotel")
        
         return [SlotSet("hoteloptions", proposedFlights)]  
 
@@ -2161,7 +2362,7 @@ class ChangeLanguageAction(Action):
     def run(self, dispatcher, tracker, domain):
         language = tracker.get_slot("language")
 
-        language_code = self.get_language_code(language)
+        language_code = self.get_language_code(language.lower())
 
         data={}
         data['type'] = "changelanguage"
@@ -2192,6 +2393,16 @@ class ChangeLanguageAction(Action):
 
         return switcher.get(language.lower(), "Invalid language")    
 
+class ShowSeatNumber(Action):
+
+    def name(self):
+        return "action_show_seat"
+
+    def run(self, dispatcher, tracker, domain):
+         seatnumber = tracker.get_slot("seatnumber")
+         txt_msg = "You have your preferred window seat "+seatnumber    
+         dispatcher.utter_message(txt_msg)
+
 
 
 class ShowVoucherAction(Action):
@@ -2211,9 +2422,6 @@ class ShowVoucherAction(Action):
             "information": "PRESENT THIS VOUCHER AT HOTEL CHECK-IN",
             "QR_code": "https://imagizer.imageshack.com/img923/6066/56rKD8.png",
             "passenger_name": passenger_name_format,
-            "flightnumber": selectedflightnumber,
-            "meals": "Eligibility is based in time of check in at the hotel",
-            "date": date.today(), 
             "booking_ref": pnr,
             "hottel_name":"LE MERIDIEN",
             "room_description":"SINGLE",
@@ -2226,8 +2434,6 @@ class ShowVoucherAction(Action):
             "information": "PRESENT THIS VOUCHER AT RESTAURANT CHECK-IN",
             "QR_code": "https://imagizer.imageshack.com/img923/6066/56rKD8.png",
             "passenger_name": passenger_name_format,
-            "flightnumber": selectedflightnumber,
-            "date": date.today(), 
             "booking_ref": pnr,
             "resttaurantt_name":"Giraffe Stop",
             "meal":"International Restaurant"
@@ -2359,7 +2565,7 @@ class BookLoungeAction(Action):
         print("selectedloungeid: ", selectedloungeid)
         selectedlounge = [flight for flight in lounges if flight['id']==selectedloungeid]
         print("selectedloungeid: ", selectedloungeid)
-        dispatcher.utter_message("Perfect, i booked for you the requested lounge")
+        dispatcher.utter_message("Ok, i booked for you the requested lounge")
        
         return [SlotSet("selectedlounge", selectedlounge)] 
 
@@ -2438,7 +2644,7 @@ class BuyArticleAction(Action):
         selectedlounge = [flight for flight in lounges if flight['id']==selectedloungeid]
         print("selectedloungeid: ", selectedloungeid)
         seatnumber = tracker.get_slot("seatnumber")  
-        dispatcher.utter_message("Perfect, the article will be delivered to your seat "+seatnumber)
+        dispatcher.utter_message("Ok, the article will be delivered to your seat "+seatnumber)
        
         #return [SlotSet("selectedarticle", selectedlounge)] 
      

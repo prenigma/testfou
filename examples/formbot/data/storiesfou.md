@@ -27,6 +27,25 @@
     - action_greet
     - action_listen        
 
+## ask seat number
+* ask_seat
+    - action_show_seat
+    - action_listen
+
+## ask seat number
+* ask_seat
+    - action_show_seat
+    - action_listen
+* thankyou
+    - utter_noworries
+    - utter_askfurtherhelp
+    - action_listen         
+
+## passsneger thanks
+* thankyou
+    - utter_noworries
+    - utter_askfurtherhelp
+    - action_listen   
 
 ## select flight and talk back to passenger
 * select_flight{"selectedflightnumber": "EK 576"}
