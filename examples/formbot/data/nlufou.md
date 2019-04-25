@@ -151,6 +151,29 @@
 - show me restaurants
 - show me a restaurant please
 
+## intent:showmeticket
+- can you please show me my ticket
+- can you show me my ticket
+- can you show me please my itinerary
+- show me please my itinerary 
+- show me please my next flight
+- show me please my flight
+- show me please my onward flight
+- show me please my ticket
+- please show me my ticket
+- can you please show me my ticket
+
+## intent:askdirectflight
+- is it a direct flight to Sydney
+- is there any stops on my flight
+- is my flight a direct flight
+- is my flight direct
+- any stops on my flight
+- do i have stops in my flight
+- any stops on my flights
+- any stop on my flight
+
+
 ## intent:change_airport
 - is there any other flight to another airport
 - i have a meeting and the flights you proposed are late, can you put me to another airport
@@ -178,6 +201,7 @@
 - change my flight to [Manchester](changedestination)
 - can you change my flight to [Manchester](changedestination) please
 - can you change my flight to [Manchester](changedestination)
+- can you rebook me please to [Manchster](changedestination) the flight you prposed is too late for me
 - I want to change my destination
 - change my onward flight destination
 - i want another destination

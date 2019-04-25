@@ -39,8 +39,36 @@
 * thankyou
     - utter_noworries
     - utter_askfurtherhelp
-    - action_listen         
+    - action_listen
 
+## showticket
+* showmeticket
+    - action_show_me_ticket
+    - action_listen
+
+## showticket1
+* showmeticket
+    - action_show_me_ticket
+    - action_listen
+* thankyou
+    - utter_noworries
+    - utter_askfurtherhelp
+    - action_listen      
+
+## askdirectflight
+* askdirectflight
+    - action_ask_direct_flight
+    - action_listen
+
+## askdirectflight1
+* askdirectflight
+    - action_ask_direct_flight
+    - action_listen    
+* thankyou
+    - utter_noworries
+    - utter_askfurtherhelp
+    - action_listen 
+    
 ## passsneger thanks
 * thankyou
     - utter_noworries
@@ -108,27 +136,47 @@
 ## search lounge
 * show_lounge
     - action_show_lounge
-    - action_listen  
+    - action_listen
+
+## search lounge1
+* show_lounge
+    - action_show_lounge
+    - action_listen
+* select_lounge
+    - action_book_lounge
+    - action_listen      
 
 ## select lounge
 * select_lounge
     - action_book_lounge
     - action_listen
 
-## search article
+## search article1
 * show_onair_shopping_article
     - action_show_dutyfree_articles
     - action_listen
+* select_article
+    - action_buy_article
+    - action_listen    
 
 ## select article
 * select_article
     - action_buy_article
     - action_listen
 
+## ask about baggage1
+* ask_baggage
+    - utter_baggage
+    - action_listen
+
 ## ask about baggage
 * ask_baggage
     - utter_baggage
     - action_listen
+* thankyou
+    - utter_noworries
+    - utter_askfurtherhelp
+    - action_listen     
 
 ## navigate passenger to the gate
 * navigate_to_gate

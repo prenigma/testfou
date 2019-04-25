@@ -36,6 +36,8 @@ intents:
   - givedestination
   - change_airport
   - ask_seat
+  - showmeticket
+  - askdirectflight
 
 
 entities:
@@ -127,7 +129,9 @@ slots:
   gatenumber:
     type: unfeaturized
   cuisine:
-    type: unfeaturized                                    
+    type: unfeaturized
+  flightnumber:
+    type: unfeaturized                                      
   requested_slot:
     type: unfeaturized
 
@@ -209,6 +213,8 @@ actions:
   - action_greet
   - utter_submit
   - action_show_seat
+  - action_show_me_ticket
+  - action_ask_direct_flight
 
 
 
