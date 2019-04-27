@@ -96,8 +96,39 @@
 ## intent:ask_restaurant
 - restaurants
 - can i be shown a gluten free restaurant
-- i want a french restaurant
-- i'm looking for a Chinese restaurant
+- i want a [french](cuisine) restaurant
+- take me to a [french](cuisine) restaurant
+- i want to eat [french](cuisine)
+- a [french](cuisine) cuisine
+- [french](cuisine) restaurant
+- [italian](cuisine) restaurant
+- [italian](cuisine) food please
+- i want a [french](cuisine) restaurant
+- i'm looking for a [Chinese](cuisine) restaurant
+- i'm looking for a [american](cuisine) food
+- can you recommend any [fastfood](cuisine)
+- [arabic](cuisine) restaurant
+- [arabic](cuisine) food please
+- i want a [arabic](cuisine) restaurant
+- i'm looking for a [arabic](cuisine) restaurant
+- i'm looking for a [arabic](cuisine) food
+- can you recommend any [fastfood](cuisine)
+- i'm looking for a [libanese](cuisine) restaurant
+- i'm looking for a [libanes](cuisine) food
+- can you recommend any [fastfood](cuisine)
+- [libanese](cuisine) restaurant
+- [libnese](cuisine) food please
+- i want a [libanese](cuisine) restaurant
+- i'm looking for a [libanese](cuisine) restaurant
+- i'm looking for a [libanes](cuisine) food
+- [fastfood](cuisine) please i'm hungry
+- [fastfood](cuisine) restaurant
+- [fastfood](cuisine) food please
+- i want to eat [american](cuisine)
+- i want a [fastfood](cuisine) restaurant
+- i'm looking for a [fastfood](cuisine) restaurant
+- i'm looking for a [fastfood](cuisine) food
+- i am hungry any [fastfood](cuisine) you recommend
 - I need a new restaurant
 - help me find restaurant
 - I'm gonna need help finding a restaurant
@@ -138,7 +169,7 @@
 - i'm hungry show me please where to eat
 - hungry and want to eat
 - can you recommend a place to eat italian
-- i want to eat libanese
+- i want to eat [libanese](cuisine)
 - i want some arabic food
 - recomemnd please some local food
 - very hungry
@@ -150,6 +181,13 @@
 - can you list restaurants
 - show me restaurants
 - show me a restaurant please
+
+## intent:flyplane
+- i want to fly the plane
+- let me fly the plane
+- why not fly the plane
+- let me fly it
+- will fly it
 
 ## intent:showmeticket
 - can you please show me my ticket
@@ -451,6 +489,7 @@
 - give me voucher
 - hotel voucher
 - restaurant voucher
+- can you show me my welcher
 - eat voucher
 - sleep voucher
 - can you give me voucher please?
@@ -463,11 +502,6 @@
 - i want to see my voucher
 - i want to have a look at my voucher
 - please show me my voucher
-- i want a french restaurant
-- take me to a french restaurant
-- i want to eat french
-- a french cuisine
-- french restaurant
 
 ## intent:navigate_to_gate
 - please navigate me to my gate

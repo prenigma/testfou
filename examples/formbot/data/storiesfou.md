@@ -105,6 +105,14 @@
     - utter_use_miles
     - action_listen
 
+## ask upgrade ticket
+* upgrade
+    - action_search_upgrade_flight
+    - action_listen
+* flyplane
+    - utter_flyplane
+    - action_listen
+
 ## finish conversation
 * thankyou
     - utter_noworries

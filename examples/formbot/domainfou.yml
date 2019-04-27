@@ -177,7 +177,9 @@ templates:
   utter_welcomes_passenger:
     - text: "Welcome {passengername} to Dubai!"
   utter_use_miles:
-    - text: "The upgrade is done. You will receive your confimation via email"  
+    - text: "The upgrade is done. You will receive your confimation via email"
+  utter_flyplane:
+    - text: "Emirates Academy would welcome your candidature"    
   
 
 actions:
@@ -221,6 +223,7 @@ actions:
   - action_show_me_ticket
   - action_ask_direct_flight
   - utter_use_miles
+  - utter_flyplane
 
 
 
