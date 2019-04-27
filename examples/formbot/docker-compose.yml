@@ -3,6 +3,14 @@ version: '3.0'
 services:
   rasa_core:
     image: rasa/rasa_core:latest
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 5000M
+        reservations:
+          cpus: '3'
+          memory: 5000M
     ports:
       - 5005:5005
     volumes:
@@ -32,6 +40,14 @@ services:
       - config/nlu_tensorflow.yml    
   action_server:
     image: rasa/rasa_core_sdk:latest
+    deploy:
+      resources:
+        limits:
+          cpus: '3'
+          memory: 5000M
+        reservations:
+          cpus: '2'
+          memory: 3000M
     ports:
       - 5055:5055
     volumes:

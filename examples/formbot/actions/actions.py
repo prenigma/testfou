@@ -3351,21 +3351,25 @@ class ShowVoucherAction(Action):
         #else:
         #    voucher = meal_voucher ## ADD later here if Meal, now not added since slot is not set
         #    showoption = "showvouchermeal"
-
-        if(voucher_type=="voucher_hotel"):
-            voucher = hotel_voucher
-            showoption = "showvoucherhotel"
+        if (voucher_type is None):
+            dispatcher.utter_message("Sorry, "+sender.title()+" you don't have a voucher as your flight is not disrupted")
         else:
-            voucher = meal_voucher ## ADD later here if Meal, now not added since slot is not set
-            showoption = "showvouchermeal"
+            if(voucher_type=="voucher_hotel"):
+                voucher = hotel_voucher
+                showoption = "showvoucherhotel"
+            else:
+                if(voucher_type=="voucher_hotel"):
+                    voucher = meal_voucher ## ADD later here if Meal, now not added since slot is not set
+                    showoption = "showvouchermeal"
+            
 
-        data={}
-        data['type'] = showoption
-        data['voucher'] = voucher
-        json_data = json.dumps(data)    
+            data={}
+            data['type'] = showoption
+            data['voucher'] = voucher
+            json_data = json.dumps(data)    
         
-        dispatcher.utter_message("Here is your Voucher")
-        dispatcher.utter_attachment(json_data)
+            dispatcher.utter_message("Here is your Voucher "+sender.title())
+            dispatcher.utter_attachment(json_data)
         #return [SlotSet("voucher", voucher)]
               
 
