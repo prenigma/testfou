@@ -165,7 +165,7 @@
     - action_listen
 
 ## search article1
-* show_onair_shopping_article
+* show_onair_shopping_articles
     - action_show_dutyfree_articles
     - action_listen
 * select_article

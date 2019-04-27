@@ -132,7 +132,9 @@ slots:
   cuisine:
     type: unfeaturized
   flightnumber:
-    type: unfeaturized                                      
+    type: unfeaturized
+  preferredlanguage:
+    type: unfeaturized                                          
   requested_slot:
     type: unfeaturized
 
