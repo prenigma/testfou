@@ -768,7 +768,8 @@ class BookFlightActions(Action):
             print("PROPOSED FLIGHTS: ", output_json)
             upgradedask = tracker.get_slot("upgradedask")
             if(upgradedask is not None):
-               dispatcher.utter_message("The upgrade is done and you will receive the receipt per email. It will cost you "+price+" AED. I will use your Skyward miles as configured in your preferences "+passengername)
+               dispatcher.utter_message("The upgrade is done and you will receive the receipt per email. It will cost you "+price+" Miles. I will use your Skyward miles as configured in your preferences "+passengername)
+               return
 
             changedestination = tracker.get_slot("changedestination")
             text_msg = "Nice! "
@@ -1236,14 +1237,18 @@ class SearchUpgradeFlightsActions(Action):
         data['duration'] = "7hrs 25 mins"
         data['passengers'] = {"adults": headcount, "children": 0, "infants":0}
         data['segments'] = proposedFlights
-        json_data = json.dumps(data)
+        #json_data = json.dumps(data)
         if(flightclass.lower() == "economy"):
            dispatcher.utter_message("I can upgrade you on Business on the following flights")
            dispatcher.utter_message("You have 40,000 miles Tier miles available. The upgrade to Business Class will be 30,000 miles. Shall we proceed?")
+           data['trip_class'] = "Business"
+           json_data = json.dumps(data)
            dispatcher.utter_attachment(json_data) 
         if(flightclass.lower() == "business"):
            dispatcher.utter_message("I can upgrade you on First on the following flights")
            dispatcher.utter_message("You have 100,000 miles Tier miles available. The upgrade to First Class will be 40,000 miles. Shall we proceed?")
+           data['trip_class'] = "First"
+           json_data = json.dumps(data)
            dispatcher.utter_attachment(json_data) 
 
         if(flightclass.lower() == "first"):
