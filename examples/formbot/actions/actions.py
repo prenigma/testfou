@@ -668,8 +668,8 @@ class GreetingAction(Action):
 
     def get_message_type(self, flightstatus, passengername, destination, hourdelay):
         switcher = {
-        "delayed": "Welcome "+passengername.title()+" to Dubai! We apologies, because of unexpected weather conditions, your connecting flight to "+destination.title()+" will be delayed for more than "+hourdelay+" hours",
-        "cancelled": "Welcome "+passengername.title() +" to Dubai! We apologies, because of unexpected weather conditions, your connecting flight to "+destination.title()+" has been cancelled",
+        "delayed": "Welcome "+passengername.title()+" to Dubai! We apologize, because of unexpected weather conditions, your connecting flight to "+destination.title()+" will be delayed for more than "+hourdelay+" hours",
+        "cancelled": "Welcome "+passengername.title() +" to Dubai! We apologize, because of unexpected weather conditions, your connecting flight to "+destination.title()+" has been cancelled",
         "ontime": "Welcome "+passengername.title() +" to Dubai!" 
         }
 
@@ -1951,7 +1951,7 @@ class ShowDutyFreeArticles(Action):
 
     def run(self, dispatcher, tracker, domain):
 
-        onAir_dutyFree_shopping = EKDB.get_hotels()
+        onAir_dutyFree_shopping = EKDB.get_onair_dutyfree_articles()
         
         data={}
         data['type'] = "showdutyfreearticles"
