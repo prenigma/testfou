@@ -96,13 +96,23 @@
 ## intent:ask_restaurant
 - restaurants
 - can i be shown a gluten free restaurant
+- can you show me a [french](cuisine) restaurant close to me
+- can you show me an [american](cuisine) restaurant close to me
+- can you show me a [fastfood](cuisine) restaurant close to me
 - i want a [french](cuisine) restaurant
 - take me to a [french](cuisine) restaurant
 - i want to eat [french](cuisine)
+- i want an [american](cuisine) restaurant
+- take me to a [american](cuisine) restaurant
+- i want to eat [american](cuisine)
 - a [french](cuisine) cuisine
+- an [american](cuisine) cuisine please
 - [french](cuisine) restaurant
 - [italian](cuisine) restaurant
 - [italian](cuisine) food please
+- [american](cuisine) restaurant
+- [american](cuisine) restaurant
+- [american](cuisine) food please
 - i want a [french](cuisine) restaurant
 - i'm looking for a [Chinese](cuisine) restaurant
 - i'm looking for a [american](cuisine) food
@@ -115,9 +125,24 @@
 - can you recommend any [fastfood](cuisine)
 - i'm looking for a [libanese](cuisine) restaurant
 - i'm looking for a [libanes](cuisine) food
+- i'm looking for a [french](cuisine) restaurant
+- i'm looking for a [french](cuisine) food
+- i'm looking for a [american](cuisine) restaurant
+- i'm looking for a [american](cuisine) food
+- i'm looking for a [fastfood](cuisine) restaurant
+- i'm looking for a [fastfood](cuisine) food
 - can you recommend any [fastfood](cuisine)
+- can you recommend any [french](cuisine)
+- can you recommend any [american](cuisine)
+- can you recommend any [libnese](cuisine)
 - [libanese](cuisine) restaurant
 - [libnese](cuisine) food please
+- [french](cuisine) restaurant
+- [french](cuisine) food please
+- [fastfood](cuisine) restaurant
+- [fastfood](cuisine) food please
+- [american](cuisine) restaurant
+- [american](cuisine) food please
 - i want a [libanese](cuisine) restaurant
 - i'm looking for a [libanese](cuisine) restaurant
 - i'm looking for a [libanes](cuisine) food
@@ -133,6 +158,10 @@
 - help me find restaurant
 - I'm gonna need help finding a restaurant
 - Hey help me find a restaurant
+- Hey help me find a [libanese](cuisine) restaurant
+- Hey help me find a [french](cuisine) restaurant
+- Hey help me find a [american](cuisine) restaurant
+- Hey help me find a [fastfood](cuisine) restaurant
 - How can you help me find a restaurant.
 - Where is the restaurant
 - Show me how to find a restaurant
@@ -140,32 +169,101 @@
 - Help me with finding this restaurant
 - Hey, can you help me with locating this restaurant.
 - Find me a place to eat
+- Find me a place to eat [libanese](cuisine)
+- Find me a place to eat [french](cuisine)
+- Find me a place to eat [american](cuisine)
+- Find me a place to eat [fastfood](cuisine)
 - Can you recommend a restaurant open right now
+- Can you recommend a [libanese](cuisine) restaurant open right now
+- Can you recommend a [french](cuisine) estaurant open right now
+- Can you recommend a [american](cuisine) restaurant open right now
+- Can you recommend a [fastfood](cuisine) restaurant open right now
 - What's the closest restaurant open near me
+- What's the closest [libanese](cuisine) restaurant open near me
+- What's the closest [french](cuisine) restaurant open near me
+- What's the closest [american](cuisine) restaurant open near me
+- What's the closest [fastfood](cuisine) restaurant open near me
 - I am hungry, find me some place to go
 - Suggest me a good restaurant around
+- Suggest me a good [libanese](cuisine) restaurant around
+- Suggest me a good [french](cuisine) restaurant around
+- Suggest me a good [american](cuisine) restaurant around
+- Suggest me a good [fastfood](cuisine) restaurant around
 - Show me the closest open restaurant
+- Show me the closest open [libanese](cuisine) restaurant
+- Show me the closest open [french](cuisine) restaurant
+- Show me the closest open [american](cuisine) restaurant
+- Show me the closest open [fastfood](cuisine) restaurant
 - What's a good place to eat nearby
+- What's a good place to eat [libanese](cuisine) nearby
+- What's a good place to eat [french](cuisine) nearby
+- What's a good place to eat [american](cuisine) nearby
+- What's a good place to eat [fastfood](cuisine) nearby
 - Recommend me a restaurant around here.
 - Pick a restaurant for me, please
 - Help me find a restaurant
+- Help me find a [libanese](cuisine) restaurant
+- Help me find a [french](cuisine) restaurant
+- Help me find an [american](cuisine) restaurant
+- Help me find a [fastfood](cuisine) restaurant
 - Can you find a restaurant for me?
 - Find a restaurant for me?
 - Would you find me a restaurant?
+- Would you find a [libanese](cuisine) restaurant?
+- Would you find a [french](cuisine) restaurant?
+- Would you find an [american](cuisine) restaurant?
+- Would you find a [fastfood](cuisine) restaurant?
 - Would you find a restaurant for me?
+- Would you find a [libanese](cuisine) restaurant for me?
+- Would you find a [french](cuisine) restaurant for me?
+- Would you find a [american](cuisine) restaurant for me?
+- Would you find a [fastfood](cuisine) restaurant for me?
 - Could you find me a restaurant?
+- Could you find me a [libanese](cuisine) restaurant?
+- Could you find me a [french](cuisine) restaurant?
+- Could you find me an [american](cuisine) restaurant?
+- Could you find me a [fastfood](cuisine) restaurant?
 - Could you find a restaurant for me?
+- Could you find a [libanese](cuisine) restaurant for me?
+- Could you find a [french](cuisine) restaurant for me?
+- Could you find an [american](cuisine) restaurant for me?
+- Could you find a [fastfood](cuisine) restaurant for me?
 - Could you find me a restaurant to eat at?
 - Find a restaurant for me to eat at.
 - Find me a restaurant where I can eat.
+- Find me a restaurant where I can eat [libanese](cuisine).
+- Find me a restaurant where I can eat [french](cuisine).
+- Find me a restaurant where I can eat [american](cuisine).
+- Find me a restaurant where I can eat [fastfood](cuisine).
+- Find me a [libanese](cuisine) restaurant where I can eat.
+- Find me a [french](cuisine) restaurant where I can eat.
+- Find me an [american](cuisine) restaurant where I can eat.
+- Find me a [fastfood](cuisine) restaurant where I can eat.
 - Find a restaurant for me where I can eat.
 - I need a restaurant.
+- I need a [libanese](cuisine) restaurant.
+- I need a [french](cuisine) restaurant.
+- I need an [american](cuisine) restaurant.
+- I need a [fastfood](cuisine) restaurant.
+- Can you find me a [libanese](cuisine) restaurant?
+- Can you find me a [french](cuisine) restaurant?
+- Can you find me an [american](cuisine) restaurant?
+- Can you find me a [fastfood](cuisine) restaurant?
 - Can you find me a restaurant?
 - Where should I eat?
 - Find me a place to eat
 - i want to eat something
 - i want to eat
+- i want to eat [libanese](cuisine)
+- i want to eat [french](cuisine)
+- i want to eat [american](cuisine)
+- i want to eat [fastfood](cuisine)
 - i am hungry
+- i am hungry i want to eat
+- i am hungry i want to eat [libanese](cuisine)
+- i am hungry i want to eat [french](cuisine)
+- i am hungry i want to eat [american](cuisine)
+- i am hungry i want to eat [fastfood](cuisine)
 - i'm hungry show me please where to eat
 - hungry and want to eat
 - can you recommend a place to eat italian
@@ -175,12 +273,39 @@
 - very hungry
 - willing to eat something
 - willing to grab something to eat
-- any fastfood nearby
+- any [fastfood](cuisine) nearby
+- any [fastfood](cuisine) restaurant nearby
+- any [french](cuisine) restaurant nearby
+- any [american](cuisine) restaurant nearby
+- any [libanese](cuisine) restaurant nearby
 - food please
+- [french](cuisine) food please
+- [american](cuisine) food please
+- [fastfood](cuisine) food please
+- [fastfood](cuisine) please
+- [libanese](cuisine) food please
 - can you show me the restaurants
 - can you list restaurants
+- i am hungry show me restaurants
+- i am hungry show me a [french](cuisine) restaurant
+- i am hungry show me an [american](cuisine) restaurant
+- i am hungry show me a [fastfood](cuisine) restaurant
+- i am hungry show me a [libanese](cuisine) restaurant
 - show me restaurants
 - show me a restaurant please
+- i want to go to a restaurant
+- i want to go to restaurant
+- i want to go to restaurant please
+- i want to go to a [french](cuisine) restaurant
+- i want to go to an [american](cuisine) restaurant
+- i want to go to a [fastfood](cuisine) restaurant
+- i want to go to a [libanese](cuisine) restaurant
+- i need a [french](cuisine) restaurant
+- i need a [american](cuisine) restaurant
+- i need a [fastfood](cuisine) restaurant
+- i need a [libanese](cuisine) restaurant
+- i need a restaurant
+- i need a restaurant please
 
 ## intent:flyplane
 - i want to fly the plane

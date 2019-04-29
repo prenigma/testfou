@@ -856,7 +856,8 @@ class LoginAction(Action):
         "deepa": "",
         "vanessa": "https://storage.googleapis.com/fouimages/Photos4/profile/VanessaEspera.jpg",
         "tingting": "https://storage.googleapis.com/fouimages/Photos4/profile/TingTing.jpg",
-        "sami": "https://storage.googleapis.com/fouimages/Photos4/profile/SamiAqil.jpg"
+        "sami": "https://storage.googleapis.com/fouimages/Photos4/profile/SamiAqil.jpg",
+        "darshit": "https://storage.googleapis.com/fouimages/Photos4/profile/darshit1.JPG"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -874,7 +875,8 @@ class LoginAction(Action):
         "deepa": "delayed",
         "vanessa": "cancelled",
         "tingting": "ontime",
-        "sami": "delayed"
+        "sami": "delayed",
+        "darshit": "deplayed"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -893,7 +895,8 @@ class LoginAction(Action):
         "deepa": "voucher_meal",
         "vanessa": "voucher_hotel",
         "tingting": None,
-        "sami": "voucher_meal"
+        "sami": "voucher_meal",
+        "darshit": "voucher_meal"
         }
 
         return switcher.get(sender.lower(), "Invalid user")    
@@ -911,7 +914,8 @@ class LoginAction(Action):
         "deepa": "hi",
         "vanessa": "en_US",
         "tingting": "zh_CN",
-        "sami": "en_US"
+        "sami": "en_US",
+        "darshit": "hi"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -929,7 +933,8 @@ class LoginAction(Action):
         "deepa": "passenger",
         "vanessa": "passenger",
         "tingting": "passenger",
-        "sami": "passenger"
+        "sami": "passenger",
+        "darhit": "passenger"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -947,7 +952,8 @@ class LoginAction(Action):
         "deepa": "XLKD11",
         "vanessa": "XLKD10",
         "tingting": "XLKD09",
-        "sami": "XLKD08"
+        "sami": "XLKD08",
+        "darshit": "XLKD07"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -964,7 +970,8 @@ class LoginAction(Action):
         "deep": "misquitta",
         "vanessa": "espera",
         "tingting": "tingting",
-        "sami": "aqil"
+        "sami": "aqil",
+        "darshir": "zalavadiya"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -982,7 +989,8 @@ class LoginAction(Action):
         "deepa": "5",
         "vanessa": "11",
         "tingting": "0",
-        "sami": "5"
+        "sami": "5",
+        "darshit": "5"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -1000,7 +1008,8 @@ class LoginAction(Action):
         "deepa": "London",
         "vanessa": "London",
         "tingting": "Shanghai",
-        "sami": "Sydney"
+        "sami": "Sydney",
+        "darshit": "Sydney"
 
         }
 
@@ -1019,7 +1028,8 @@ class LoginAction(Action):
         "deepa": "business",
         "vanessa": "economy",
         "tingting": "business",
-        "sami": "business"
+        "sami": "business",
+        "darshit": "business"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -1037,7 +1047,8 @@ class LoginAction(Action):
         "deepa": "6A",
         "vanessa": "20A",
         "tingting": "8B",
-        "sami": "2A"
+        "sami": "2A",
+        "darshit": "2A"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -1055,7 +1066,8 @@ class LoginAction(Action):
         "deepa": "B7",
         "vanessa": "B8",
         "tingting": "B12",
-        "sami": "B8"
+        "sami": "B8",
+        "darshit": "B8"
         }
 
         return switcher.get(sender.lower(), "Invalid user")                                              
@@ -1256,7 +1268,7 @@ class SearchUpgradeFlightsActions(Action):
         
         #dispatcher.utter_message(output_json)
         #dispatcher.utter_attachment(json_data) 
-        return [SlotSet("flightoptions", json_data), SlotSet("upgradedask", "true")]
+        return [SlotSet("upgradedask", "true")]
 
 class BookRestaurantActions(Action):
     def name(self):
@@ -1291,15 +1303,16 @@ class SearchRestaurantsActions(Action):
         cuisine = tracker.get_slot("cuisine")
         if (cuisine is not None):
             if(cuisine.lower() in self.cuisine_db()):
-                data = {}
-                data['type'] = 'restaurantoptions'
                 proposedRestaurants= [flight for flight in restaurants if flight['cuisine'].lower()==cuisine.lower()]
-                data['restaurants'] = proposedRestaurants
-                json_data = json.dumps(data)
 
-       
-                dispatcher.utter_attachment(json_data)
+        else:
+            proposedRestaurants = restaurants
 
+        data = {}
+        data['type'] = 'restaurantoptions'
+        data['restaurants'] = proposedRestaurants
+        json_data = json.dumps(data)            
+        dispatcher.utter_attachment(json_data)
         print("CUISINE ", cuisine)
 
         
@@ -1830,7 +1843,7 @@ class ShowVoucherAction(Action):
                 voucher = hotel_voucher
                 showoption = "showvoucherhotel"
             else:
-                if(voucher_type=="voucher_hotel"):
+                if(voucher_type=="voucher_meal"):
                     voucher = meal_voucher ## ADD later here if Meal, now not added since slot is not set
                     showoption = "showvouchermeal"
             
