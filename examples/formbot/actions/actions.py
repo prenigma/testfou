@@ -849,7 +849,7 @@ class LoginAction(Action):
         "rami": "https://storage.googleapis.com/fouimages/Photos4/profile/RamiElSamra.png",
         "jisha": "https://storage.googleapis.com/fouimages/Photos4/profile/JishaRoux.png",
         "safa": "https://storage.googleapis.com/fouimages/Photos4/profile/SafaOmri.jpg",
-        "elena": "https://storage.googleapis.com/fouimages/Photos4/profile/ElenaKalimera.jpg",
+        "elena": "https://storage.googleapis.com/fouimages/Photos4/profile/elenakalimera.jpg",
         "wafa": "https://storage.googleapis.com/fouimages/Photos4/profile/WafaOmri.png",
         "faizan": "",
         "amna":"https://storage.googleapis.com/fouimages/Photos4/profile/AmnaAlRedha.png",
@@ -857,7 +857,8 @@ class LoginAction(Action):
         "vanessa": "https://storage.googleapis.com/fouimages/Photos4/profile/VanessaEspera.jpg",
         "tingting": "https://storage.googleapis.com/fouimages/Photos4/profile/TingTing.jpg",
         "sami": "https://storage.googleapis.com/fouimages/Photos4/profile/SamiAqil.jpg",
-        "darshit": "https://storage.googleapis.com/fouimages/Photos4/profile/darshit1.JPG"
+        "darshit": "https://storage.googleapis.com/fouimages/Photos4/profile/darshit1.JPG",
+        "natasha": "https://storage.googleapis.com/fouimages/Photos4/profile/natasha.jpg"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -876,7 +877,8 @@ class LoginAction(Action):
         "vanessa": "cancelled",
         "tingting": "ontime",
         "sami": "delayed",
-        "darshit": "deplayed"
+        "darshit": "deplayed",
+        "natasha": "delayed"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -896,7 +898,8 @@ class LoginAction(Action):
         "vanessa": "voucher_hotel",
         "tingting": None,
         "sami": "voucher_meal",
-        "darshit": "voucher_meal"
+        "darshit": "voucher_meal",
+        "natasha": "voucher_meal"
         }
 
         return switcher.get(sender.lower(), "Invalid user")    
@@ -915,7 +918,8 @@ class LoginAction(Action):
         "vanessa": "en_US",
         "tingting": "zh_CN",
         "sami": "en_US",
-        "darshit": "hi"
+        "darshit": "hi",
+        "natasha": "en_US"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -934,7 +938,8 @@ class LoginAction(Action):
         "vanessa": "passenger",
         "tingting": "passenger",
         "sami": "passenger",
-        "darhit": "passenger"
+        "darhit": "passenger",
+        "natasha": "passenger"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -953,7 +958,8 @@ class LoginAction(Action):
         "vanessa": "XLKD10",
         "tingting": "XLKD09",
         "sami": "XLKD08",
-        "darshit": "XLKD07"
+        "darshit": "XLKD07",
+        "natasha": "XLKD06"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -971,7 +977,8 @@ class LoginAction(Action):
         "vanessa": "espera",
         "tingting": "tingting",
         "sami": "aqil",
-        "darshir": "zalavadiya"
+        "darshir": "zalavadiya",
+        "natasha": "malik"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -990,7 +997,8 @@ class LoginAction(Action):
         "vanessa": "11",
         "tingting": "0",
         "sami": "5",
-        "darshit": "5"
+        "darshit": "5",
+        "natasha": "5"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -1009,7 +1017,8 @@ class LoginAction(Action):
         "vanessa": "London",
         "tingting": "Shanghai",
         "sami": "Sydney",
-        "darshit": "Sydney"
+        "darshit": "Sydney",
+        "natasha": "Sydney"
 
         }
 
@@ -1029,7 +1038,8 @@ class LoginAction(Action):
         "vanessa": "economy",
         "tingting": "business",
         "sami": "business",
-        "darshit": "business"
+        "darshit": "business",
+        "natasha": "business"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -1048,7 +1058,8 @@ class LoginAction(Action):
         "vanessa": "20A",
         "tingting": "8B",
         "sami": "2A",
-        "darshit": "2A"
+        "darshit": "2A",
+        "natasha": "2A"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -1067,7 +1078,8 @@ class LoginAction(Action):
         "vanessa": "B8",
         "tingting": "B12",
         "sami": "B8",
-        "darshit": "B8"
+        "darshit": "B8",
+        "natasha": "B8"
         }
 
         return switcher.get(sender.lower(), "Invalid user")                                              
