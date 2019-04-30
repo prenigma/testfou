@@ -140,13 +140,13 @@ class EKDB:
             "id": 1,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-30",
-            "origin_display_date": "Tue, Apr 30",
+            "origin_date": "2019-05-02",
+            "origin_display_date": "Thu, Mai 02",
             "origin_time": "02:30 AM",
             "destinationcode": "LHR",
             "destination": "London",
-            "destination_date": "2019-04-30",
-            "destination_display_day": "Tue, Apr 30",
+            "destination_date": "2019-05-02",
+            "destination_display_day": "Thu, Mai 02",
             "destination_time": "07:05 AM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 007",
@@ -156,13 +156,13 @@ class EKDB:
             "id": 2,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-30",
-            "origin_display_date": "Tue, Apr 30",
+            "origin_date": "2019-05-02",
+            "origin_display_date": "Thu, Mai 02",
             "origin_time": "07:45 AM",
             "destinationcode": "LHR",
             "destination": "London",
-            "destination_date": "2019-04-30",
-            "destination_display_day": "Tue, Apr 30",
+            "destination_date": "2019-05-02",
+            "destination_display_day": "Thu, Mai 02",
             "destination_time": "12:25 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 001",
@@ -172,13 +172,13 @@ class EKDB:
             "id": 3,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-30",
-            "origin_display_date": "Tue, Apr 30",
+            "origin_date": "2019-05-02",
+            "origin_display_date": "Thu, Mai 02",
             "origin_time": "08:00 AM",
             "destinationcode": "LGW",
             "destination": "Gatwick",
-            "destination_date": "2019-04-30",
-            "destination_display_day": "Tue, Apr 30",
+            "destination_date": "2019-05-02",
+            "destination_display_day": "Thu, Mai 02",
             "destination_time": "12:35 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 015",
@@ -188,13 +188,13 @@ class EKDB:
             "id": 4,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-30",
-            "origin_display_date": "Tue, Apr 30",
+            "origin_date": "2019-05-02",
+            "origin_display_date": "Thu, Mai 02",
             "origin_time": "11:25 AM",
             "destinationcode": "LHR",
             "destination": "London",
-            "destination_date": "2019-04-30",
-            "destination_display_day": "Tue, Apr 30",
+            "destination_date": "2019-05-02",
+            "destination_display_day": "Thu, Mai 02",
             "destination_time": "16:10 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 031",
@@ -204,13 +204,13 @@ class EKDB:
             "id": 5,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-30",
-            "origin_display_date": "Tue, Apr 30",
+            "origin_date": "2019-05-01",
+            "origin_display_date": "Wed, Mai 01",
             "origin_time": "07:25 AM",
             "destinationcode": "MAN",
             "destination": "Manchester",
-            "destination_date": "2019-04-30",
-            "destination_display_day": "Tue, Apr 30",
+            "destination_date": "2019-05-01",
+            "destination_display_day": "Wed, Mai 01",
             "destination_time": "12:05 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 017",
@@ -220,13 +220,13 @@ class EKDB:
             "id": 6,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-29",
-            "origin_display_date": "Mon, Apr 29",
+            "origin_date": "2019-05-01",
+            "origin_display_date": "Wed, Mai 01",
             "origin_time": "23:45 AM",
             "destinationcode": "NYC",
             "destination": "New York",
-            "destination_date": "2019-04-30",
-            "destination_display_day": "Tue, Apr 30",
+            "destination_date": "2019-05-02",
+            "destination_display_day": "Thu, Mai 02",
             "destination_time": "07:20 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 127",
@@ -236,13 +236,13 @@ class EKDB:
             "id": 7,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-29",
-            "origin_display_date": "Mon, Apr 29",
+            "origin_date": "2019-05-01",
+            "origin_display_date": "Wed, Mai 01",
             "origin_time": "17:10 AM",
             "destinationcode": "NYC",
             "destination": "New York",
-            "destination_date": "2019-04-29",
-            "destination_display_day": "Mon, Apr 29",
+            "destination_date": "2019-05-01",
+            "destination_display_day": "Wed, Mai 01",
             "destination_time": "21:15 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 128",
@@ -252,13 +252,13 @@ class EKDB:
             "id": 8,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-29",
-            "origin_display_date": "Mon, Apr 29",
+            "origin_date": "2019-05-01",
+            "origin_display_date": "Wed, Mai 01",
             "origin_time": "23:45 AM",
             "destinationcode": "SIN",
             "destination": "Singapure",
-            "destination_date": "2019-04-30",
-            "destination_display_day": "Tue, Apr 30",
+            "destination_date": "2019-05-02",
+            "destination_display_day": "Thu, Mai 02",
             "destination_time": "07:20 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 127",
@@ -268,13 +268,13 @@ class EKDB:
             "id": 9,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-29",
-            "origin_display_date": "Mon, Apr 29",
+            "origin_date": "2019-05-01",
+            "origin_display_date": "Wed, Mai 01",
             "origin_time": "17:10 AM",
             "destinationcode": "SIN",
             "destination": "Singapure",
-            "destination_date": "2019-04-29",
-            "destination_display_day": "Mon, Apr 29",
+            "destination_date": "2019-05-01",
+            "destination_display_day": "Wed, Mai 01",
             "destination_time": "21:15 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 128",
@@ -284,13 +284,13 @@ class EKDB:
             "id": 10,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-29",
-            "origin_display_date": "Mon, Apr 29",
+            "origin_date": "2019-05-01",
+            "origin_display_date": "Wed, Mai 01",
             "origin_time": "23:45 AM",
             "destinationcode": "CDG",
             "destination": "Paris",
-            "destination_date": "2019-04-30",
-            "destination_display_day": "Tue, Apr 30",
+            "destination_date": "2019-05-02",
+            "destination_display_day": "Thu, Mai 02",
             "destination_time": "07:20 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 127",
@@ -300,13 +300,13 @@ class EKDB:
             "id": 11,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-29",
-            "origin_display_date": "Mon, Apr 29",
+            "origin_date": "2019-05-01",
+            "origin_display_date": "Wed, Mai 01",
             "origin_time": "17:10 AM",
             "destinationcode": "CDG",
             "destination": "Paris",
-            "destination_date": "2019-04-29",
-            "destination_display_day": "Mon, Apr 29",
+            "destination_date": "2019-05-01",
+            "destination_display_day": "Wed, Mai 01",
             "destination_time": "21:15 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 128",
@@ -316,13 +316,13 @@ class EKDB:
             "id": 12,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-29",
-            "origin_display_date": "Mon, Apr 29",
+            "origin_date": "2019-05-01",
+            "origin_display_date": "Wed, Mai 01",
             "origin_time": "23:45 AM",
             "destinationcode": "SFO",
             "destination": "San Francisco",
-            "destination_date": "2019-04-30",
-            "destination_display_day": "Tue, Apr 30",
+            "destination_date": "2019-05-02",
+            "destination_display_day": "Thu, Mai 02",
             "destination_time": "07:20 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 154",
@@ -332,13 +332,13 @@ class EKDB:
             "id": 13,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-29",
-            "origin_display_date": "Mon, Apr 29",
+            "origin_date": "2019-05-01",
+            "origin_display_date": "Wed, Mai 01",
             "origin_time": "17:10 AM",
             "destinationcode": "SFO",
             "destination": "San Francisco",
-            "destination_date": "2019-04-29",
-            "destination_display_day": "Mon, Apr 29",
+            "destination_date": "2019-05-01",
+            "destination_display_day": "Wed, Mai 01",
             "destination_time": "21:15 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 155",
@@ -348,13 +348,13 @@ class EKDB:
             "id": 14,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-29",
-            "origin_display_date": "Mon, Apr 29",
+            "origin_date": "2019-05-01",
+            "origin_display_date": "Wed, Mai 01",
             "origin_time": "23:45 AM",
             "destinationcode": "HND",
             "destination": "Tokyo",
-            "destination_date": "2019-04-30",
-            "destination_display_day": "Tue, Apr 30",
+            "destination_date": "2019-05-02",
+            "destination_display_day": "Thu, Mai 02",
             "destination_time": "07:20 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 444",
@@ -364,13 +364,13 @@ class EKDB:
             "id": 15,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-29",
-            "origin_display_date": "Mon, Apr 29",
+            "origin_date": "2019-05-01",
+            "origin_display_date": "Wed, Mai 01",
             "origin_time": "17:10 AM",
             "destinationcode": "HND",
             "destination": "Tokyo",
-            "destination_date": "2019-04-29",
-            "destination_display_day": "Mon, Apr 29",
+            "destination_date": "2019-05-01",
+            "destination_display_day": "Wed, Mai 01",
             "destination_time": "21:15 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 445",
@@ -380,13 +380,13 @@ class EKDB:
             "id": 16,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-29",
-            "origin_display_date": "Mon, Apr 29",
+            "origin_date": "2019-05-01",
+            "origin_display_date": "Wed, Mai 01",
             "origin_time": "17:10 AM",
             "destinationcode": "HND",
             "destination": "Tokyo",
-            "destination_date": "2019-04-29",
-            "destination_display_day": "Mon, Apr 29",
+            "destination_date": "2019-05-01",
+            "destination_display_day": "Wed, Mai 01",
             "destination_time": "21:15 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 445",
@@ -396,13 +396,13 @@ class EKDB:
             "id": 17,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-29",
-            "origin_display_date": "Mon, Apr 29",
+            "origin_date": "2019-05-01",
+            "origin_display_date": "Wed, Mai 01",
             "origin_time": "17:10 AM",
             "destinationcode": "HND",
             "destination": "Tokyo",
-            "destination_date": "2019-04-29",
-            "destination_display_day": "Mon, Apr 29",
+            "destination_date": "2019-05-01",
+            "destination_display_day": "Wed, Mai 01",
             "destination_time": "21:15 PM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 445",
@@ -412,13 +412,13 @@ class EKDB:
             "id": 18,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-28",
-            "origin_display_date": "Sun, Apr 28",
+            "origin_date": "2019-05-01",
+            "origin_display_date": "Wed, Mai 01",
             "origin_time": "08:45 AM",
             "destinationcode": "SYD",
             "destination": "Sydney",
-            "destination_date": "2019-04-28",
-            "destination_display_day": "Sun, Apr 28",
+            "destination_date": "2019-05-01",
+            "destination_display_day": "Wed, Mai 01",
             "destination_time": "07:40 AM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 418",
@@ -428,13 +428,13 @@ class EKDB:
             "id": 19,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-28",
-            "origin_display_date": "Sun, Apr 28",
+            "origin_date": "2019-05-01",
+            "origin_display_date": "Wed, Mai 01",
             "origin_time": "03:15 AM",
             "destinationcode": "CDG",
             "destination": "Shanghai",
-            "destination_date": "2019-04-28",
-            "destination_display_day": "Sun, Apr 28",
+            "destination_date": "2019-05-01",
+            "destination_display_day": "Wed, Mai 01",
             "destination_time": "15:50 AM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 302",
@@ -444,13 +444,13 @@ class EKDB:
             "id": 20,
             "origincode": "DXB",
             "origin": "Dubai",
-            "origin_date": "2019-04-28",
-            "origin_display_date": "Sun, Apr 28",
+            "origin_date": "2019-05-01",
+            "origin_display_date": "Wed, Mai 01",
             "origin_time": "04:10 AM",
             "destinationcode": "CDG",
             "destination": "Paris",
-            "destination_date": "2019-04-28",
-            "destination_display_day": "Sun, Apr 28",
+            "destination_date": "2019-05-01",
+            "destination_display_day": "Wed, Mai 01",
             "destination_time": "09:25 AM",
             "airline": "Emirates Airlines",
             "flight_number": "EK 071",
@@ -480,7 +480,7 @@ class EKDB:
                     "url": "https://storage.googleapis.com/fouimages/Photos4/restaurants/Paul/paul3.jpg"
                 }
             ],
-            "address": "Concourse B,Terminal 3,Dubai International Airport - Dubai",
+            "address": "Concourse B, Terminal 3, Dubai International Airport - Dubai",
             "Reservation": "Sun, Apr 28, 1 people",
             "cuisine": "French",
             "open_time":{
@@ -726,7 +726,7 @@ class InformFlightSearchAction(Action):
                 text_msg = self.get_message_type(flightstatus, destination, passengername)
             else:
                 if(flightstatus == "ontime"):
-                    text_msg = passengername.title()+" Your flight to "+changedestination.title()+ " is on time, here are all options i found to your same destination" 
+                    text_msg = passengername.title()+" Your flight to "+changedestination.title()+ " is on time, here are all options I found to your same destination" 
                  
         else:
             if(changedestination is not None):
@@ -754,7 +754,7 @@ class BookFlightActions(Action):
         
         segments = EKDB.get_segments()
         
-        price = "10000"
+        price = "40000"
         selectedflightnumber = tracker.get_slot("selectedflightnumber")
         print("selectedflightnumber: ", selectedflightnumber)
         passengername = tracker.current_state()['sender_id']
@@ -779,18 +779,18 @@ class BookFlightActions(Action):
                 text_msg = text_msg+"The change to the new destination "+changedestination+" will cost you "+price+" AED. I will use your Skyward miles as configured in your preferences "+passengername
             else:
                 if(changedestination is not None and voucher_type == "voucher_hotel"):
-                    text_msg1 = text_msg+passengername+" i rebooked you on the flight "+selectedflightnumber
+                    text_msg1 = text_msg+passengername+" I rebooked you on the flight "+selectedflightnumber
                     dispatcher.utter_message(text_msg1)
-                    text_msg2 = " Emirates apologies and gives you a Hotel Voucher for you to rest till your next flight"
+                    text_msg2 = " Emirates apologizes and gives you a Hotel Voucher for you to rest till your next flight"
                     dispatcher.utter_message(text_msg2)
                 else:
                     if(changedestination is not None and voucher_type == "voucher_meal"):
-                        text_msg1 = text_msg+passengername+" i rebooked you on the flight "+selectedflightnumber
+                        text_msg1 = text_msg+passengername+" I rebooked you on the flight "+selectedflightnumber
                         dispatcher.utter_message(text_msg1)
-                        text_msg2 = " Emirates apologies and gives you a Meal Voucher for you as apologies for the delay"
+                        text_msg2 = " Emirates apologizes and gives you a Meal Voucher for you as apologies for the delay"
                         dispatcher.utter_message(text_msg2)
                     else:
-                        text_msg1 = text_msg+passengername+" i rebooked you on the flight "+selectedflightnumber
+                        text_msg1 = text_msg+passengername+" I rebooked you on the flight "+selectedflightnumber
                         dispatcher.utter_message(text_msg1)
 
 
@@ -1236,6 +1236,8 @@ class SearchUpgradeFlightsActions(Action):
         return 'action_search_upgrade_flight'
 
     def run(self, dispatcher, tracker, domain):
+        sender = (tracker.current_state())["sender_id"]
+        passengername = sender.title()
         segments = EKDB.get_segments()
         destination = tracker.get_slot("destination")
         flightclass = tracker.get_slot("flightclass")
@@ -1264,7 +1266,7 @@ class SearchUpgradeFlightsActions(Action):
            dispatcher.utter_attachment(json_data) 
 
         if(flightclass.lower() == "first"):
-           dispatcher.utter_message("Would you like to fly the plane? :-)")           
+           dispatcher.utter_message(passengername+", you are already traveling First Class. Would you like to fly the plane?")           
         
         #dispatcher.utter_message(output_json)
         #dispatcher.utter_attachment(json_data) 
@@ -1282,7 +1284,7 @@ class BookRestaurantActions(Action):
         proposedFlights = [flight for flight in restaurants if flight['id']==selectedflightnumber]
         output_json = json.dumps(proposedFlights)
         print("PROPOSED FLIGHTS: ", output_json)
-        dispatcher.utter_message("Ok, i booked for you a table")
+        dispatcher.utter_message("Ok, I booked for you a table")
         return [SlotSet("selectedrestaurant", proposedFlights)]  
 
 class SearchRestaurantsActions(Action):
@@ -1314,9 +1316,10 @@ class SearchRestaurantsActions(Action):
         json_data = json.dumps(data)            
         dispatcher.utter_attachment(json_data)
         print("CUISINE ", cuisine)
+        
 
         
-        return [SlotSet("restaurantoptions", proposedRestaurants)]  
+        return [SlotSet("restaurantoptions", proposedRestaurants), SlotSet("cuisine", None)]  
 
 
 class SearchHotelsActions(Action):
@@ -1346,7 +1349,7 @@ class BookHotelsActions(Action):
         print("selectedhotelid: ", selectedflightnumber)
         proposedFlights = [flight for flight in hotels if flight['id']==selectedflightnumber]
        
-        dispatcher.utter_message("Ok, i booked for you the requested hotel")
+        dispatcher.utter_message("Ok, I booked for you the requested hotel")
        
         return [SlotSet("hoteloptions", proposedFlights)]  
 
@@ -1551,7 +1554,7 @@ class ShowRosterOverviewAction(Action):
             "arrival_time": "20:15",
             "departure_airport": "Dubai (DXB)",
             "arrival_airport": "London (LHR)",
-            "flightdate": "22/04/2019"
+            "flightdate": "01/05/2019"
 		},
 		{
 			"id": 2,
@@ -1559,7 +1562,7 @@ class ShowRosterOverviewAction(Action):
             "arrival_time": "12:55",
             "departure_airport": "London (LHR)",
             "arrival_airport": "Dubai (DXB)",
-            "flightdate": "22/04/2019"
+            "flightdate": "01/05/2019"
 		},
 		{
 			"id": 3,
@@ -1567,7 +1570,7 @@ class ShowRosterOverviewAction(Action):
             "arrival_time": "21:15",
             "departure_airport": "Dubai (DXB)",
             "arrival_airport": "Vienna (VIE)",
-            "flightdate": "22/04/2019"
+            "flightdate": "01/05/2019"
 		},
 		{
 			"id": 4,
@@ -1575,7 +1578,7 @@ class ShowRosterOverviewAction(Action):
             "arrival_time": "07:20",
             "departure_airport": "Vienna (VIE)",
             "arrival_airport": "Dubai (DXB)",
-            "flightdate": "22/04/2019"
+            "flightdate": "01/05/2019"
 		},
         {
 			"id": 5,
@@ -1583,7 +1586,7 @@ class ShowRosterOverviewAction(Action):
             "arrival_time": "07:20",
             "departure_airport": "Vienna (VIE)",
             "arrival_airport": "Dubai (DXB)",
-            "flightdate": "20/04/2019"
+            "flightdate": "01/05/2019"
 		},
         {
 			"id": 6,
@@ -1591,7 +1594,7 @@ class ShowRosterOverviewAction(Action):
             "arrival_time": "07:20",
             "departure_airport": "Vienna (VIE)",
             "arrival_airport": "Dubai (DXB)",
-            "flightdate": "20/04/2019"
+            "flightdate": "01/05/2019"
 		},
         {
 			"id": 7,
@@ -1599,7 +1602,7 @@ class ShowRosterOverviewAction(Action):
             "arrival_time": "07:20",
             "departure_airport": "Vienna (VIE)",
             "arrival_airport": "Dubai (DXB)",
-            "flightdate": "20/04/2019"
+            "flightdate": "01/05/2019"
 		}
 	
 	    ]
@@ -1744,9 +1747,9 @@ class ChangeLanguageAction(Action):
         print("LANGUAGE: ", language)
         language_code = tracker.get_slot("preferredlanguage")
         if (language is None or language not in self.language_db()):
-            dispatcher.utter_message("Sorry "+passengername+" i dont't speak the language you asked for")
+            dispatcher.utter_message("Sorry "+passengername+" I dont't speak the language you asked for")
             dispatcher.utter_message("I currently only talk the folowing languages Arabic French English German Hindi and Chinese")
-            dispatcher.utter_message("but i'm working hard on learning further languages")
+            dispatcher.utter_message("but I'm working hard on learning further languages")
 
         else:
             if(language in self.language_db()):
@@ -1809,7 +1812,7 @@ class ShowVoucherAction(Action):
             "QR_code": "https://imagizer.imageshack.com/img923/6066/56rKD8.png",
             "passenger_name": passenger_name_format,
             "booking_ref": pnr,
-            "hottel_name":"LE MERIDIEN",
+            "hotel_name":"LE MERIDIEN",
             "room_description":"SINGLE",
             "meal":"BREAKFAST LUNCH"
         }
@@ -1821,7 +1824,7 @@ class ShowVoucherAction(Action):
             "QR_code": "https://imagizer.imageshack.com/img923/6066/56rKD8.png",
             "passenger_name": passenger_name_format,
             "booking_ref": pnr,
-            "resttaurantt_name":"Giraffe Stop",
+            "restaurant_name":"Giraffe Stop",
             "meal":"International Restaurant"
         }
 
@@ -1872,7 +1875,7 @@ class ShowLoungesAction(Action):
             "id": 1,
             "photo": "https://storage.googleapis.com/fouimages/Photos4/lounges/EmiraresBusiness%20ClassLounge.png",
             "name": "Business Class Lounge",
-            "address": "Terminal 3,Dubai International Airport - Dubai",
+            "address": "Terminal 3, Dubai International Airport - Dubai",
             "title": "Business Class Lounge",
             "open_now": "Open Now",
             "open_time":{
@@ -1905,7 +1908,7 @@ class ShowLoungesAction(Action):
             "id": 2,
             "photo": "https://imagizer.imageshack.com/img921/1920/6Y0rGn.png",
             "name": "First Class Lounge",
-            "address": "Terminal 3,Dubai International Airport - Dubai",
+            "address": "Terminal 3, Dubai International Airport - Dubai",
             "titel": "FIRST Class Lounge",
             "open_now": "Open Now",
             "open_time":{
@@ -1939,7 +1942,7 @@ class ShowLoungesAction(Action):
         data['lounges'] = lounges
         json_data = json.dumps(data)    
         
-        dispatcher.utter_message("Here are a some lounges i would recommend")
+        dispatcher.utter_message("Here are some lounges I would recommend")
         dispatcher.utter_attachment(json_data)
 
 
@@ -1955,7 +1958,7 @@ class BookLoungeAction(Action):
         print("selectedloungeid: ", selectedloungeid)
         selectedlounge = [flight for flight in lounges if flight['id']==selectedloungeid]
         print("selectedloungeid: ", selectedloungeid)
-        dispatcher.utter_message("Ok, i booked for you the requested lounge")
+        dispatcher.utter_message("Ok, I booked for you the requested lounge")
        
         return [SlotSet("selectedlounge", selectedlounge)] 
 
@@ -1978,8 +1981,8 @@ class ShowDutyFreeArticles(Action):
 
         seatnumber = tracker.get_slot("seatnumber")    
         
-        dispatcher.utter_message("Here are some of the articles i found for you")
-        dispatcher.utter_message("If you buy directly from the app, i will deliver it to your seat "+seatnumber+", and then you can pay on the plane")
+        dispatcher.utter_message("Here are some of the articles I found for you")
+        dispatcher.utter_message("If you buy directly from the app, I will deliver it to your seat "+seatnumber+", and then you can pay on the plane")
         dispatcher.utter_attachment(json_data)
 
 

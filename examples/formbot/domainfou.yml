@@ -142,7 +142,7 @@ templates:
   utter_ask_destination:
     - text: "Which new destination are you looking for?"
   utter_confirm_upgrade:
-    - text : "Perfect i upgraded you to {upgradedclass}"    
+    - text : "Perfect I upgraded you to {upgradedclass}"    
   utter_ask_flightclass:
     - text: "in which class?"
   utter_ask_departuredate:
