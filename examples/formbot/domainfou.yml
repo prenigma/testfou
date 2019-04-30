@@ -39,6 +39,7 @@ intents:
   - showmeticket
   - askdirectflight
   - confirmmiles
+  - whoisboss
 
 
 entities:
@@ -157,7 +158,7 @@ templates:
   utter_return_proposed_flights:
     - text: {flightoptions}           
   utter_noworries:
-    - text: "you are welcome :)"
+    - text: "you are welcome"
   utter_chitchat:
     - text: "chitchat"
   utter_ask_continue:
@@ -179,7 +180,9 @@ templates:
   utter_use_miles:
     - text: "The upgrade is done. You will receive your confimation via email"
   utter_flyplane:
-    - text: "Emirates Academy would welcome your candidature"    
+    - text: "Emirates Academy would welcome your candidature"
+  utter_bossanswer:
+    - text: "It depends on who is asking"        
   
 
 actions:
@@ -224,6 +227,7 @@ actions:
   - action_ask_direct_flight
   - utter_use_miles
   - utter_flyplane
+  - utter_bossanswer
 
 
 

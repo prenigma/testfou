@@ -105,6 +105,15 @@
     - utter_use_miles
     - action_listen
 
+## ask who the boss
+* whoisboss
+    - utter_bossanswer
+    - action_listen
+* thankyou
+    - utter_noworries
+    - utter_askfurtherhelp
+    - action_listen     
+
 ## ask upgrade ticket
 * upgrade
     - action_search_upgrade_flight

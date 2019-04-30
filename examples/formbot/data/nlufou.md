@@ -71,6 +71,8 @@
 - what should i do with my baggage?
 - what about my baggage
 
+
+
 ## intent:ask_hotel
 - I am tired I want to sleep
 - search a hotel for me
@@ -805,6 +807,19 @@
 - please upgrade me
 - please upgrade my flight
 - i want to upgrade my flight
+- i want to buy an upgrade
+- i want to buy an upgrade for my flight
+- Can i buy an upgrade
+- can i buy an upgrade for my flight
+
+## intent:whoisboss
+- who is your boss
+- who is the boss
+- do you know your boss
+- can you tell me who is your boss
+- tell me who is your boss
+- tell me who is the boss
+- the boss
 
 ## synonym:1
 - {"selectedhotelid":"1"}
