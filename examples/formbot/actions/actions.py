@@ -77,15 +77,15 @@ class EKDB:
             "photoCount": 3,
             "photos": [
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/hotels/hotel_sleepnfly/hotel_sleepnfly1.jpg"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/hotels/hotel_sleepnfly/hotel_sleepnfly1.jpg"
                 },
 
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/hotels/hotel_sleepnfly/hotel_sleepnfly2.jpg"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/hotels/hotel_sleepnfly/hotel_sleepnfly2.jpg"
                 },
 
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/hotels/hotel_sleepnfly/hotel_sleepnfly3.jpg"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/hotels/hotel_sleepnfly/hotel_sleepnfly3.jpg"
                 }
             ],
             "Stay": "Sun, Apr 21, 2 poeple",
@@ -110,15 +110,15 @@ class EKDB:
             "photoCount": 3,
             "photos": [
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/hotels/hotel_leMeridien/hotel_leMeridien1.png"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/hotels/hotel_leMeridien/hotel_leMeridien1.png"
                 },
 
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/hotels/hotel_leMeridien/hotel_leMeridien2.png"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/hotels/hotel_leMeridien/hotel_leMeridien2.png"
                 },
 
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/hotels/hotel_leMeridien/hotel_leMeridien3.png"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/hotels/hotel_leMeridien/hotel_leMeridien3.png"
                 }
             ],
             "Stay": "Sun, Apr 21, 2 poeple",
@@ -468,16 +468,16 @@ class EKDB:
             "photoCount": 3,
             "photos": [
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/restaurants/Paul/paul1.jpg",
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/restaurants/Paul/paul1.jpg",
 
                 },
 
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/restaurants/Paul/paul2.jpg"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/restaurants/Paul/paul2.jpg"
                 },
 
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/restaurants/Paul/paul3.jpg"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/restaurants/Paul/paul3.jpg"
                 }
             ],
             "address": "Concourse B, Terminal 3, Dubai International Airport - Dubai",
@@ -502,16 +502,16 @@ class EKDB:
             "photoCount": 3,
             "photos": [
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/restaurants/hardrock/hardrock1.jpeg"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/restaurants/hardrock/hardrock1.jpeg"
 
                 },
 
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/restaurants/hardrock/hardrock2.jpeg"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/restaurants/hardrock/hardrock2.jpeg"
                 },
 
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/restaurants/hardrock/hardrock3.jpeg"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/restaurants/hardrock/hardrock3.jpeg"
                 }
             ],
             "address": "By Departures Gate 25, (Concourse B) Terminal 3, Dubai International Airport Area, Dubai",
@@ -535,16 +535,16 @@ class EKDB:
             "photoCount": 3,
             "photos": [
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/restaurants/theGallery/theGallery1.png"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/restaurants/theGallery/theGallery1.png"
 
                 },
 
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/restaurants/theGallery/theGallery2.png"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/restaurants/theGallery/theGallery2.png"
                 },
 
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/restaurants/theGallery/theGallery3.png"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/restaurants/theGallery/theGallery3.png"
                 }
             ],
             "address": " Near Gate B09, Terminal 3, Dubai International Airport Concourse B, Dubai",
@@ -568,16 +568,16 @@ class EKDB:
             "photoCount": 3,
             "photos": [
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/restaurants/Giraffe/Giraffe1.png"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/restaurants/Giraffe/Giraffe1.png"
 
                 },
 
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/restaurants/Giraffe/Giraffe2.png"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/restaurants/Giraffe/Giraffe2.png"
                 },
 
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/restaurants/Giraffe/Giraffe3.png"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/restaurants/Giraffe/Giraffe3.png"
                 }
             ],
             "address": "Near Gate A18, A-Gates, After Security, Departures, Terminal 3, Dubai International Airport Area, Dubai",
@@ -601,16 +601,16 @@ class EKDB:
             "photoCount": 3,
             "photos": [
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/restaurants/McDonalds/mcdonalds1.png"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/restaurants/McDonalds/mcdonalds1.png"
 
                 },
 
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/restaurants/McDonalds/mcdonalds2.png"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/restaurants/McDonalds/mcdonalds2.png"
                 },
 
                 {
-                    "url": "https://storage.googleapis.com/fouimages/Photos4/restaurants/McDonalds/mcdonalds3.png"
+                    "url": "https://storage.googleapis.com/fouimage/Photos4/restaurants/McDonalds/mcdonalds3.png"
                 }
             ],
             "address": "Gate 25, Terminal 3 - Dubai International Airport Concourse B - Dubai",
@@ -845,20 +845,20 @@ class LoginAction(Action):
 
     def get_profile_url(self, sender):
         switcher = {
-        "fouad": "https://storage.googleapis.com/fouimages/Photos4/profile/FouadOmri.png",
-        "rami": "https://storage.googleapis.com/fouimages/Photos4/profile/RamiElSamra.png",
-        "jisha": "https://storage.googleapis.com/fouimages/Photos4/profile/JishaRoux.png",
-        "safa": "https://storage.googleapis.com/fouimages/Photos4/profile/SafaOmri.jpg",
-        "elena": "https://storage.googleapis.com/fouimages/Photos4/profile/elenakalimera.jpg",
-        "wafa": "https://storage.googleapis.com/fouimages/Photos4/profile/WafaOmri.png",
+        "fouad": "https://storage.googleapis.com/fouimage/Photos4/profile/FouadOmri.png",
+        "rami": "https://storage.googleapis.com/fouimage/Photos4/profile/RamiElSamra.png",
+        "jisha": "https://storage.googleapis.com/fouimage/Photos4/profile/JishaRoux.png",
+        "safa": "https://storage.googleapis.com/fouimage/Photos4/profile/SafaOmri.jpg",
+        "elena": "https://storage.googleapis.com/fouimage/Photos4/profile/elenakalimera.jpg",
+        "wafa": "https://storage.googleapis.com/fouimage/Photos4/profile/WafaOmri.png",
         "faizan": "",
-        "amna":"https://storage.googleapis.com/fouimages/Photos4/profile/AmnaAlRedha.png",
+        "amna":"https://storage.googleapis.com/fouimage/Photos4/profile/AmnaAlRedha.png",
         "deepa": "",
-        "vanessa": "https://storage.googleapis.com/fouimages/Photos4/profile/VanessaEspera.jpg",
-        "tingting": "https://storage.googleapis.com/fouimages/Photos4/profile/TingTing.jpg",
-        "sami": "https://storage.googleapis.com/fouimages/Photos4/profile/SamiAqil.jpg",
-        "darshit": "https://storage.googleapis.com/fouimages/Photos4/profile/darshit1.JPG",
-        "natasha": "https://storage.googleapis.com/fouimages/Photos4/profile/natasha.jpg"
+        "vanessa": "https://storage.googleapis.com/fouimage/Photos4/profile/VanessaEspera.jpg",
+        "tingting": "https://storage.googleapis.com/fouimage/Photos4/profile/TingTing.jpg",
+        "sami": "https://storage.googleapis.com/fouimage/Photos4/profile/SamiAqil.jpg",
+        "darshit": "https://storage.googleapis.com/fouimage/Photos4/profile/darshit1.JPG",
+        "natasha": "https://storage.googleapis.com/fouimage/Photos4/profile/natasha.jpg"
         }
 
         return switcher.get(sender.lower(), "Invalid user")
@@ -1885,7 +1885,7 @@ class ShowLoungesAction(Action):
 
         {
             "id": 1,
-            "photo": "https://storage.googleapis.com/fouimages/Photos4/lounges/EmiraresBusiness%20ClassLounge.png",
+            "photo": "https://storage.googleapis.com/fouimage/Photos4/lounges/EmiraresBusiness%20ClassLounge.png",
             "name": "Business Class Lounge",
             "address": "Terminal 3, Dubai International Airport - Dubai",
             "title": "Business Class Lounge",
