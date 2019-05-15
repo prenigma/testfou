@@ -1107,7 +1107,7 @@ class LoginAction(Action):
         milesstatus['lastdestination'] = "London"
         profile['milesstatus'] = milesstatus
         activity = {}
-        activity['date'] = "24.04.2019"
+        activity['date'] = "16.05.2019"
         activity['destination'] = "Tokyo - Dubai"
         activity['awardmiles'] = "15,000"
         activity['executivebonus'] = "2,500"
@@ -1117,7 +1117,7 @@ class LoginAction(Action):
         activity["flightclass"] = "Economy Class"
 
         activity2 = {}
-        activity2['date'] = "25.04.2019"
+        activity2['date'] = "17.05.2019"
         activity2['destination'] = "Dubai - London"
         activity2['awardmiles'] = "15,000"
         activity2['executivebonus'] = "2,500"
