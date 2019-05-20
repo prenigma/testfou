@@ -1,0 +1,87 @@
+version: '3.0'
+
+services:
+  rasa_core:
+    image: rasa/rasa_core:latest
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 1000M
+        reservations:
+          cpus: '0.5'
+          memory: 1000M
+    ports:
+      - 5005:5005
+    volumes:
+      - ./models/rasa_core:/app/models
+      - ./config:/app/config
+    command:
+      - start
+      - --enable_api
+      - --core
+      - models
+      - -c
+      - rest
+      - --endpoints
+      - config/endpoints.yml
+      - -u
+      - current/
+  rasa_nlu:
+    image: rasa/rasa_nlu:stable-full
+    volumes:
+      - ./models/rasa_nlu:/app/models
+      - ./config:/app/config
+    ports:
+      - 5000:5000  
+    command:
+      - start
+      - --path
+      - models
+      - -c
+      - config/nlu_tensorflow.yml    
+  action_server:
+    image: rasa/rasa_core_sdk:latest
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 1000M
+        reservations:
+          cpus: '0.5'
+          memory: 1000M
+    ports:
+      - 5055:5055
+    volumes:
+      - ./actions:/app/actions
+  postgres:
+    image: postgres:11
+    ports:
+      - "5432:5432"
+    volumes:
+      - "rasauidata:/var/lib/postgresql/data"
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "rasaui"
+      POSTGRES_DB: "rasa"
+  duckling:
+    image: rasa/duckling:latest
+    ports:
+    - "8000:8000" 
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: rasa
+      MONGO_INITDB_ROOT_PASSWORD: example
+  mongo-express:
+    image: mongo-express
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: rasa
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example     
+
+volumes: {rasauidata:{}}        
+
